@@ -5,11 +5,83 @@
 	<meta name="Description"  content="Descripcion de la pagina"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Titulo de mi pagina</title>
+  <style>
+    *{margin: 0;
+      padding: 0;
+    }
+    div{
+      display: inline-block;
+    }
+    .ancho{
+      width: 40%;
+      display: none;
+    }
+    span{
+      background-color: #cacaca;
+      display: block;
+    }
+
+    header{
+      height: 10%;
+    }
+    
+    #headerCentral{
+      text-align: center;
+      width: 65%;
+      margin-top: 3%;
+      padding-top: 0%;
+      vertical-align: top;
+    }
+
+
+
+    .Boton-login{
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+  </style>
 	
   </head>
+  
   <body>
+    <header>
+      <div id="logo">
+        <picture><img src="https://lasrozasinnova.es/wp-content/uploads/2021/08/cropped-logo-las-rozas-innova-web.png" height="100px" alt=""></picture>
+      </div>
+      <div id="headerCentral">
+        <h1>Nombre de la Empresa</h1>
+      </div>
+      <div>
+        <div>
+        <input type="search" name="buscar" id="barradebusqueda">
+        <input type="submit" name="buscar" value="buscar">
+      </div>
+        <div class="Boton-login">
+        <input type="button" value="Log in">
+        </div>
+      </div>
+    </header>
 
-   
-    
+
+
+
+
+    <main>
+<span></span>
+<div>uno</div>
+<div>dos</div>
+<div>tres</div>
+<div class="ancho">cuatro</div>
+<div>cinco</div>
+<span>uno</span>
+<span>dos</span>
+<span>tres</span>
+<span>cuatro</span>
+<span>cinco</span>
+
+    </main>
+
 </body>
 </html>
