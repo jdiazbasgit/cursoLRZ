@@ -1,0 +1,17 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nave{
+    display: inline;
+
+}
+.login{
+    display: flex ;
+    justify-content: center;
+    margin-top: 0.3em;
+    
+    align-items: center;
+}
