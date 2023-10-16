@@ -2,33 +2,78 @@
 <html lang="ES-es">	<!--Inicio de la página-->
 <head>				<!--Inicio del HEAD-->
 	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
+	<meta name="DisplayFlex"  content="Ejercicios para conocer DisplayFlex"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Pagina de Javier Moreno</title>
 	<style>
-    div{
-      background-color: #fabada;
-      margin: 10px;
-      display: inline;
+    header div{
+      /* background-color: #fabada; */
+      /* margin: 10px; */
+      display: inline-block;
+      height: 125px;
+      vertical-align: middle;
+      
+    }
+    header .logo_ppal{
+      
+      width: 25%;
+      background-color:beige ;
+      
+    }
+    header .title{
+      width: 45%;
+      background-color: aqua;
+      text-align: center;
+      
+    }
+    header .textSearch{
+      width: 25%;
+      background-color:beige;
+      text-align: center;
+    }
+    .buttomLogin{
+      margin-top: 20px;
     }
     span{
-      background-color: #cacaca;
-      display: block;
+      /* background-color: #cacaca;
+      display: block; */
+
+    }
+    .ancho{
+      width: 20%;
+      /* display: none; Oculta el elemento y el espacio */
+      /* visibility: hidden; Oculta el elemento pero le deja el espacio */
     }
   </style>
   </head>
   <body>
-    <div>uno</div>
+    <!-- <div>uno</div>
     <div>dos</div>
     <div>tres</div>
-    <div>cuatro</div>
+    <div class="ancho">cuatro</div>
     <div>cinco</div>
     <span>uno</span>
     <span>dos</span>
     <span>tres</span>
     <span>cuatro</span>
-    <span>cinco</span>
+    <span>cinco</span> -->
 
+    <header>
+      <div class="logo_ppal">
+        <img src="LogoLevelOne.png" alt="No se encuentra la imagen">
+        
+      </div>
+      <div class="title">
+        <h1 class="name">Level One</h1>
+      </div>
+      
+      <div class="textSearch">
+        <input class="searchText" type="search"><!-- input - buscar -->
+        <input class="searchButtom" type="button" value="Buscar"><!-- Buttom Search -->
+        <input class="buttomLogin" type="button" value="Login"><!-- Buttom Login -->
+      </div>
+      <nav></nav> <!-- El nav por estandar va dentro del Header -->
+    </header>
    
     
 </body>
