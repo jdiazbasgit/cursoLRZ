@@ -1,15 +1,112 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
-	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Ejemplo de Angeles</title>
-	
-  </head>
-  <body>
+<html lang="ES-es"> <!--Inicio de la página-->
 
-   
+<head> <!--Inicio del HEAD-->
+  <meta charset="utf-8" />
+  <meta name="Description" content="Descripcion de la pagina" />
+  <meta name="Keywords" content="Palabras clave, separadas por comas" />
+  <title>Ejemplo de Angeles</title>
+  <style>
+    /* div{
+      background-color: #fabada;
+      margin: 20px;
+      display: inline-block;
+    }
+    .ancho{
+      width: 40%;
+      visibility: hidden;
+
+    }
+    span{
+      background-color: #cacaca;
+      display: block;
+    } */
+  </style>
+
+</head>
+
+<body>
+  <!-- <div>uno</div>
+   <div>dos</div>
+   <div>tres</div>
+   <div class="ancho">cuatro</div>
+   <div>cinco</div> 
+
+    <span>uno</span>
+    <span class="ancho">dos</span>
+    <span>tres</span>
+    <span>cuatro</span>
+    <span>cinco</span> -->
+  <style>
     
+    
+    
+     div {
+
+      display: inline-block;
+
+    }
+
+    #cabecera{
+
+      display: flex;
+      background-color: aquamarine;
+    }
+    #central {
+      margin: auto;
+      width: 40%;
+      justify-content: center;
+    }
+
+    #logo {
+
+      width: 20%;
+    }
+    
+    #login{
+      display: inline-block;
+      
+    }
+
+    .menu_izquierdo{
+      display: block;
+      margin: 10px;
+    }
+    .menu_abajo{
+
+      display: block;
+      margin: 10px;
+    }
+  </style>
+
+  <header>
+    <nav id="cabecera">
+      <div id="logo">
+        <img src="descargar.jfif" width="100px" alt="No se encuentra la imagen">
+      </div>
+
+
+      <div id="central">
+        <h1>NOMBRE DE LA EMPRESA</h1>
+      </div>
+
+
+
+      <div id="login">
+
+        <div class="menu_izquierdo">
+          <input type="text">
+          <input type="button" value="Buscar">
+        </div>
+
+        <div class="menu_abajo">
+          <input type="button" value="login in">
+        </div>
+
+      </div>
+    </nav>
+
+  </header>
 </body>
+
 </html>
