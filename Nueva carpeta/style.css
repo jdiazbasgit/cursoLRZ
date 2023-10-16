@@ -20,7 +20,8 @@ header{
     margin-top: 30px;
 }
 #login {
-    margin-top: 1em;
+    /* margin-top: 1em; */
+    margin: 20px auto;
     text-align: center;
     background-color: rgb(113, 115, 115);
     width: 40%;
