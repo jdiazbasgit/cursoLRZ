@@ -6,6 +6,9 @@
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Pagina de Javier Moreno</title>
 	<style>
+    *{
+      margin: 0;
+    }
     header div{
       /* background-color: #fabada; */
       /* margin: 10px; */
@@ -16,24 +19,65 @@
     }
     header .logo_ppal{
       
-      width: 25%;
+      width: 32%;
       background-color:beige ;
+      border: 1px solid orange;
       
     }
     header .title{
-      width: 45%;
-      background-color: aqua;
+      width: 43%;
+      background-color: rgb(74, 74, 234);
+      color: orange;
+      font-family: Arial, Helvetica, sans-serif;
       text-align: center;
+      border: 1px solid orange;
       
     }
     header .textSearch{
-      width: 25%;
+      width: 23%;
       background-color:beige;
-      text-align: center;
+      border: 1px solid orange;
+    }
+    .searchText{
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 220px;
+    }
+    .searchButtom{
+      margin-top: 10px;
+      display: inline-block;
+      width: 80px;
+    }
+    .userText{
+      float: left;
+      padding-left: 0px;
+      margin-top: 10px;
+      margin-left: 5px;
+    }
+    .textBox{
+      margin-top: 10px;
+      margin-left: 32px;
+      border: 1px solid orange;
+    }
+    .passText{
+      /* float: left; */
+      /* margin-top: 35px; */
+      margin-left: 5px;
+    }
+    .passBox{
+      /* float: left; */
+      margin-top: 5px;
+      margin-left: 6px;
+      border: 1px solid orange;
     }
     .buttomLogin{
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-left: 130px;
     }
+    h1{
+      margin-top: 40px;
+    }
+    
     span{
       /* background-color: #cacaca;
       display: block; */
@@ -60,17 +104,22 @@
 
     <header>
       <div class="logo_ppal">
-        <img src="LogoLevelOne.png" alt="No se encuentra la imagen">
-        
+        <figure>
+          <img src="LogoLevelOne.png" alt="No se encuentra la imagen">
+        </figure>
       </div>
       <div class="title">
         <h1 class="name">Level One</h1>
       </div>
       
       <div class="textSearch">
-        <input class="searchText" type="search"><!-- input - buscar -->
-        <input class="searchButtom" type="button" value="Buscar"><!-- Buttom Search -->
-        <input class="buttomLogin" type="button" value="Login"><!-- Buttom Login -->
+        <input class="searchText" type="search" name="searchText" placeholder="Introduzca una palabra a buscar"/><!-- input - buscar -->
+        <input class="searchButtom" type="button" name="searchButtom" value="Buscar"/><!-- Buttom Search -->
+        <label class="userText" for="user">Usuario:</label>
+        <input class="textBox" type="text" name="textBox" placeholder="Introduzca su usuario" required alt="Debe introducir su usuario"/>
+        <label class="passText" for="pass">Contraseña:</label>
+        <input class="passBox" type="password" name="password" required alt="Debe introducir la contraseña"/>
+        <input class="buttomLogin" type="submit" name="buttomLogin" value="Entrar"/><!-- Buttom Login -->
       </div>
       <nav></nav> <!-- El nav por estandar va dentro del Header -->
     </header>
