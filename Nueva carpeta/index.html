@@ -5,11 +5,128 @@
 	<meta name="Description"  content="Ejercicio de JGL"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Ejercicio de JGL</title>
+	<link rel="stylesheet" href="reset.css">
+	<!-- <style>
+		div {
+			background-color: #FABADA;
+			margin: 20px;
+			display: inline-block;
+		}
+		span {
+			background-color: #cacaca;
+			display: block;
+		}
+
+		.ancho {
+			width: 40%;
+			visibility: hidden;
+		}
+	</style> -->
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+		}
+		
+		header{
+			display: flex;
+			align-items: center;
+			padding: 30px 0 30px 0;
+			box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.1);
+		}
+
+		header div {
+			display: inline-block;
+		}
+
+		#logo {
+			width: 15%;
+		}
+
+		#central {
+			width: 60%;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#login {
+			width: 25%;
+		}
+
+		.logoHeader {
+			padding-left: 30px;
+		}
+
+		.logoHeader:hover {
+			opacity: 50%;
+		}
+
+		.formFields {
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+
+		.botonBuscar {
+			color: white;
+			background-color: red;
+			padding: 5px;
+			font-weight: bold;
+			border: none;
+		}
+
+		.botonBuscar:hover {
+			opacity: 50%;
+		}
+
+		.botonLogIn {
+			color: white;
+			background-color: blue;
+			padding: 10px;
+			font-size: 15px;
+			font-weight: bold;
+			border: none;
+		}
+
+		.botonLogIn:hover {
+			opacity: 50%;
+		}
+
+	</style>
 	
+
   </head>
   <body>
+		<!-- <div>Uno</div>
+	<div>Dos</div>
+	<div>Tres</div>
+	<div class="ancho">Cuatro</div>
+	<div>Cinco</div>
+	<span>Uno</span>
+	<span>Dos</span>
+	<span>Tres</span>
+	<span>Cuatro</span>
+	<span>Cinco</span> -->
 
-   
-    
-</body>
+	<header>
+		<div id="logo">
+			<a href="/Nueva carpeta/"><img src="logo.jpg" alt="Logotipo" class="logoHeader"></a>
+		</div>
+		<div id="central">
+			<span>Ejercicio de JGL</span>
+		</div>
+		<div id="login">
+			<input type="text" class="formFields" >
+			<input type="submit" value="Buscar" class="formFields botonBuscar">
+			<button style="display: block;" class="botonLogIn">Log In</button>
+		</div>
+	</header>
+
+	<main></main>
+
+	<footer></footer>
+  </body>
 </html>
