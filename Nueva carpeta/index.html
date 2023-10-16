@@ -65,6 +65,11 @@
 			opacity: 50%;
 		}
 
+		.formLogin {
+			display: inline-block;
+			margin-bottom: 10px;
+		}
+
 		.formFields {
 			display: inline-block;
 			margin-bottom: 10px;
@@ -112,16 +117,25 @@
 	<span>Cinco</span> -->
 
 	<header>
+
 		<div id="logo">
 			<a href="/Nueva carpeta/"><img src="logo.jpg" alt="Logotipo" class="logoHeader"></a>
 		</div>
+
 		<div id="central">
 			<span>Ejercicio de JGL</span>
 		</div>
+
 		<div id="login">
-			<input type="text" class="formFields" >
-			<input type="submit" value="Buscar" class="formFields botonBuscar">
-			<button style="display: block;" class="botonLogIn">Log In</button>
+			<div class="formLogin">			
+				<input type="text">
+				<input type="submit" value="Buscar" class="botonBuscar">
+			</div>
+
+			<div style="display: block;">
+				<button  class="botonLogIn">Log In</button>
+			</div>
+
 		</div>
 	</header>
 
