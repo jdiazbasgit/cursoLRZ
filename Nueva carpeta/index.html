@@ -4,12 +4,115 @@
 	<meta charset="utf-8"/>
 	<meta name="Description"  content="Descripcion de la pagina"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Titulo de mi pagina</title>
-	
+	<title>Ejercicio de Alex</title>
+	<style>
+        /* div{
+            background-color: #fabada;
+            margin: 10px;
+            display: inline-block;
+        }
+        .ancho{
+            width: 40%; */
+            /* visibility: hidden; */
+            /* display: none; */
+            /* diferencia entre  visibility: hidden contra el  display: none  es que visibility guarda el espacio además de ocultar*/
+        /* } */
+        /* span{
+            background-color: #cacaca;
+            display: block;
+        }
+        */
+        #cabecera{
+            display: flex;
+            background-color: rgb(241, 237, 168);
+        }
+
+        h1{
+            color: #888;
+            font-family: sans-serif;
+
+        }
+
+        #logo{
+            display: inline-block;
+        }
+        #central{
+            margin: auto;
+            justify-content: center;
+            display: inline-block;
+
+        }
+
+        #menu_derecha{
+            display: inline-block;
+            /* margin-top: 40px; */
+            margin: auto;
+        }
+
+        #bloque_buscar{
+            display: inline-block;
+        }
+
+        #cuadro_buscar{
+            background-color: #b7b9b7;
+            box-shadow: 2px 2px 4px #888;
+            margin: 10px;
+        }
+
+        #boton_buscar{
+            background-color: tomato;
+            margin: 10px;
+
+        }
+
+        #login{
+            background-color: tomato;
+            margin: 10px;
+        }
+       
+
+    </style>
   </head>
+
   <body>
 
-   
+    <!-- <div>uno</div>
+    <div>dos</div>
+    <div>tres</div>
+    <div class="ancho">cuatro</div>
+    <div>cinco</div>
+
+    <span>uno</span>
+    <span>dos</span>
+    <span>tres</span>
+    <span class="ancho">cuatro</span>
+    <span>cinco</span> -->
+
+    <header >
+        <div id="cabecera">
+            <div id="logo"><img id="logo" src="imagen\color.png" alt="No se encuentra la imagen" width="175px"></div>
+            <div id="central">
+                <h1>Nombre chuli de la empresa</h1>
+            </div>
+            <div id="menu_derecha">
+                <div id="bloque_buscar">
+                     <input type="text"  id="cuadro_buscar" placeholder="Buscar..." required>
+                    <input type="submit" id="boton_buscar" value="Buscar">
+                </div>
+                <div>
+                    <button id="login">Login</button>
+                </div>
+                              
+            </div>
+        </div>
+        
+        <nav></nav>
+
+    </header>
+
+    <main></main>
+
+    <footer></footer>
     
 </body>
 </html>
