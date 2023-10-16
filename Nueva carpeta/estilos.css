@@ -1,6 +1,6 @@
 body{
   margin: auto;
-
+  box-sizing: 0;
 }
 nav{
   background-color: orange;
@@ -10,7 +10,6 @@ nav{
   align-items: center;
 }
 nav div{
-  display: inline-block;
 
 }
 
@@ -22,7 +21,7 @@ nav div{
 
 }
 #central{
-  background-color: rgb(255, 0, 166);
+  background-color: #408080;
   color: #fff;
   width: 500px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -36,12 +35,12 @@ nav div{
 }
 #login{
   background-color: rgb(13, 220, 27);
+  display: inline-block;
 }
 #busqueda{
-  width: 50%;
+  display: inline;
 }
 #logear{
-  width: 40%;
   align-items: center;
-
+  margin-top: 20px;
 }
