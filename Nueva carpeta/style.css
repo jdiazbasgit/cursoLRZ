@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#logo {
+    display: flex;
+    width: 60%;
+}
+
+#logo h1 {
+    margin-left: 350px;
+    margin-top: 30px;
+}
+#login {
+    margin-top: 1em;
+    text-align: center;
+    background-color: rgb(113, 115, 115);
+    width: 40%;
+    color: white;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+#login:hover {
+    background-color: rgb(24, 24, 24);
+}
+
+#buscar-btn{
+    padding: 5px 10px;
+    background-color: gold;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input{
+    height: 25px;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 2px;
+    
+}
