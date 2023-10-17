@@ -2,56 +2,74 @@
     margin: 0%;
     padding: 0%;
 }
-header div{
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}
+/* .logo{
+    background-color: rgb(43, 187, 98);   
+}  */
+.logo img{
+    width: 100px;  
+} 
+.central{
+    /* background-color:red; */
+    color: white;
+} 
+h1{
+    padding: 25px;
+}
+
+.derecha{
+    /* background-color: grey; */
+    margin-left: 100px;
+    padding: 25px;
+  
+} 
+
+ .login{
+    align-items: end;
+    text-align: center;
+    padding-top: 25px;
+    
+} 
+ /* header div{
     background-color: rgb(50, 50, 194);
     display: inline-block;
     height: 100px;
-    /* padding: 10px; */
     
-   
-   
-}
+  }   */
 
-.logo{
+   
+
+/* .logo{
     height: 100%;
     justify-content: center;
     text-align: center;
-    
     background-color: rgb(43, 187, 98);   
-}
- .logo img{
-    width: 100px;
-    vertical-align: middle;
-    
-}
+} */
 
-.central{
+/* .central{
     width: 50%;
     background-color:red;
     vertical-align: middle;
     text-align: center;
     color: white;
-}
-
-h1{
-    padding: 25px;
-}
+} */
 
 
-.derecha{
+/* .derecha{
     background-color: grey;
     vertical-align: middle;
     margin-left: 100px;
     
-}
+} */
 
-.login{
+/* .login{
     align-items: center;
-    /* justify-content: center; */
-    text-align: center;
-
-       
-}
+    text-align: center;     
+} */
 
 
 
