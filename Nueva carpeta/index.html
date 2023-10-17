@@ -22,31 +22,43 @@
             display: block;
         }
         */
-        #cabecera{
-            display: flex;
-            background-color: rgb(241, 237, 168);
+
+        *{
+            padding: 0;
+            margin: 0;
         }
 
-        h1{
-            color: #888;
-            font-family: sans-serif;
-
+        #cabecera{
+            display: inline-block;
+            background-color: rgb(241, 237, 168);
         }
 
         #logo{
             display: inline-block;
         }
+        
         #central{
             margin: auto;
-            justify-content: center;
+            /* justify-content: top; */
+            /* background-color: tomato; */
             display: inline-block;
+            align-items: top;
+            vertical-align: top;
+            padding: 5px;
+        }
 
+        h1{
+            color: #888;
+            font-family: sans-serif;
+            display: inline-block;
+            margin-top: 8%;
         }
 
         #menu_derecha{
             display: inline-block;
             /* margin-top: 40px; */
             margin: auto;
+            /* background-color: azure; */
         }
 
         #bloque_buscar{
@@ -65,9 +77,23 @@
 
         }
 
+        #cuadro_usuario{
+            margin: 10px;
+        }
+
+        #cuadro_password{
+            margin: 10px;
+        }
+        
+        #cuadro_login{
+           display: block;
+           justify-items: end;
+        }
+
         #login{
             background-color: tomato;
             margin: 10px;
+                      
         }
        
 
@@ -88,19 +114,30 @@
     <span class="ancho">cuatro</span>
     <span>cinco</span> -->
 
-    <header >
+    <header>
         <div id="cabecera">
             <div id="logo"><img id="logo" src="imagen\color.png" alt="No se encuentra la imagen" width="175px"></div>
             <div id="central">
-                <h1>Nombre chuli de la empresa</h1>
+                <h1>Nombre de la empresa</h1>
             </div>
             <div id="menu_derecha">
                 <div id="bloque_buscar">
-                     <input type="text"  id="cuadro_buscar" placeholder="Buscar..." required>
+                    <input type="text"  id="cuadro_buscar" placeholder="Buscar..." required>
                     <input type="submit" id="boton_buscar" value="Buscar">
                 </div>
-                <div>
-                    <button id="login">Login</button>
+                <div id="bloque_login">
+                    <div id="cuadro_usuario">
+                        <span>Usuario</span>
+                        <input type="text" placeholder="Introduzca usuario" required>
+                    </div>
+                    <div id="cuadro_password">
+                        <span>Contraseña</span>
+                        <input type="text" placeholder="Introduzca contraseña" required>
+                    </div>
+                    <div id="cuadro_login">
+                        <button id="login">Login</button>
+                    </div>
+                    
                 </div>
                               
             </div>
