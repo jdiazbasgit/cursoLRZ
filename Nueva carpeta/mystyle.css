@@ -1,0 +1,71 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+header div{
+    background-color: rgb(50, 50, 194);
+    display: inline-block;
+    height: 100px;
+    /* padding: 10px; */
+    
+   
+   
+}
+
+.logo{
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    
+    background-color: rgb(43, 187, 98);   
+}
+ .logo img{
+    width: 100px;
+    vertical-align: middle;
+    
+}
+
+.central{
+    width: 50%;
+    background-color:red;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+}
+
+h1{
+    padding: 25px;
+}
+
+
+.derecha{
+    background-color: grey;
+    vertical-align: middle;
+    margin-left: 100px;
+    
+}
+
+.login{
+    align-items: center;
+    /* justify-content: center; */
+    text-align: center;
+
+       
+}
+
+
+
+/* div{
+    background-color:#fabada;
+    margin: 20px;
+    display: inline-block;
+}
+.ancho{
+    width: 40%;
+    display: none;
+    /* visibility: hidden;
+}
+span{
+    background-color: #cacaca;
+    display: block;
+} */
