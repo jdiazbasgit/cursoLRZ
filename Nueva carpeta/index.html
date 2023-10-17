@@ -1,37 +1,64 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
-	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de JCGA_1</title>
-	<style>
-       .cabecera{
-        display:inline
-       } 
-    </style>
-  </head>
-  
-  <body>
-<header>
-<div class="cabecera">
-    <figure>
-        <img src="../Imagenes/New_logo_SinFondo.png" width="200px " alt="">
-    </figure>
-</div>
-<div class="cabecera">nombre</div>
-<div class="cabecera">login</div>
-</header>
- 
-<main>
+<html lang="ES-es"> <!--Inicio de la página-->
 
-</main>
+<head> <!--Inicio del HEAD-->
+  <meta charset="utf-8" />
+  <meta name="Description" content="Descripcion de la pagina" />
+  <meta name="Keywords" content="Palabras clave, separadas por comas" />
+  <title>Pagina de JCGA</title>
+  <style>
+    header div {
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-    
-   
-    
+    .nombre {
+      display: flexbox;
+      width: 55%;
+      height: 100px;
+      background-color: bisque;
+      text-align: center;
+
+      
+    }
+    .nombre h1{
+      height: auto;
+      padding: 0px;
+      margin-top: 30px;                                                             ;
+    }
+
+    .login {
+
+      width: 20%;
+      border: black solid 1px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <figure>
+        <img src="../Imagenes/New_logo_SinFondo.png" height="100px" alt="">
+      </figure>
+    </div>
+    <div class="nombre">
+      <h1>NOMBRE DE MI PAGINA</h1>
+    </div>
+    <div class="login">
+      <input type="search"> Buscar
+      <button>Login</button>
+    </div>
+  </header>
+  <main>
+
+  </main>
+  <footer>
+
+  </footer>
+
+
+
 </body>
-<footer>
 
-</footer>
 </html>
