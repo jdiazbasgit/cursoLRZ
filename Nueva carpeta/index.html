@@ -15,14 +15,12 @@
 		}	
 		#logo{
 			padding: 10px;
-			border: 1px solid grey;
-			
+			border: 1px solid grey;		
 		}
 		#titulo{	
 			border: 1px solid grey;
 			padding: 10px;
-			width:63%;	
-	
+			width:63%;		
 		}
 		#bloqueder{
 			display: flex;
@@ -36,7 +34,7 @@
 			font-size: 2em;
 			text-align: center;
 		}
-		form {
+		.buscador {
 			margin:18px 0;
 			text-align: center;
 		}
@@ -56,20 +54,16 @@
 			<h1>PÁGINA WEB MAR</h1>
 		</div>
 		<div id="bloqueder">
-			<div>
-				<form action="#" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+			<div class="buscador">		
 					<label for="buscador"></label>
 					<input type="search" id="buscador" placeholder="Buscar..." name="buscador">
 					<label for="buscar"></label>
-					<input type="button" id="buscar" value="Buscar">
-				</form>
+					<input type="button" id="buscar" value="Buscar">		
 			</div>
-			<div>	<form action="#" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
-					<label for="login"></label>
-					<input type="button" id="login" value="Sign up">
-				</form>
+			<div class="buscador">
+				<label for="login"></label>
+				<input type="button" id="login" value="Sign up">
 			</div>
-
 		</div>
 	</header>
 
