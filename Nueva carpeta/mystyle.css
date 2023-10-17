@@ -2,7 +2,7 @@
     margin: 0%;
     padding: 0%;
 }
-header{
+nav{
     display: flex;
     justify-content: space-between;
     background-color: #8EC5FC;
