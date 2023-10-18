@@ -1,66 +1,55 @@
 <!doctype html>
-<html lang="ES-es"> <!--Inicio de la página-->
-
-<head> <!--Inicio del HEAD-->
-	<meta charset="utf-8" />
-	<meta name="Description" content="Descripcion de la pagina" />
+<html lang="ES-es">	<!--Inicio de la página-->
+<head>				<!--Inicio del HEAD-->
+	<meta charset="utf-8"/>
+	<meta name="Description"  content="Descripcion de la pagina"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de profe</title>
+	<title>Pagina de JPT</title>
 	<style>
-		#contenedor div {
-			min-width: 200px;
-			flex-grow: 1;
-			align-items: stretch;
+		header div{
+			display: inline-block;
+			vertical-align: middle;
+			background-color: aquamarine;
 		}
-
-		#contenedor {
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			
-			
-
-
-		}
-
-		h1 {
-			background-color: red;
+		.nombre{
+			width: 70%;
+			background-color: aquamarine;
 			text-align: center;
-			flex-grow: 0.5;
-			margin: auto;
 		}
+		.loging{
+			width: 169px;
+			display: inline-block;
+		}
+		#button {
+			width: 100px;
+			margin: 20px;
+
+		}
+		
 	</style>
-</head>
+	
+  </head>
+  <body>
 
-<body>
-	<div id="contenedor">
-		<div style="background-color: rgb(227, 215, 250);">
-			<h1>uno uno</h1>
-			<h1>uno dos</h1>
-			<h1>uno tres</h1>
-		</div>
-		<div style="background-color: rgb(250, 231, 215);display: flex;">
-			<h1 style="width: 50%;background-color: black;color: white;">dos</h1>
-		</div>
-		<div style="background-color: rgb(215, 250, 218);">
-			<h1>tres</h1>
-		</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
-		<div style="background-color: rgb(250, 231, 215);width: 50%;">dos</div>
-		<div style="background-color: rgb(215, 250, 218);">tres</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
-		<div style="background-color: antiquewhite;">uno</div>
-		<div style="background-color: rgb(250, 231, 215);">dos</div>
-		<div style="background-color: rgb(215, 250, 218);">tres</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
+<header>
 
 
+	<div>
+		<figure>
+			<img src="imagen1.jpg" alt="no se muestra la pagina" width="100px">
+		</figure>	
 	</div>
-
-
+	<div class="nombre">
+		<h1>Nombre de Ejemplo</h1>
+	</div>
+	<div class="loging">
+		<input type="search">
+		<button id="buscar">Buscar</button>
+		
+		<button id="button">Login</button>
+	</div>
+</header>
+     
+    
 </body>
-
 </html>
