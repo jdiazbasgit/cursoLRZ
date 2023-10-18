@@ -7,6 +7,10 @@
   <meta name="Keywords" content="Palabras clave, separadas por comas" />
   <title>Pagina de JCGA</title>
   <style>
+    html{
+      margin: 0px;
+      padding: 0px;
+    }
     #contenedorGeneral {
       display: flex;
       align-items: center;
@@ -14,12 +18,14 @@
 
     #logo {
       width: 20%;
+      text-align: center;
     }
 
     #nombre {
       background-color: grey;
       width: 70%;
       text-align: center;
+      border: 1px solid grey;
     }
 
     #login {
@@ -41,14 +47,14 @@
     <div id="contenedorGeneral">
       <div class="contenedor1" id="logo">
         <figure>
-          <img src="New_logo_SinFondo.png" height="100px" alt="">
+          <img src="New_logo_SinFondo.png" height="80px" alt="">
         </figure>
       </div>
       <div class="contenedor1" id="nombre">
         <h1>NOMBRE DE MI PAGINA</h1>
       </div>
       <div class="contenedor1" id="login">
-        <input type="search"> Buscar
+        <div><input type="search"> Buscar </div>
         <button id="boton">Login</button>
       </div>
     </div>
