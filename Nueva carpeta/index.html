@@ -14,12 +14,12 @@
       margin: 0.5%;
       display: flex;
     }
-    header .logo_ppal{
+    header .logo_ppal{ /* Contenedor del Logo */
       width: 17%;
       background-color:beige ;
       border: 1px solid orange;
     }
-    header .title{
+    header .title{ /* Contenedor del Nombre Central */
       width: 59%;
       background-color: rgb(74, 74, 234);
       color: orange;
@@ -27,46 +27,52 @@
       text-align: center;
       border: 1px solid orange;
     }
-    header .textSearch{
+    header .textSearch{ /* Contenedor de Buscar y Login */
       width: 24%;
       background-color:beige;
-      border: 1px solid orange;      
+      border: 1px solid orange;
+	  /* display: flex; */
+	  /* flex-direction: column; */
+	  text-align: center;
     }
-    .searchText{
+    .searchText{ /* Caja de texto Buscar */
       /* margin-top: 3%;
       margin-left: 3%;
       width: 220px; */
       border: 1px solid orange;
+	  width: 65%;
+	  height: 20%;
+	  margin-top: 3%;
+	  text-align: center;
     }
-    .searchButtom{
+    .searchButtom{ /* Boton Buscar */
       /* margin-top: 3%;
       display: inline-block;
       width: 20%; */
       border: 1px solid orange;
+	  width: 20%;
+	  height: 20%;
+	  margin-top: 3%;
     }
-    .buttomLogin{
+    .buttomLogin{ /* Boton de Login */
       /* margin-top: 3%;
       margin-left: 40%; */
       width: 20%;
       height: 20%;
+	  margin-top: 10%
     }
-    .textSearch{
-      display: flex;
-      flex-direction: column;
-    }
-    h1{
+    h1{ /* Titulo principal superior con el nombre de la Empresa */
       border: 1px solid orange;
     }
-    img{
+    img{ /* Imagen del Logo */
       border: 1px solid orange;
     }
-    span{
+    /* span{
       /* background-color: #cacaca;
       display: block; */
-
-    }
-    .ancho{
-      width: 20%;
+    } */
+    /* .ancho{
+      width: 20%; */
       /* display: none; Oculta el elemento y el espacio */
       /* visibility: hidden; Oculta el elemento pero le deja el espacio */
     }
@@ -97,7 +103,7 @@
       <div class="textSearch">
         <input class="searchText" type="search" name="searchText" placeholder="Introduzca una palabra a buscar"/><!-- input - buscar -->
         <input class="searchButtom" type="button" name="searchButtom" value="Buscar"/><!-- Buttom Search -->
-        <input class="buttomLogin" type="submit" name="buttomLogin" value="Entrar"/><!-- Buttom Login -->
+        <input class="buttomLogin" type="submit" name="buttomLogin" value="Login"/><!-- Buttom Login -->
       </div>
       <nav></nav> <!-- El nav por estandar va dentro del Header -->
     </header>
