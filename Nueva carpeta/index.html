@@ -1,21 +1,81 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
-	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de JCGA</title>
-	<style>
-        
-    </style>
-  </head>
-  <body>
+<html lang="ES-es"> <!--Inicio de la página-->
 
-    <h1>PAGINA DE EJEMPLO DE JC</h1>
+<head> <!--Inicio del HEAD-->
+  <meta charset="utf-8" />
+  <meta name="Description" content="Descripcion de la pagina" />
+  <meta name="Keywords" content="Palabras clave, separadas por comas" />
+  <title>Pagina de JCGA</title>
+  <style>
+    #contenedorGeneral {
+      display: flex;
+      align-items: center;
+    }
+
+    #logo {
+      width: 20%;
+    }
+
+    #nombre {
+      background-color: grey;
+      width: 70%;
+      text-align: center;
+    }
+
+    #login {
+      border: 1px solid black;
+      padding: 13px;
+      width: 25%;
+      text-align: center;
+    }
+
+    #boton {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div id="contenedorGeneral">
+      <div class="contenedor1" id="logo">
+        <figure>
+          <img src="New_logo_SinFondo.png" height="100px" alt="">
+        </figure>
+      </div>
+      <div class="contenedor1" id="nombre">
+        <h1>NOMBRE DE MI PAGINA</h1>
+      </div>
+      <div class="contenedor1" id="login">
+        <input type="search"> Buscar
+        <button id="boton">Login</button>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <br><br><br>
+    <div class="container">
+      <button class="bg-danger" onmouseover="ver()">PULSAME</button>
+      <br><br>
+      <button id="boton" class="bg-success" onclick="ver1()">Pulsa para añadir contenido</button>
+    </div>
+
+    <div id="divContenedor">
+    </div>
+
+  </main>
+  <footer>
+
+  </footer>
 
 
-    
-   
-    
+
 </body>
+
+
+
+
+
 </html>
