@@ -1,47 +1,66 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
+<html lang="ES-es"> <!--Inicio de la página-->
+
+<head> <!--Inicio del HEAD-->
+	<meta charset="utf-8" />
+	<meta name="Description" content="Descripcion de la pagina" />
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Pagina de profe</title>
-	 <style>
-		#contenedor div{
-			width: 33%
+	<style>
+		#contenedor div {
+			min-width: 200px;
+			flex-grow: 1;
+			align-items: stretch;
 		}
-		#contenedor{
+
+		#contenedor {
 			display: flex;
 			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: center;
-			flex-shrink: 0;
+			flex-wrap: wrap;
 			
+			
+
+
 		}
-		h1{
+
+		h1 {
 			background-color: red;
 			text-align: center;
+			flex-grow: 0.5;
+			margin: auto;
 		}
-	 </style>
-  </head>
-  <body>
-<div id="contenedor">
-	<div style="background-color: rgb(227, 215, 250);width: 25%;"><h1>uno</h1></div>
-	<div style="background-color: rgb(250, 231, 215);width: 50%;"><h1>dos</h1></div>
-	<div style="background-color: rgb(215, 250, 218);width: 25%;"><h1>tres</h1></div>
-	<!--<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div>
-	<div style="background-color: rgb(250, 231, 215);">dos</div>
-	<div style="background-color: rgb(215, 250, 218);">tres</div>
-	<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div><div style="background-color: antiquewhite;">uno</div>
-	<div style="background-color: rgb(250, 231, 215);">dos</div>
-	<div style="background-color: rgb(215, 250, 218);">tres</div>
-	<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div>-->
+	</style>
+</head>
+
+<body>
+	<div id="contenedor">
+		<div style="background-color: rgb(227, 215, 250);">
+			<h1>uno uno</h1>
+			<h1>uno dos</h1>
+			<h1>uno tres</h1>
+		</div>
+		<div style="background-color: rgb(250, 231, 215);display: flex;">
+			<h1 style="width: 50%;background-color: black;color: white;">dos</h1>
+		</div>
+		<div style="background-color: rgb(215, 250, 218);">
+			<h1>tres</h1>
+		</div>
+		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
+		<div style="background-color: rgb(250, 215, 215);">cinco</div>
+		<div style="background-color: rgb(250, 231, 215);width: 50%;">dos</div>
+		<div style="background-color: rgb(215, 250, 218);">tres</div>
+		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
+		<div style="background-color: rgb(250, 215, 215);">cinco</div>
+		<div style="background-color: antiquewhite;">uno</div>
+		<div style="background-color: rgb(250, 231, 215);">dos</div>
+		<div style="background-color: rgb(215, 250, 218);">tres</div>
+		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
+		<div style="background-color: rgb(250, 215, 215);">cinco</div>
 
 
-</div>
-   
-    
+	</div>
+
+
 </body>
+
 </html>
