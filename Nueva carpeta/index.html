@@ -4,43 +4,116 @@
 	<meta charset="utf-8"/>
 	<meta name="Description"  content="Descripcion de la pagina"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de profe</title>
+	<title>Pagina de ejercicio de cabecera con flex de ALEX</title>
 	 <style>
-		#contenedor div{
-			width: 33%
-		}
-		#contenedor{
+
+#cabecera{
+            display: flex;
+            background-color: rgb(241, 197, 168);
+        }
+
+        #cuadro_logo{
 			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: center;
-			flex-shrink: 0;
-			
-		}
-		h1{
-			background-color: red;
-			text-align: center;
-		}
-	 </style>
+        }
+
+		#logo{
+            margin: auto;
+        }
+
+        #central{
+            margin: auto;
+            padding: 5px;
+        }
+
+        h1{
+            color: #888;
+            font-family: sans-serif;
+            margin-top: 8%;
+        }
+
+        #menu_derecha{
+            display: inline-block;
+            /* margin-top: 40px; */
+            margin: auto;
+            /* background-color: azure; */
+        }
+
+        #bloque_buscar{
+            display: inline-block;
+        }
+
+        #cuadro_buscar{
+            background-color: #b7b9b7;
+            box-shadow: 2px 2px 4px #888;
+            margin: 10px;
+        }
+
+        #boton_buscar{
+            background-color: tomato;
+            margin: 10px;
+
+        }
+
+        /* #cuadro_usuario{
+            margin: 10px;
+        }
+
+        #cuadro_password{
+            margin: 10px;
+        } */
+        
+        #cuadro_login{
+           display: block;
+           justify-items: end;
+        }
+
+        #login{
+            background-color: tomato;
+            margin: 10px;
+                      
+        }
+       
+    </style>
   </head>
+
   <body>
-<div id="contenedor">
-	<div style="background-color: rgb(227, 215, 250);width: 25%;"><h1>uno</h1></div>
-	<div style="background-color: rgb(250, 231, 215);width: 50%;"><h1>dos</h1></div>
-	<div style="background-color: rgb(215, 250, 218);width: 25%;"><h1>tres</h1></div>
-	<!--<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div>
-	<div style="background-color: rgb(250, 231, 215);">dos</div>
-	<div style="background-color: rgb(215, 250, 218);">tres</div>
-	<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div><div style="background-color: antiquewhite;">uno</div>
-	<div style="background-color: rgb(250, 231, 215);">dos</div>
-	<div style="background-color: rgb(215, 250, 218);">tres</div>
-	<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div>-->
 
+    <header>
+        <div id="cabecera">
+            <div id="cuadro_logo"><img id="logo" src="imagen\color.png" alt="No se encuentra la imagen" width="175px"></div>
+            <div id="central">
+                <h1>Nombre de la empresa</h1>
+            </div>
+            <div id="menu_derecha">
+                <div id="bloque_buscar">
+                    <input type="text"  id="cuadro_buscar" placeholder="Buscar..." required>
+                    <input type="submit" id="boton_buscar" value="Buscar">
+                </div>
+                <div id="bloque_login">
+                    <!-- <div id="cuadro_usuario">
+                        <span>Usuario</span>
+                        <input type="text" placeholder="Introduzca usuario" required>
+                    </div>
+                    <div id="cuadro_password">
+                        <span>Contraseña</span>
+                        <input type="text" placeholder="Introduzca contraseña" required>
+                    </div> -->
+                    <div id="cuadro_login">
+                        <button id="login">Login</button>
+                    </div>
+                    
+                </div>
+                              
+            </div>
+        </div>
+        
+        <nav></nav>
 
-</div>
+    </header>
+
+    <main></main>
+
+    <footer></footer>
    
     
 </body>
