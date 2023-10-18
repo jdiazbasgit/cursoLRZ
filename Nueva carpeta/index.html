@@ -17,10 +17,6 @@
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			
-			
-
-
 		}
 
 		h1 {
@@ -29,10 +25,49 @@
 			flex-grow: 0.5;
 			margin: auto;
 		}
+
+		.divHeader{
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		header{
+			display: flex;
+			flex-wrap: wrap;
+			background-color: blue;
+		}
+
+		#Logo{
+			width: 25%;
+		}
+
+		#Titulo{
+			width: 50%;
+		}
+
+		#Busqueda{
+			width: 25%;
+		}
 	</style>
 </head>
 
 <body>
+	<header>
+		<div id="Logo" class="divHeader" style="background-color: yellow;">
+			<img src="" alt="">
+		</div>
+		<div id="Titulo" class="divHeader" style="background-color: rgb(189, 20, 147);">
+			<h1>Nombre de la Empresa</h1>
+		</div>
+		<div id="Busqueda" class="divHeader" style="background-color: tomato;">
+			<input type="search">
+			<input type="text">
+		</div>
+	</header>
+	<nav></nav>
+	<br>
+	<div></div><div></div>
 	<div id="contenedor">
 		<div style="background-color: rgb(227, 215, 250);">
 			<h1>uno uno</h1>
