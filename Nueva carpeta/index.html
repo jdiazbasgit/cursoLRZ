@@ -5,61 +5,75 @@
 	<meta charset="utf-8" />
 	<meta name="Description" content="Descripcion de la pagina" />
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de profe</title>
-	<style>
-		#contenedor div {
-			min-width: 200px;
-			flex-grow: 1;
-			align-items: stretch;
+	<title>Ejercicio Mar</title>
+	<link rel="stylesheet" href="reset.css" >
+	<style>	
+		header{
+			background-color: rgb(216, 216, 96);
+			display:flex;
+			align-items: center;
+		}	
+		#logo{
+			padding: 10px;
+			border: 1px solid grey;		
 		}
-
-		#contenedor {
+		#titulo{	
+			border: 1px solid grey;
+			padding: 10px;
+			width:63%;		
+		}
+		#bloqueder{
 			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			
-			
-
-
+			flex-direction: column;
+			align-items: center;
+			border: 1px solid grey;
+			padding: 10px;
 		}
-
-		h1 {
-			background-color: red;
+		h1{
+			color: rgb(23, 97, 35);
+			font-size: 2em;
 			text-align: center;
-			flex-grow: 0.5;
-			margin: auto;
+		}
+		.buscador {
+			margin:18px auto;
+			text-align: center;
+		}
+		p {
+			margin:1em auto;
 		}
 	</style>
+
 </head>
 
 <body>
-	<div id="contenedor">
-		<div style="background-color: rgb(227, 215, 250);">
-			<h1>uno uno</h1>
-			<h1>uno dos</h1>
-			<h1>uno tres</h1>
+	<header>
+		<div id="logo">
+			<a href="index.html"><img src="logo.png" title="logo de mi web" width=200px; alt="No se encuentra la imagen"></a>
 		</div>
-		<div style="background-color: rgb(250, 231, 215);display: flex;">
-			<h1 style="width: 50%;background-color: black;color: white;">dos</h1>
+		<div id="titulo">
+			<h1>PÁGINA WEB MAR</h1>
 		</div>
-		<div style="background-color: rgb(215, 250, 218);">
-			<h1>tres</h1>
+		<div id="bloqueder">
+			<div class="buscador">		
+					<label for="buscador"></label>
+					<input type="search" id="buscador" placeholder="Buscar..." name="buscador">
+					<label for="buscar"></label>
+					<input type="button" id="buscar" value="Buscar">		
+			</div>
+			<div class="buscador">
+				<label for="login"></label>
+				<input type="button" id="login" value="Sign up">
+			</div>
 		</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
-		<div style="background-color: rgb(250, 231, 215);width: 50%;">dos</div>
-		<div style="background-color: rgb(215, 250, 218);">tres</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
-		<div style="background-color: antiquewhite;">uno</div>
-		<div style="background-color: rgb(250, 231, 215);">dos</div>
-		<div style="background-color: rgb(215, 250, 218);">tres</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
+	</header>
 
+	<main>
+		<p>HOLA MUNDO</p>
+	</main>
 
-	</div>
-
+	<footer>
+		<p>footer</p>
+	</footer>
 
 </body>
 
