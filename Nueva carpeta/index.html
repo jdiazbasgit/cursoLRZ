@@ -7,7 +7,7 @@
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Pagina de profe</title>
 	<style>
-		#contenedor div {
+		/*#contenedor div {
 			min-width: 200px;
 			flex-grow: 1;
 			align-items: stretch;
@@ -17,13 +17,14 @@
 			display: flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-		}
+		}*/
 
 		h1 {
-			background-color: red;
+			/*background-color: red;*/
 			text-align: center;
 			flex-grow: 0.5;
 			margin: auto;
+			vertical-align: middle;
 		}
 
 		.divHeader{
@@ -36,65 +37,64 @@
 			display: flex;
 			flex-wrap: wrap;
 			background-color: blue;
+		
 		}
 
 		#Logo{
-			width: 25%;
+			max-width: 10%;
+			max-height: 5%;
 		}
 
 		#Titulo{
-			width: 50%;
+			width: 65%;
 		}
 
 		#Busqueda{
 			width: 25%;
+			margin: auto;
+		}
+
+		img{
+			height: 100%;
+			width: 100%;
+
+		}
+
+		#barrabusqueda{
+			margin: auto;
+			text-align: center;
+		}
+
+		#botonlogin{
+			text-align: center;
 		}
 	</style>
 </head>
 
 <body>
 	<header>
-		<div id="Logo" class="divHeader" style="background-color: yellow;">
-			<img src="" alt="">
+		<div id="Logo" class="divHeader"> <!--style="background-color: yellow;"-->
+			<img src="https://lasrozasinnova.es/wp-content/uploads/2021/08/cropped-logo-las-rozas-innova-web.png" alt="LogoInnova">
 		</div>
-		<div id="Titulo" class="divHeader" style="background-color: rgb(189, 20, 147);">
+		<div id="Titulo" class="divHeader"> <!--style="background-color: rgb(189, 20, 147);"-->
 			<h1>Nombre de la Empresa</h1>
 		</div>
-		<div id="Busqueda" class="divHeader" style="background-color: tomato;">
-			<input type="search">
-			<input type="text">
+		<div id="Busqueda" class="divHeader"><!-- style="background-color: tomato;"-->
+			<div id="BarraBusqueda" >
+				<input type="search" name="buscar" id="barra">
+				<input type="submit" name="buscar" value="buscar">
+			  </div>
+			  <div id="botonlogin" class="Boton-login">
+				<input type="button" value="Log in">
+			  </div>
 		</div>
 	</header>
+
+
+
 	<nav></nav>
-	<br>
-	<div></div><div></div>
-	<div id="contenedor">
-		<div style="background-color: rgb(227, 215, 250);">
-			<h1>uno uno</h1>
-			<h1>uno dos</h1>
-			<h1>uno tres</h1>
-		</div>
-		<div style="background-color: rgb(250, 231, 215);display: flex;">
-			<h1 style="width: 50%;background-color: black;color: white;">dos</h1>
-		</div>
-		<div style="background-color: rgb(215, 250, 218);">
-			<h1>tres</h1>
-		</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
-		<div style="background-color: rgb(250, 231, 215);width: 50%;">dos</div>
-		<div style="background-color: rgb(215, 250, 218);">tres</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
-		<div style="background-color: antiquewhite;">uno</div>
-		<div style="background-color: rgb(250, 231, 215);">dos</div>
-		<div style="background-color: rgb(215, 250, 218);">tres</div>
-		<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-		<div style="background-color: rgb(250, 215, 215);">cinco</div>
 
-
-	</div>
-
+	<main></main>
 
 </body>
 
