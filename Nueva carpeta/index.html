@@ -12,82 +12,49 @@
     }
     header{
       margin: 0.5%;
-    }
-    header div{
-      /* background-color: #fabada; */
-      /* margin: 10px; */
-      display: inline-block;
-      height: 125px;
-      vertical-align: middle;
-      align-items: center;          
+      display: flex;
     }
     header .logo_ppal{
-      
       width: 17%;
       background-color:beige ;
       border: 1px solid orange;
-      
-      
     }
     header .title{
-      width: 58.9%;
+      width: 59%;
       background-color: rgb(74, 74, 234);
       color: orange;
       font-family: Arial, Helvetica, sans-serif;
       text-align: center;
       border: 1px solid orange;
-    
-      
     }
     header .textSearch{
-      width: 23%;
+      width: 24%;
       background-color:beige;
-      border: 1px solid orange;
+      border: 1px solid orange;      
     }
     .searchText{
-      margin-top: 3%;
+      /* margin-top: 3%;
       margin-left: 3%;
-      width: 220px;
+      width: 220px; */
       border: 1px solid orange;
     }
     .searchButtom{
-      margin-top: 3%;
+      /* margin-top: 3%;
       display: inline-block;
-      width: 20%;
-      border: 1px solid orange;
-    }
-    .userText{
-      /* float: left; */
-      padding-left: 0%;
-      margin-top: 3%;
-      margin-left: 3%;
-      border: 1px solid orange;
-    }
-    .textBox{
-      margin-top: 3%;
-      margin-left: 11%;
-      border: 1px solid orange;
-    }
-    .passText{
-      /* float: left; */
-      margin-top: 3%;
-      margin-left: 3%;
-      border: 1px solid orange;
-    }
-    .passBox{
-      /* float: left; */
-      margin-top: 3%;
-      margin-left: 4%;
+      width: 20%; */
       border: 1px solid orange;
     }
     .buttomLogin{
-      margin-top: 3%;
-      margin-left: 40%;
+      /* margin-top: 3%;
+      margin-left: 40%; */
       width: 20%;
       height: 20%;
     }
+    .textSearch{
+      display: flex;
+      flex-direction: column;
+    }
     h1{
-      margin-top: 40px;
       border: 1px solid orange;
     }
     img{
@@ -130,10 +97,6 @@
       <div class="textSearch">
         <input class="searchText" type="search" name="searchText" placeholder="Introduzca una palabra a buscar"/><!-- input - buscar -->
         <input class="searchButtom" type="button" name="searchButtom" value="Buscar"/><!-- Buttom Search -->
-        <label class="userText" for="user">Usuario:</label>
-        <input class="textBox" type="text" name="textBox" placeholder="Introduzca su usuario" required alt="Debe introducir su usuario"/>
-        <label class="passText" for="pass">Contraseña:</label>
-        <input class="passBox" type="password" name="password" required alt="Debe introducir la contraseña"/>
         <input class="buttomLogin" type="submit" name="buttomLogin" value="Entrar"/><!-- Buttom Login -->
       </div>
       <nav></nav> <!-- El nav por estandar va dentro del Header -->
