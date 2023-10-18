@@ -26,43 +26,40 @@
 		}
 	</style> -->
 	<style>
-		.logo{
-			vertical-align: middle;
-		}
+
 		header{
-			background-color: antiquewhite;
-			/* display: flex;
-			align-items: center; */
+			display: flex;
+			margin-top: 20px;
+			align-items: center;
 		}
 
-		header div{
-			display: inline-block;	
-		} 
-		
+		.logo{
+			width: 20%;
+			background-color: aqua;
+		}
+
 		.nombre{
 			width: 60%;
-			/* margin-top: 1.5%; */
+			background-color: bisque;
+			text-align: center;
+			
+		}
+		h1{
+			margin: auto;
 			vertical-align: middle;
-		
-			/* padding: 0%;	 */
+
+		}
+		#botones{
+			width: 20%;
+			background-color: brown;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.boton-login{
-			display: block;
-			text-align: center;
-			margin-top: 20px;
-	
-		}
-
-		.buscador{  
 			margin-top: 20px;
 		}
-		
-		
-		h1{
-			text-align: center;
-		}
-
 		
 	</style>
   </head>
@@ -75,7 +72,7 @@
 	<div class="nombre">
 		<h1>NOMBRE</h1>
 	</div>
-	<div>
+	<div id="botones">
 		<div class="buscador">
 			<input type="search" name="busquedamusica" buscador><input type="button" value="buscar"></div>
 		<div class="boton-login">
