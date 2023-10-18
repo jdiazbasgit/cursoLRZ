@@ -1,47 +1,79 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
-	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de profe</title>
-	 <style>
-		#contenedor div{
-			width: 33%
-		}
-		#contenedor{
-			display: flex;
-			flex-direction: row;
-			flex-wrap: nowrap;
-			justify-content: center;
-			flex-shrink: 0;
-			
-		}
-		h1{
-			background-color: red;
-			text-align: center;
-		}
-	 </style>
-  </head>
-  <body>
-<div id="contenedor">
-	<div style="background-color: rgb(227, 215, 250);width: 25%;"><h1>uno</h1></div>
-	<div style="background-color: rgb(250, 231, 215);width: 50%;"><h1>dos</h1></div>
-	<div style="background-color: rgb(215, 250, 218);width: 25%;"><h1>tres</h1></div>
-	<!--<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div>
-	<div style="background-color: rgb(250, 231, 215);">dos</div>
-	<div style="background-color: rgb(215, 250, 218);">tres</div>
-	<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div><div style="background-color: antiquewhite;">uno</div>
-	<div style="background-color: rgb(250, 231, 215);">dos</div>
-	<div style="background-color: rgb(215, 250, 218);">tres</div>
-	<div style="background-color: rgb(222, 215, 250);">cuatro</div>
-	<div style="background-color: rgb(250, 215, 215);">cinco</div>-->
+<html lang="ES-es"> <!--Inicio de la página-->
 
+<head> <!--Inicio del HEAD-->
+    <meta charset="utf-8" />
+    <meta name="Description" content="Descripcion de la pagina" />
+    <meta name="Keywords" content="Palabras clave, separadas por comas" />
+    <title>Pagina de Nacho</title>
+    <style>
+        .cabecera {
+            display: flex;
+            align-items: center;
+        }
 
-</div>
-   
-    
+        .imagen {
+            width: 10%;
+
+        }
+        .figure{
+            margin: 0px;
+            padding: 0px;
+            height: 80px
+        }
+
+        .nombre {
+            background-color: rgb(108, 107, 107);
+            color: aliceblue;
+            text-align: center;
+            width: 70%;
+
+        }
+
+        .loging {
+            width: 20%;
+            
+
+        }
+
+        #button {
+
+            
+        }
+
+        #busacar {
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <div class="imagen">
+                <figure class="figure">
+                    <img src="img/IMG_6382.JPG" alt="No se muestra la pagina" width="150px" height="80px">
+                </figure>
+            </div>
+            <div class="nombre">
+                <h1>Parsear temas</h1>
+            </div>
+            <div class="loging">
+                <input type="search">
+                <button id="buscar">Buscar</button>
+            <div>
+                <button id="button">Login</button>
+            </div>
+
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
+
 </html>
