@@ -7,7 +7,7 @@ function ver(botonParaPulsar) {
     h1Nuevo.innerHTML = "has pulsado el boton"
     divContenedor.classList.add("bg-danger")
     divContenedor.appendChild(h1Nuevo)
-    // var boton=document.querySelector("#boton")
-    boton.classList.remove("bg-danger")
-    boton.classList.add("bg-success")
+    //var boton=document.querySelector("#boton")
+    botonParaPulsar.classList.remove("bg-danger")
+    botonParaPulsar.classList.add("bg-success")
 }
