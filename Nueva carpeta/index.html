@@ -1,15 +1,112 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
-	<meta name="Keywords" content="Palabras clave, separadas por comas" />
-	<title>Pagina de profe</title>
-	 
-  </head>
-  <body>
+<html lang="ES-es"> <!--Inicio de la página-->
 
+<head> <!--Inicio del HEAD-->
+    <meta charset="utf-8" />
+    <meta name="Description" content="Descripcion de la pagina" />
+    <meta name="Keywords" content="Palabras clave, separadas por comas" />
+    <title>Pagina de profe</title>
+    <style>
+        header {
+            background-color: #fabada;
+            margin: 10px;
+           display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            height: 100px;
+         
+            
+        }
+        .ancho{
+            vertical-align: middle;
+            display: inline-block;
+            width: 33%;
+            align-items: center;
+            text-align: center;
+            
+        }
+        .oculto{
+            display:none
+        }
+        .visible{
+            display:block
+        }
+
+       header div  div {
+            align-items: center;
+            text-align: center;
+            width: fit-content;
+            background-color: #cacaca;
+            float: left;
+        }
+        
+
+        
+
+        span {
+            background-color: #cacaca;
+            display: block;
+        }
+        section {
+		display: grid;
+	  grid-template-columns: 550px ;
+	  grid-template-rows: 100px 100px;
+}
+    </style>
    
+</head>
+
+<body>
+    <header>
+        
+        <div class="ancho">
+            <div>uno</div>
+        </div>
+        <div class="ancho">
+            <div>dosgbfdghdgfhfghfgdgfh</div>
+        </div>
+        <div class="ancho">
+            <div><button id="boton">pulsame</button></div>
+            <div class="oculto" id="menu">
+            <ul>
+                <li>menu 1</li>
+                <li>menu 2</li>
+                <li>mwnu3 </li>
+            </ul>
+            </div>
+        </div>
+        
+    </header>
     
+
+    <span>uno</span>
+    <span >dos</span>
+    <span>tres</span>
+    <span>cuatro</span>
+    <span>cinco</span>
+
+
+    <div style="background-color: aquamarine;">
+        <section>
+            <!-- ítems del grid -->
+          <article>Item 1 sdfgsdagdsfgsdfgfdsg</article>
+          <article>Item 2</article>
+          <article>Item 3</article>
+    </section>
+    </div>
+
 </body>
+<script>
+       
+    document.querySelector("#boton").addEventListener("click",function(){
+    if( document.querySelector("#menu").classList.contains("oculto")){
+     document.querySelector("#menu").classList.add("visible")
+     document.querySelector("#menu").classList.remove("oculto")
+    }
+    else{
+        document.querySelector("#menu").classList.remove("visible")
+     document.querySelector("#menu").classList.add("oculto")
+    }
+     })
+ </script>
 </html>
