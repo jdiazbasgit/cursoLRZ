@@ -10,4 +10,5 @@ function ver(botonParaPulsar) {
     //var boton=document.querySelector("#boton")
     botonParaPulsar.classList.remove("bg-danger")
     botonParaPulsar.classList.add("bg-success")
+
 }
