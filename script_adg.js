@@ -11,3 +11,16 @@ function ver(botonParaPulsar) {
     botonParaPulsar.classList.remove("bg-danger")
     botonParaPulsar.classList.add("bg-success")
 }
+
+var edad=15
+
+if(edad<=15)
+{
+    let edad=58
+    console.log("dentro edad vale:" +edad)
+}
+// edad=edad+1
+edad++
+console.log("fuera edad vale:"+edad)
+
+  
