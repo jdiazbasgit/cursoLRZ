@@ -62,18 +62,22 @@ var ver = (botonParaPulsar) => {
             console.log(e[i])
 
     })
+    
+    
+}
+//function verNumeros(fin){}
+let verNumeros=(fin)=>{
     let divEjercicio1 = document.querySelector("#ejercicio1")
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < fin; i++) {   
         let h1 = document.createElement("h1")
-        h1.classList.add("text-center")
-        if (i <= 50 && i % 2 == 0) { 
-            h1.innerHTML = i
-            h1.classList.add("bg-danger") 
+        h1.innerHTML = i  
+        if ((i <= fin/2) && (i % 2 == 0)) {          
+            h1.classList.add("text-center","bg-danger")
+            divEjercicio1.appendChild(h1)
         }
-        if (i > 50 && i % 2 != 0) {
-            h1.innerHTML = i
-            h1.classList.add("bg-success")
-        }
-    divEjercicio1.appendChild(h1)
+        if (i > fin/2 && i % 2 != 0) {          
+            h1.classList.add("text-center","bg-success")
+            divEjercicio1.appendChild(h1)
+        }              
     }
 }
