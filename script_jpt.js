@@ -56,4 +56,3 @@ let contador=0;
         numeros2.forEach(function(e){//le agrego los valores de la variable numeros2 a "e"
             console.log(`elemento dentro del foreach es: ${e+100}`)//a cada valor de numeros2 que le pase a "e" le sumo 100
         })
-    }
