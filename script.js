@@ -20,7 +20,7 @@ if(edad<=15)
     /*let edad=58
     console.log("dentro edad vale:"+edad)*/
 }
-console.log("slaario="+salario)
+console.log("salario="+salario)
 edad++
 console.log("fuera edad vale:"+edad)
 
@@ -30,6 +30,7 @@ for(let i=0;i<10;i++){
     nombre="mi nombre es\"javi\""
     n=`mi nombre es "javier"`
         console.log(`valor de i: ${i}`)
+
 }
 
 if(i % 2 !=0){
