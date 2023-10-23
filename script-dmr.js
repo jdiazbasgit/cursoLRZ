@@ -13,48 +13,55 @@
     botonParaPulsar.classList.add("bg-success")
 }
 
-var edad=14 
-var salario=50
-if(edad<=15)
-{
-    salario=20
-    /*let edad=58
-    console.log("dentro edad vale:"+edad)*/
-}
-console.log("slaario="+salario)
+var edad = 19
+var salario = 50
+if (edad <= 15)
+    salario = 20
+let edad1 = 58
+console.log("dentro edad vale:" + edad1)
+
+
+
+console.log("salario=" + salario)
 edad++
-console.log("fuera edad vale:"+edad)
+console.log("fuera edad vale:" + edad)
 
-//for(valor de inicio;condicion;incremento o decremento)
-i=0
-for(let i=0;i<10;i++){
-    nombre="mi nombre es\"javi\""
-    n=`mi nombre es "javier"`
+//for(valor de inicio;condición;incremento o decremento)
+let contador = 0;
+for (let i = 0; i < 100; i++) {
+    //nombre=" mi nombre es \"javier\""
+    // n=`mi nombre es "javier"`
+
+    if (i % 2 != 0) {
         console.log(`valor de i: ${i}`)
+        contador++
+    }
 }
+console.log(`el numero de elemntos es ${contador}`)
 
-if(i % 2 !=0){
-    console.log(`valor de i: ${i}`)
-    contador++
+let numeros = new Array()
+let numeros1 = []
+if (true) {
+    let numeros = 3
 }
-
-//arrays 
-
-let numeros=new Array()
-let numeros1=[]
-if(true){
-    let numeros=3 
-}
-let numeros2=[3,6,5,7,9,34]
-numeros2[5]=15
+let numeros2 = [
+   [3, 6, 6, 6, 6, 5] ,
+    [7, 9, 34]
+]
+// numeros2[5] = true
+numeros2[1][2]=316
+console.log(`longitud:${numeros2.length}`)
 console.log(numeros)
 console.log(numeros1)
 console.log(numeros2)
-for(i=0;i<numeros.length;i++)
-console.log(`valor del array: ${numeros2[i]}`)
-numeros2.forEach(function(elemento){
-    console.log(`elemento dentro del foreach es: $(elemento+100)`)
-})
+for (i = 0; i < numeros2.length; i++)
+    console.log(`valor del array: ${numeros2[i]}`)
 
+    numeros2.forEach( (e) =>{
+        console.log(e)
+        for (i = 0; i < e.length; i++)
+            console.log(e[i])
 
-//arrow functioni
+        })
+
+    
