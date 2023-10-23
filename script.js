@@ -1,8 +1,9 @@
 
 
-function ver(botonParaPulsar) {
+//function ver(botonParaPulsar) {
+    var ver=(botonParaPulsar)=>{
     console.log(botonParaPulsar.classList)
-   var divContenedor=document.querySelector("#divContenedor")
+    var divContenedor = document.querySelector("#divContenedor")
     var h1Nuevo = document.createElement("h1")
     h1Nuevo.innerHTML = "has pulsado el boton"
     divContenedor.classList.add("bg-danger")
