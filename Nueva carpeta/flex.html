@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio de flex</title>
+  <style>
+    body{
+      margin: 0 auto;
+    }
+    main{
+      /* background-color: greenyellow; */
+
+    }
+nav{
+  width: 100%;
+  justify-content: center;
+
+}
+    #contenedor {
+      display:flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+
+    }
+
+
+    #logo{
+      width: 15%;
+    }
+#central{
+  width: 65%;
+  /* background-color: coral; */
+  color: #5e55c9;
+  text-align: center;
+
+}
+#login{
+  width: 20%;
+}
+#logear{
+
+  margin-top: 30px;
+}
+  </style>
+</head>
+<body>
+
+<header>
+
+  <main>
+    <nav>
+      <div id="contenedor">
+        <div id="logo">          
+          <img src="dmr_logo.png" alt="" title="logotipo dmr_logo" />
+        </div>
+        <div id="central"><h1>DMR SOLUCIONES INFORMÁTICAS</h1></div>
+        <div id="login">
+          <div id="busqueda">
+            <input type="search" name="busqueda" /> 
+            <input type="submit" value="Buscar" />
+          <div>
+          <div id="logear">
+              <button id="botonLogin"><a href="#">LOGIN</a></button>
+          </div>
+        </div>        </div>
+
+    </nav>
+  </main>
+</header>
+
+
+
+</body>
+</html>
