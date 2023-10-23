@@ -1,7 +1,7 @@
 
 
 //function ver(botonParaPulsar) {
-    var ver=(botonParaPulsar)=>{
+var ver = (botonParaPulsar) => {
     console.log(botonParaPulsar.classList)
     var divContenedor = document.querySelector("#divContenedor")
     var h1Nuevo = document.createElement("h1")
@@ -44,11 +44,11 @@
         let numeros = 3
     }
     let numeros2 = [
-       [3, 6, 6, 6, 6, 5] ,
+        [3, 6, 6, 6, 6, 5],
         [7, 9, 34]
     ]
-   // numeros2[5] = true
-   numeros2[1][2]=316
+    // numeros2[5] = true
+    numeros2[1][2] = 316
     console.log(`longitud:${numeros2.length}`)
     console.log(numeros)
     console.log(numeros1)
@@ -56,11 +56,24 @@
     for (i = 0; i < numeros2.length; i++)
         console.log(`valor del array: ${numeros2[i]}`)
 
-    numeros2.forEach( (e) =>{
+    numeros2.forEach((e) => {
         console.log(e)
         for (i = 0; i < e.length; i++)
             console.log(e[i])
 
     })
+    let divEjercicio1 = document.querySelector("#ejercicio1")
+    for (let i = 0; i < 100; i++) {
+        let h1 = document.createElement("h1")
+        h1.classList.add("text-center")
+        if (i <= 50 && i % 2 == 0) { 
+            h1.innerHTML = i
+            h1.classList.add("bg-danger") 
+        }
+        if (i > 50 && i % 2 != 0) {
+            h1.innerHTML = i
+            h1.classList.add("bg-success")
+        }
+    divEjercicio1.appendChild(h1)
+    }
 }
-
