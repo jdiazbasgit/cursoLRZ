@@ -23,7 +23,7 @@ for (i = 1; i <= 50; i++) {
         let contenedorpares = document.querySelector("#contenedorpares");
         let h1Nuevo = document.createElement("h1");
         h1Nuevo.innerHTML = i;
-        contenedorpares.classList.add("text-center","bg-danger");
+        h1Nuevo.classList.add("text-center","bg-danger");
         contenedorpares.appendChild(h1Nuevo);
     }
 }
@@ -33,7 +33,7 @@ for (i = 51; i <= 100; i++) {
         let contenedorimpares = document.querySelector("#contenedorimpares");
         let h1Nuevo = document.createElement("h1");
         h1Nuevo.innerHTML = i;
-        contenedorimpares.classList.add("text-center","bg-success");
+        h1Nuevo.classList.add("text-center","bg-success");
         contenedorimpares.appendChild(h1Nuevo);
     }
 }
