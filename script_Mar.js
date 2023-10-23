@@ -17,18 +17,16 @@
 //    }
 //    console.log("fuera edad vale:"+edad);
 //}
-for (i = 1; i <= 50; i++) {
-    if ((i % 2) == 0) {
+for (i = 1; i <= 100; i++) {
+    if (i%2==0 && i<=50) {
         console.log(i);
         let contenedorpares = document.querySelector("#contenedorpares");
         let h1Nuevo = document.createElement("h1");
         h1Nuevo.innerHTML = i;
-        h1Nuevo.classList.add("text-center","bg-danger");
+        h1Nuevo.classList.add("text-center","bg-danger"); //añade la clase a 
         contenedorpares.appendChild(h1Nuevo);
     }
-}
-for (i = 51; i <= 100; i++) {
-    if ((i % 2) != 0) {
+    if (i%2!=0 && i>50) {
         console.log(i);
         let contenedorimpares = document.querySelector("#contenedorimpares");
         let h1Nuevo = document.createElement("h1");
