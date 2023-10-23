@@ -17,4 +17,5 @@ function ver(botonParaPulsar) {
         console.log("dentro edad vale;" + edad)
     }
     console.log("fuera edad vale;" + edad)
+    //comilla simple control + ?
 }
