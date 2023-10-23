@@ -27,7 +27,7 @@ function ver(botonParaPulsar) {
 
 //for (valor de inicio; condicion; incremento o decremento)
 let contador=0;
-    for (let i=0; i<10)
+    for (let i=0 ; i<10;)
 
 
 
@@ -56,3 +56,4 @@ let contador=0;
         numeros2.forEach(function(e){//le agrego los valores de la variable numeros2 a "e"
             console.log(`elemento dentro del foreach es: ${e+100}`)//a cada valor de numeros2 que le pase a "e" le sumo 100
         })
+
