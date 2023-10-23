@@ -23,8 +23,36 @@ function ver(botonParaPulsar) {
 
 //for(valor de inicio; condicion que tengo  que cumplir;incremento o decremento)
 
-for(let i=0;i<10;i++){
+/*for(let i=0;i<10;i++){
     console.log(`valor de i: ${i}`)
 
-}
+}*/
 
+/*for (let i = 0; i < 50; i++)
+    if (i % 2 != 0) {
+        console.log(`valor de impares: ${i}`)
+
+
+    }
+for (let i = 50; i <= 100; i++)
+    if (i % 2 == 0) {
+        console.log(`valor de pares: ${i}`)
+
+
+}*/
+
+let verNumeros=(fin)=>{
+    let divEjercicio1 = document.querySelector("#ejercicio1")
+    for (let i = 0; i < fin; i++) {   
+        let h1 = document.createElement("h1")
+        h1.innerHTML = i  
+        if ((i <= fin/2) && (i % 2 == 0)) {          
+            h1.classList.add("text-center","bg-danger")
+            divEjercicio1.appendChild(h1)
+        }
+        if (i > fin/2 && i % 2 != 0) {          
+            h1.classList.add("text-center","bg-success")
+            divEjercicio1.appendChild(h1)
+        }              
+    }
+}
