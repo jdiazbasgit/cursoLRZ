@@ -10,4 +10,12 @@ function ver(botonParaPulsar) {
     //var boton=document.querySelector("#boton")
     botonParaPulsar.classList.remove("bg-danger")
     botonParaPulsar.classList.add("bg-success")
+
+    var edad=15
+    if (edad<=15)
+    {
+        let edad=58
+        console.log(" dentro edad vale:"+edad)
+    }
+    console.log("fuera edad vale:"+edad)
 }
