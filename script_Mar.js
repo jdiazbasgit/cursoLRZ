@@ -20,20 +20,20 @@
 for (i = 1; i <= 50; i++) {
     if ((i % 2) == 0) {
         console.log(i);
-        var contenedorpares = document.querySelector("#contenedorpares");
-        var h1Nuevo = document.createElement("h1");
+        let contenedorpares = document.querySelector("#contenedorpares");
+        let h1Nuevo = document.createElement("h1");
         h1Nuevo.innerHTML = i;
-        contenedorpares.classList.add("bg-danger");
+        contenedorpares.classList.add("text-center","bg-danger");
         contenedorpares.appendChild(h1Nuevo);
     }
 }
 for (i = 51; i <= 100; i++) {
     if ((i % 2) != 0) {
         console.log(i);
-        var contenedorimpares = document.querySelector("#contenedorimpares");
-        var h1Nuevo = document.createElement("h1");
+        let contenedorimpares = document.querySelector("#contenedorimpares");
+        let h1Nuevo = document.createElement("h1");
         h1Nuevo.innerHTML = i;
-        contenedorimpares.classList.add("bg-success");
+        contenedorimpares.classList.add("text-center","bg-success");
         contenedorimpares.appendChild(h1Nuevo);
     }
 }
