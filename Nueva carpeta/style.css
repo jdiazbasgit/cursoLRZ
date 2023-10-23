@@ -52,3 +52,7 @@ input{
     border-radius: 2px;
     
 }
+
+div {
+    width: 300px;
+}
