@@ -22,18 +22,26 @@ function ver(botonParaPulsar) {
 }
 //for(valor de inicio; condicion incremento o decremento)
 
-    for(let i=0; i<100;i++){
-        if(i % 2 != 0 ){console.log(`valor de i: ${i}`)
-        }
-    }
+// for (let i = 0; i < 10; i++) {
+//     console.log(`valor de i: ${i}`); 
+// }
 
- let numeros = new Array()
- let numeros1 = []
- let numeros2 = [3,6,5,34,25,8]
+// for (let i = 0; i < 10; i+2) {
+//     console.log(`valor de i: ${i}`); 
+// }
 
- console.log(numeros); 
- console.log(numeros1);
- console.log(numeros2);
+    // for(let i=0; i<100;i++){
+    //     if(i % 2 != 0 ){console.log(`valor de i: ${i}`)
+    //     }
+    // }
+
+//  let numeros = new Array()
+//  let numeros1 = []
+//  let numeros2 = [3,6,5,34,25,8]
+
+//  console.log(numeros); 
+//  console.log(numeros1);
+//  console.log(numeros2);
 
  // del 1 al 100 pares y los impares
 
