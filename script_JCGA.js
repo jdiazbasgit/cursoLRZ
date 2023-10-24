@@ -56,26 +56,30 @@ numeros2.forEach(function (elemento) {
 })
 
 let verNumeros = (fin) => {
-    let divEjercicio1 = document.querySelector("#numeros")
-
+// creas una variable con el valor final de la serie
+    let divEjercicio1 = document.querySelector("#ejercicio1")
+// cojes lo que tengas en ejercicio1 y lo metes en la variable divEjercicio1
     for (let i = 0; i < fin; i++) {
-        if (i <= 50 && i % 2 == 0) {
-            // console.log(`los pares menores de 50 son: ${i}`). En lugar de por consola lo voy a hacer en el html
-            let h1Nuevo = document.createElement("h1")
-            h1Nuevo.innerHTML = i
-            if ((i <= fin / 2) && (i % 2 == 0)) {
+        let h1Nuevo = document.createElement("h1")
+        // crea una variable h1Nuevo cuyo contenido va a ser un h1
+        h1Nuevo.innerHTML = i
+        // rellena ese h1 con el valor de i
+
+        if ((i <= fin / 2) && (i % 2 == 0)) {
+                // si i es menor que la mitad de "fin" y es par
                 h1Nuevo.classList.add("bg-danger", "text-center")
+                // da a h1Nuevo esas caracteristicas bg color y centrado
                 divEjercicio1.appendChild(h1Nuevo)
+                // escribe el h1Nuevo dentro del contenedor divEjercicio1
             }
-            if ((i > fin / 2) && (i % 2 != 0)) {
+        if ((i > fin / 2) && (i % 2 != 0)) {
+            // para todos los impares superiores a la mitad del limite
                 h1Nuevo.classList.add("bg-success", "text-center")
                 divEjercicio1.appendChild(h1Nuevo)
             }
         }
 
     }
-
-}
 
 
 
