@@ -62,22 +62,111 @@ var ver = (botonParaPulsar) => {
             console.log(e[i])
 
     })
-    
-    
+
+
 }
-//function verNumeros(fin){}
-let verNumeros=(fin)=>{
+//function verNumeros(){
+let verNumeros = () => {
     let divEjercicio1 = document.querySelector("#ejercicio1")
-    for (let i = 0; i < fin; i++) {   
+    for (let i = 0; i < 100; i++) {
         let h1 = document.createElement("h1")
-        h1.innerHTML = i  
-        if ((i <= fin/2) && (i % 2 == 0)) {          
-            h1.classList.add("text-center","bg-danger")
+        h1.innerHTML = i
+        if ((i <= 50) && (i % 2 == 0)) {
+            h1.classList.add("text-center", "bg-danger")
             divEjercicio1.appendChild(h1)
         }
-        if (i > fin/2 && i % 2 != 0) {          
-            h1.classList.add("text-center","bg-success")
+        if (i > 50 && i % 2 != 0) {
+            h1.classList.add("text-center", "bg-success")
             divEjercicio1.appendChild(h1)
-        }              
+        }
+    }
+
+
+}
+
+//function verNumeros1(){
+let verNumeros1 = () => {
+    let final = parseInt(document.querySelector("#cantidad").value)
+    let divEjercicio1 = document.querySelector("#ejercicio1")
+    for (let i = 0; i < final; i++) {
+        let h1 = document.createElement("h1")
+        h1.innerHTML = i
+        if ((i <= final / 2) && (i % 2 == 0)) {
+            h1.classList.add("text-center", "bg-danger")
+            divEjercicio1.appendChild(h1)
+        }
+        if (i > final / 2 && i % 2 != 0) {
+            h1.classList.add("text-center", "bg-success")
+            divEjercicio1.appendChild(h1)
+        }
+    }
+
+
+}
+function verNumeros2(fin) {
+    //let verNumeros=(fin)=>{
+    let divEjercicio1 = document.querySelector("#ejercicio1")
+    for (let i = 0; i < fin; i++) {
+        let h1 = document.createElement("h1")
+        h1.innerHTML = i
+        if ((i <= fin / 2) && (i % 2 == 0)) {
+            h1.classList.add("text-center", "bg-danger")
+            divEjercicio1.appendChild(h1)
+        }
+        if (i > fin / 2 && i % 2 != 0) {
+            h1.classList.add("text-center", "bg-success")
+            divEjercicio1.appendChild(h1)
+        }
+    }
+
+
+}
+
+//function suma(... numeros){
+let suma = (...numeros) => {
+    let salida = 0
+    numeros.forEach((numero) => {
+        salida += numero
+    })
+    return salida;
+
+}
+
+console.log(suma(3, 4))
+console.log(suma(3, 4, 56, 78, 5, 6, 7))
+console.log(suma(3, 4, 1234, 89, 6, 8, 8, 4, 3, 2, 3, 4, 54, 5, 6, 67, 7))
+console.log(suma(3, 4, 4))
+console.log(suma(3))
+console.log(suma())
+
+let texto = "19230456789"
+console.log("posicion:" + texto.indexOf("9"))
+console.log("posicion final:" + texto.lastIndexOf("9"))
+
+/*
+while(condicion){
+
+
+}
+
+do{
+
+}while(condicion)
+
+*/
+let numerosPrimitiva=[6,5,1,4,7,9,2]
+let termine = false
+//while(termine==false)
+console.log("antes:" + numerosPrimitiva)
+while (!termine) {
+    termine = true
+    for (let i = 0; i < numerosPrimitiva.length - 1; i++) {
+        if (numerosPrimitiva[i] > numerosPrimitiva[i + 1]) {
+            termine = false
+            let temporal = numerosPrimitiva[i + 1]
+            numerosPrimitiva[i + 1] = numerosPrimitiva[i]
+            numerosPrimitiva[i] = temporal
+        }
     }
 }
+console.log("despues:" + numerosPrimitiva)
