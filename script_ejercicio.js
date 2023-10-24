@@ -109,9 +109,8 @@ console.log("Después: " + numPri)
 
 
 
-var cantidadNumeros = 6;
 var myArray = []
-while (myArray.length < cantidadNumeros) {
+while (myArray.length < 6) {
     function numAle(min, max) {
         min = Math.ceil(1);
         max = Math.floor(49);
