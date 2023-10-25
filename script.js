@@ -154,19 +154,29 @@ do{
 }while(condicion)
 
 */
-let numerosPrimitiva=[6,5,1,4,7,9,2]
-let termine = false
-//while(termine==false)
-console.log("antes:" + numerosPrimitiva)
-while (!termine) {
-    termine = true
-    for (let i = 0; i < numerosPrimitiva.length - 1; i++) {
-        if (numerosPrimitiva[i] > numerosPrimitiva[i + 1]) {
-            termine = false
-            let temporal = numerosPrimitiva[i + 1]
-            numerosPrimitiva[i + 1] = numerosPrimitiva[i]
-            numerosPrimitiva[i] = temporal
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 console.log("despues:" + numerosPrimitiva)
