@@ -68,19 +68,21 @@
 
 let numerosPrimi = new Array();
 
-function dameNumero() {
+function dameNumero() { //dameNumero = ()=>{
     let numero = 0;
-    while (numero == 0 || numero >= 50) {
+    while (numero == 0 || numero > 49) {
         valido = true;
-        numero = Math.trunc(Math.random() * 100);
+        numero = Math.trunc(Math.random() * 100); //eq: Math.floor(Math.random()*49 +1);
     }
     return numero;
 }
 
-for (i = 0; i < 6; i++) {
-    if (!numerosPrimi.includes[i]) { //mal: repite los números
-        numerosPrimi[i] = dameNumero();
-    }
+let max=6;
+while (numerosPrimi.length < max) {
+    let num = dameNumero();
+    if (!numerosPrimi.includes(num)) // equivalente: if (numerosPrimi.indexOf(num) === -1)
+        numerosPrimi.push(num);
+    
 }
 
 let termine = false;
