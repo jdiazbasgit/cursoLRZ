@@ -200,15 +200,13 @@ console.log("la longitud de prueba es: " + longitud1)
 let numerosPrimitiva1 = new Array();
 
 let numeroNuevo = () => {
-    let longitud = numerosPrimitiva1.length
-    while (longitud < 7) {
+    while (numerosPrimitiva1.length < 7) {
         let nuevoNumero = (Math.random() * 100).toFixed(0);
-        if ((nuevoNumero <= 49) && (numerosPrimitiva1.indexOf(nuevoNumero) = -1)) {
+        if ((nuevoNumero >0 && nuevoNumero <= 49) && (numerosPrimitiva1.indexOf(nuevoNumero) === -1)) {
             numerosPrimitiva1.push(nuevoNumero)
         }
     }
 }
-
+numeroNuevo(); 
 console.log("los numeros ganadores son:" + numerosPrimitiva1)
-
 
