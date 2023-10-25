@@ -210,3 +210,6 @@ let numeroNuevo = () => {
 numeroNuevo(); 
 console.log("los numeros ganadores son:" + numerosPrimitiva1)
 
+let h1 = document.createElement("h1")
+h1.innerHTML= numerosPrimitiva1
+document.querySelector("#primitiva").appendChild(h1)
