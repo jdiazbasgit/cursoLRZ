@@ -41,18 +41,36 @@ for (let i = 50; i <= 100; i++)
 
 }*/
 
-let verNumeros=(fin)=>{
+let verNumeros = (fin) => {
     let divEjercicio1 = document.querySelector("#ejercicio1")
-    for (let i = 0; i < fin; i++) {   
+    for (let i = 0; i < fin; i++) {
         let h1 = document.createElement("h1")
-        h1.innerHTML = i  
-        if ((i <= fin/2) && (i % 2 == 0)) {          
-            h1.classList.add("text-center","bg-danger")
+        h1.innerHTML = i
+        if ((i <= fin / 2) && (i % 2 == 0)) {
+            h1.classList.add("text-center", "bg-danger")
             divEjercicio1.appendChild(h1)
         }
-        if (i > fin/2 && i % 2 != 0) {          
-            h1.classList.add("text-center","bg-success")
+        if (i > fin / 2 && i % 2 != 0) {
+            h1.classList.add("text-center", "bg-success")
             divEjercicio1.appendChild(h1)
-        }              
+        }
     }
 }
+
+let numerosPrimitiva=[5, 4, 9, 3, 7, 2, 1]
+let termine=false
+//while (termine == true)
+console.log ("antes:" +numerosPrimitiva)
+while (!termine) {
+    termine=true
+    for (let i=0; i<numerosPrimitiva.length-1; i++){
+        if (numerosPrimitiva[i]>numerosPrimitiva[i+1]){
+            termine=false
+            let termoral=numerosPrimitiva[i+1]
+            numerosPrimitiva[i+1]=numerosPrimitiva[i]
+            numerosPrimitiva[i]=termoral
+        }
+    }
+}
+console.log ("despues:" +numerosPrimitiva)
+
