@@ -44,12 +44,11 @@ console.log("despues:" + numerosPrimitiva)
 
 
 
-
 function NumerosPrimitiva() {
     let numeros = [];
-    while(numeros.length < 6) {
+    while (numeros.length < 6) {
         let numero = Math.floor(Math.random() * 49) + 1;
-        if(!numeros.includes(numero)) {
+        if (!numeros.includes(numero)) {
             numeros.push(numero);
         }
     }
@@ -58,4 +57,7 @@ function NumerosPrimitiva() {
     return numeros;
 }
 
-console.log(NumerosPrimitiva());   // Ejemplo: [7, 26, 35, 12, 48, 19, 3]
+document.write("NUMEROS PRIMITIVA " + NumerosPrimitiva());
+console.log("NUMEROS PRIMITIVA " + NumerosPrimitiva());   // Ejemplo: [7, 26, 35, 12, 48, 19, 3]
+
+
