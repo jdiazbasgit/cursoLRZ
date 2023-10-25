@@ -184,21 +184,31 @@ console.log("despues de ordenar:" + numerosPrimitiva)
 
 // otro de lo mismo....Calcular aleatoriamente los numeros de la primitiva (1 a 49) y ordénalo. Necesito "indexOf" (me dice si está o no en el array), para que no se repita; necesito incluir en un array, "push"; necesito mirar la longitud del array y que sea menor que 7; necesito generar un random (que es entre 0 y 1); necesito redondear el nuemro aleatorio (tofixed(0))
 
-let numerosNuevosPrimitiva = []
+// verificacion de funcionamiento de cada una de las funciones
+let prueba = []
+prueba.push(5)
+let random = (Math.random() * 100).toFixed(0)
+prueba.push(random)
+console.log("si el numero incluido es 5 y random prueba será " + prueba)
+incluido1 = prueba.indexOf(4)
+console.log("el rdo de comprobar si 4 esta incluido es " + incluido1)
+let longitud1 = prueba.length
+console.log("la longitud de prueba es: " + longitud1)
+
+// Ahora el ejercicio en si
+
+let numerosPrimitiva1 = new Array();
+
 let numeroNuevo = () => {
-    while (numerosNuevosPrimitiva.length < 7) {
-        let nuevoNumero = Math.random().toFixed(0) * 100;
-        if (nuevoNumero > 49) {
-            nuevoNumero = Math.random().toFixed(0) * 100
+    let longitud = numerosPrimitiva1.length
+    while (longitud < 7) {
+        let nuevoNumero = (Math.random() * 100).toFixed(0);
+        if ((nuevoNumero <= 49) && (numerosPrimitiva1.indexOf(nuevoNumero) = -1)) {
+            numerosPrimitiva1.push(nuevoNumero)
         }
-        if (numerosNuevosPrimitiva.indexOf(nuevoNumero) = !-1) {
-            numerosNuevosPrimitiva.push(nuevoNumero)
-        }
-
     }
-
 }
 
-console.log("los numeros ganadores son:" + numerosNuevosPrimitiva)
+console.log("los numeros ganadores son:" + numerosPrimitiva1)
 
 
