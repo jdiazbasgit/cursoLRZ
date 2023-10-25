@@ -15,11 +15,19 @@
 
 <body>
     <div class="container">
-        <button class="bg-danger" onclick="verNumeros(300)">PULSAME</button>
+        Cantidad:<input type="text" id="cantidad"><br>
+        <button class="bg-danger" onclick="verNumeros()">PULSAME PARA 100</button>
+        <button class="bg-danger" onclick="verNumeros1()">PULSAME PARA VALOR EN INPUT</button>
+
+        <button class="bg-danger" onclick="verNumeros2(300)">PULSAME PARA VALOR EN PARAMETRO</button>
+
+        <button class="bg-danger" onclick="verNumeros2(document.querySelector('#cantidad').value)">PULSAME PARA VALOR EN PARAMETROdesde input</button>
         <div id="ejercicio1"></div>
-    </div>
+   
     <div id="divContenedor">
     </div>
+    
+</div>
     
 </body>
 
