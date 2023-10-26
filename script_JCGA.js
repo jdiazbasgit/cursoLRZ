@@ -210,12 +210,52 @@ let calcularNumerosPrimitiva = () => {
         }
     }
     numeroNuevo();
-    // Para que me lo ordene con comando...
+    // Para que me lo ordene con comando...Si no, crearía una funcion para la parte de ordenar y la llamaría aquí.
     numerosPrimitiva1.sort((a,b) =>{
+    // le digo que compare el primero con el segundo (creo que restandolos) y luego los ordene
         return a - b} )
-    console.log("los numeros ganadores son:" + numerosPrimitiva1)
+    // Ordena de menor a mayor. Si puesieramos "b-a" ordenaría de mayor a menor
+
+        console.log("los numeros ganadores son:" + numerosPrimitiva1)
 
     let h1 = document.createElement("h1")
     h1.innerHTML = numerosPrimitiva1.join("-")
     document.querySelector("#primitiva").appendChild(h1)
 }
+
+// Vamos a ver el "switch". Es un multi"if"
+
+// creo una función (sin () porque solo recibe un parámetro). En condiciones normales escribiriamos "numero()" para que en el () recibiera un parametro
+
+    ejemploSwitch=numero=>{
+        let div=document.querySelector("#contenido")
+        let h1=document.createElement("h1")
+        switch(numero){
+            case 1:
+                h1.innerHTML="has pulsadoel boton uno"
+                break;
+            case 2:
+                h1.innerHTML="has pulsadoel boton dos"
+                break;  
+            case 3:
+                h1.innerHTML="has pulsadoel boton tres"
+                break;  
+            case 4:
+                h1.innerHTML="has pulsadoel boton cuatro"
+                break;
+                // si no pongo "break", salta este paso y ejecuta el siguiente. Es decir, si no pongo break en este, escribiría "has pulsado cinco"  
+            case 5:
+                h1.innerHTML="has pulsadoel boton cinco"
+                break;  
+            default:
+                h1.innerHTML="No has pulsado ningun boton del 1 al 5"
+
+
+        }
+        div.innerHTML = ""
+        div.appendChild(h1)
+
+    }
+
+
+
