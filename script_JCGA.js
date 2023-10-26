@@ -250,7 +250,6 @@ let calcularNumerosPrimitiva = () => {
             default:
                 h1.innerHTML="No has pulsado ningun boton del 1 al 5"
 
-
         }
         div.innerHTML = ""
         div.appendChild(h1)
