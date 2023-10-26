@@ -43,19 +43,24 @@ for (let i = 50; i <= 100; i++)
 
 // Ahora el ejercicio en si
 
+let calculoPrimitiva = () => {
+
 let numerosPrimitiva1 = [];
 
 let numeroNuevo = () => {
-    while (numerosPrimitiva1.length < 7) {
+    while (numerosPrimitiva1.length < 6) {
         let nuevoNumero = Math.floor(Math.random() * 49) + 1;
         if (numerosPrimitiva1.indexOf(nuevoNumero) === -1) {
             numerosPrimitiva1.push(nuevoNumero);
+            }
         }
     }
-};
+
 numeroNuevo();
-console.log("Los números ganadores son: " + numerosPrimitiva1);
+//console.log("Los números ganadores son: " + numerosPrimitiva1);
+numerosPrimitiva1.sort ((a, b) => {return a - b})
 let h1 = document.createElement("h1");
-h1.textContent = "Los números ganadores son: " + numerosPrimitiva1.join(", ");
-document.querySelector("#primitiva").innerHTML = "";
-document.querySelector("#primitiva").appendChild(h1);
+h1.textContent = "Los números ganadores son: " + numerosPrimitiva1.join(" - ");
+document.querySelector("#primitiva").innerHTML = ""; //limpiar html
+document.querySelector("#primitiva").appendChild(h1);//mete en h1 en el div del ID
+}
