@@ -196,20 +196,26 @@ let longitud1 = prueba.length
 console.log("la longitud de prueba es: " + longitud1)
 
 // Ahora el ejercicio en si
+let calcularNumerosPrimitiva = () => {
 
-let numerosPrimitiva1 = new Array();
 
-let numeroNuevo = () => {
-    while (numerosPrimitiva1.length < 7) {
-        let nuevoNumero = (Math.random() * 100).toFixed(0);
-        if ((nuevoNumero >0 && nuevoNumero <= 49) && (numerosPrimitiva1.indexOf(nuevoNumero) === -1)) {
-            numerosPrimitiva1.push(nuevoNumero)
+    let numerosPrimitiva1 = new Array();
+
+    let numeroNuevo = () => {
+        while (numerosPrimitiva1.length < 7) {
+            let nuevoNumero = (Math.random() * 100).toFixed(0);
+            if ((nuevoNumero > 0 && nuevoNumero <= 49) && (numerosPrimitiva1.indexOf(nuevoNumero) === -1)) {
+                numerosPrimitiva1.push(nuevoNumero)
+            }
         }
     }
-}
-numeroNuevo(); 
-console.log("los numeros ganadores son:" + numerosPrimitiva1)
+    numeroNuevo();
+    // Para que me lo ordene con comando...
+    numerosPrimitiva1.sort((a,b) =>{
+        return a - b} )
+    console.log("los numeros ganadores son:" + numerosPrimitiva1)
 
-let h1 = document.createElement("h1")
-h1.innerHTML= numerosPrimitiva1
-document.querySelector("#primitiva").appendChild(h1)
+    let h1 = document.createElement("h1")
+    h1.innerHTML = numerosPrimitiva1.join("-")
+    document.querySelector("#primitiva").appendChild(h1)
+}
