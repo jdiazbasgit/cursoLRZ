@@ -73,16 +73,16 @@ console.log("Después: " + numerosPrimitiva)
 // Generar 06 numeros aleatorios para jugar la primitiva
 
 function numAle1(min, max) {
-    min = Math.ceil(1);
-    max = Math.floor(49);
+    //min = Math.ceil(1);
+    //max = Math.floor(49);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
-let num1 = (numAle1())
-let num2 = (numAle1())
-let num3 = (numAle1())
-let num4 = (numAle1())
-let num5 = (numAle1())
-let num6 = (numAle1())
+let num1 = (numAle1(1, 49))
+let num2 = (numAle1(1, 49))
+let num3 = (numAle1(1, 49))
+let num4 = (numAle1(1, 49))
+let num5 = (numAle1(1, 49))
+let num6 = (numAle1(1, 49))
 
 
 let numPri = [num1, num2, num3, num4, num5, num6]  //Creo un array con n cantidad de valores
@@ -108,15 +108,15 @@ console.log("Después: " + numPri)
 //Define la cantidad de numeros aleatorios.
 
 
-
+function numAle(min, max) {
+    //min = Math.ceil(min); Se usa en el caso de que la entrada de valores puedan ser decimales y necesitemos convertirlo a entero
+    //max = Math.floor(max);Se usa en el caso de que la entrada de valores puedan ser decimales y necesitemos convertirlo a entero
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 var myArray = []
 while (myArray.length < 6) {
-    function numAle(min, max) {
-        min = Math.ceil(1);
-        max = Math.floor(49);
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    var numeroAleatorio = (numAle())
+    
+    var numeroAleatorio = (numAle(1, 49))
     var existe = false;
     for (var i = 0; i < myArray.length; i++) {
         if (myArray[i] == numeroAleatorio) {
@@ -129,7 +129,12 @@ while (myArray.length < 6) {
     }
 
 }
-//var numPri2 = [myArray]  //No hace falta declrar el array porque lo traigo de arriba listo con los 6 valores
+//numAle(5,10)
+
+
+
+
+//var numAle = [myArray]  //No hace falta declarar el array porque lo traigo de arriba listo con los 6 valores
 let ordenados = false // lo declaro false para que pueda pasar de la consulta del (while(!ordenados) y entrar al bucle "for" si no tendria que usar la condiciòn "do while"
 //while (termine==true)
 console.log("Array Antes:   " + myArray) // Muestrame por consola los valores antes de empezar a ordenarlos
@@ -139,13 +144,13 @@ while (!ordenados) // Mientras no !ordenados, es decir, sea false entonces entro
     for (let i = 0; i < myArray.length - 1; i++) {    //inicializo la variable i=0 y digo mientras que i sea menor a la longitud (length) de mi array -1 
         if (myArray[i] > myArray[i + 1]) {     //si cumplo la condicion que el valor de la posicion 1 de i es mayor que el numero de la posicion i+1, es que estan cambiados
             ordenados = false
-            let temporal2 = myArray[i + 1] //guardo el valor de i en un temporal
-            myArray[i + 1] = myArray[i]
-            myArray[i] = temporal2
+            let temporal2 = myArray[i + 1] //guardo el valor de i (la posición 1) en una variable temporal2
+            myArray[i + 1] = myArray[i] //a la posición 1 de mi array le doy el valor de la posición 2
+            myArray[i] = temporal2 // a la posición 2 le doy el valor de la posicion 1 que guarde en temporal2
         }
     }
 }
-console.log("Array Después: " + myArray)
-document.write("La primitiva de hoy es : " + myArray);
+console.log("Array Después: " + myArray.join(" ")) // el .join(" ") es para que el resultado del array que normalmente lo pone con comas, me lo separe por un espacio o si le pongo otras cosa entre los parentesis me los imprima al lado de los numeros
+document.write("La primitiva de hoy es : " + myArray.join("-"));// el .join("-") es para que el resultado del array que normalmente lo pone con comas, me lo separe por guiones o si le pongo otras cosa entre los parentesis me los imprima al lado de los numeros
 
 
