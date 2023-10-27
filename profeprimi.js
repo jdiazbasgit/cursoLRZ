@@ -18,7 +18,7 @@ let calcularNumerosPrimitiva = (longitudDelArray) => {
         }
     }
     numerosPrimitiva.sort((a, b) => {return a - b })
-    //ordenar(numerosPrimitiva)
+    //ordenar(numerosPrimitiva)esta funcion de la burbuja que esta mas abajo ya no hace falta comentarlo porque se usa sort
 
     let h1 = document.createElement("h1")
     //numerosPrimitiva.forEach(numero => {
@@ -33,7 +33,8 @@ let calcularNumerosPrimitiva = (longitudDelArray) => {
 }
 
 //function ordenar(matrizDeNumeros){
-let ordenar = (matrizDeNumeros) => {
+
+/* let ordenar = (matrizDeNumeros) => {
     let termine = false
     //while(termine==false)
 
@@ -49,5 +50,5 @@ let ordenar = (matrizDeNumeros) => {
         }
     }
 }
-
+*/
 calcularNumerosPrimitiva(6)

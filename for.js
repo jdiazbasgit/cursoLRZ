@@ -50,7 +50,7 @@ let numerosPrimitiva = [5,4,9,3,7,2,1]
 
     ///primitiva con random
 
-    let max = 49
+   //  let max = 49
       function getRandomInt() {
          let numerosAleatorios = []
 
