@@ -1,17 +1,15 @@
-
-
 function ver(botonParaPulsar) {
-    console.log(botonParaPulsar.classList)
-    var divContenedor = document.querySelector("#divContenedor")
-    var h1Nuevo = document.createElement("h1")
-    h1Nuevo.innerHTML = "has pulsado el boton"
-    divContenedor.classList.add("bg-danger")
-    divContenedor.appendChild(h1Nuevo)
-    //var boton=document.querySelector("#boton")
-    botonParaPulsar.classList.remove("bg-danger")
-    botonParaPulsar.classList.add("bg-success")
+  console.log(botonParaPulsar.classList);
+  var divContenedor = document.querySelector("#divContenedor");
+  var h1Nuevo = document.createElement("h1");
+  h1Nuevo.innerHTML = "has pulsado el boton";
+  divContenedor.classList.add("bg-danger");
+  divContenedor.appendChild(h1Nuevo);
+  //var boton=document.querySelector("#boton")
+  botonParaPulsar.classList.remove("bg-danger");
+  botonParaPulsar.classList.add("bg-success");
 
-    /*var edad = 15
+  /*var edad = 15
     if (edad <= 15) {
         let edad = 58
         console.log("dentro edad vale;" + edad)
@@ -19,7 +17,6 @@ function ver(botonParaPulsar) {
     console.log("fuera edad vale;" + edad)
     //comilla simple control + ?*/
 }
-
 
 //for(valor de inicio; condicion que tengo  que cumplir;incremento o decremento)
 
@@ -44,23 +41,25 @@ for (let i = 50; i <= 100; i++)
 // Ahora el ejercicio en si
 
 let calculoPrimitiva = () => {
+  let numerosPrimitiva1 = [];
 
-let numerosPrimitiva1 = [];
-
-let numeroNuevo = () => {
+  let numeroNuevo = () => {
     while (numerosPrimitiva1.length < 6) {
-        let nuevoNumero = Math.floor(Math.random() * 49) + 1;
-        if (numerosPrimitiva1.indexOf(nuevoNumero) === -1) {
-            numerosPrimitiva1.push(nuevoNumero);
-            }
-        }
+      let nuevoNumero = Math.floor(Math.random() * 49) + 1;
+      if (numerosPrimitiva1.indexOf(nuevoNumero) === -1) {
+        numerosPrimitiva1.push(nuevoNumero);
+      }
     }
+  };
 
-numeroNuevo();
-//console.log("Los números ganadores son: " + numerosPrimitiva1);
-numerosPrimitiva1.sort ((a, b) => {return a - b})
-let h1 = document.createElement("h1");
-h1.textContent = "Los números ganadores son: " + numerosPrimitiva1.join(" - ");
-document.querySelector("#primitiva").innerHTML = ""; //limpiar html
-document.querySelector("#primitiva").appendChild(h1);//mete en h1 en el div del ID
-}
+  numeroNuevo();
+  //console.log("Los números ganadores son: " + numerosPrimitiva1);
+  numerosPrimitiva1.sort((a, b) => {
+    return a - b;
+  });
+  let h1 = document.createElement("h1");
+  h1.textContent =
+    "Los números ganadores son: " + numerosPrimitiva1.join(" - ");
+  document.querySelector("#primitiva").innerHTML = ""; //limpiar html
+  document.querySelector("#primitiva").appendChild(h1); //mete en h1 en el div del ID
+};
