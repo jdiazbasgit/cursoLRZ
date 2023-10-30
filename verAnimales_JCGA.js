@@ -1,6 +1,7 @@
-import { Animal } from "./Animal_JCGA.js"
+import { Animal } from "./Clases/Animal_JCGA.js"
 
 document.querySelector("#boton").addEventListener("click",() =>{
+    // el addEventListener crea un "onclick" y le digo que lo asocie al id=boton. No le pongo nombre a la funcion porque no lo voy a volver a usar en el futuro
     // vamos a construir un animal
     let perro=new Animal("canina","caniche")
     let div=document.querySelector("#contenido")
@@ -11,5 +12,12 @@ document.querySelector("#boton").addEventListener("click",() =>{
     div.appendChild(h1raza)
     div.appendChild(h1Especie)
 })
-verAnimales()
 
+
+/** 
+*Este es el formato de comentarios tecnicos. Sonar no los penaliza
+*Cada comentario en una linea y todo se mantiene dentro de comentario tecnico
+**/  
+
+
+    
