@@ -7,7 +7,7 @@ export class Musico {
 
     // como puede tocar varios instrumentos, necesito un array para meter los diferentes instrumentos
 
-    constructor(instrumentos) {
+    constructor(instrumentos,tipo) {
         this.instrumentos = instrumentos
         this.tipo=tipo
     }
@@ -17,8 +17,9 @@ export class Musico {
     tocar = () => {
         console.log(`El musico es de tipo ${this.tipo}`)
         this.instrumentos.forEach(instrumento => {
-            
-            console.log(instrumento.sonar())
+        console.log(instrumento.sonar())
         })
     }
 }
+
+
