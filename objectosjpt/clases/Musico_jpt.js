@@ -1,8 +1,8 @@
-import { Instrumento } from "./Instrumentos_jpt";
+
 
 export class Musico{
 
-    Instrumentos=new Array()
+    instrumentos=new Array()
     tipo
 
 
@@ -14,7 +14,7 @@ export class Musico{
     tocar=()=>{
         console.log(`el musico es de tipo ${this.tipo}`)
 
-        this.instrumentos.forEach(Instrumento => {
+        this.instrumentos.forEach(instrumento => {
             console.log(instrumento.sonar())
         });
     }
