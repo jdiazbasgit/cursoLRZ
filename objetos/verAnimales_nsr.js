@@ -1,4 +1,4 @@
-import { Animal } from "./clases/Animal.js";
+import { Animal } from "./clases/Animal_nsr.js";
 
 document.querySelector("#boton").addEventListener("click", function () {
   let perro = new Animal("canina", "caniche");
