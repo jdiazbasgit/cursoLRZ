@@ -1,3 +1,8 @@
+//estructura tipo de una clase:
+//propiedades
+//constructores
+//métodos
+
 export class Musico {
 
     instrumentos = new Array(); //arrays en PLURAL
@@ -8,7 +13,7 @@ export class Musico {
         this.tipo = tipo;
     }
 
-    tocar = () => {
+    tocar = () => { 
         console.log(`el musico es de tipo ${this.tipo}`);
         
         //this.instrumentos.forEach(i => {console.log(i.sonar());
