@@ -11,7 +11,7 @@ document.querySelector("#boton").addEventListener("click", function () {
     for (let i=0; i<selectInstrumentos.options.length; i++) {
     
         if (selectInstrumentos.options[i].selected) {
-           console.log(selectInstrumentos.options[i].value);//para ver si funciona
+           //console.log(selectInstrumentos.options[i].value);//punto de control
             instrumento[i]=selectInstrumentos.options[i].value;
             let h1Sonido = document.createElement("h1");
             h1Sonido.innerHTML = `El sonido del instrumento seleccionado es: ${instrumento[i]}`;
