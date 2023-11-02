@@ -1,5 +1,5 @@
-import { Instrumento } from "../clases/Instrumento.js";
-import { Musico } from "../clases/Musico.js";
+import { Instrumento } from "../clases/Instrumento_nsr.js";
+import { Musico } from "../clases/Musico_nsr.js";
 
 
 
