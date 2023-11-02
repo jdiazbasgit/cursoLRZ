@@ -18,11 +18,6 @@ let conciertoSolista = () => {
     switch (solista.instrumentos.length) {
         case 1:
             solista.tocar()
-            var divContenedor = document.querySelector("#espectador")
-            var h1Nuevo = document.createElement("h1")
-            h1Nuevo.innerHTML = Instrumento.array.forEach(element => {
-            });
-            divContenedor.appendChild(h1Nuevo)
             break;
         case 0:
             console.log("no tienes nada que tocar")
@@ -58,6 +53,11 @@ document.querySelector("#botonSolista").addEventListener("click", () => {
     switch (solista.instrumentos.length) {
         case 1:
             solista.tocar()
+            var divContenedor = document.querySelector("#espectador")
+            var h1Nuevo = document.createElement("h1")
+            h1Nuevo.innerHTML = Instrumento.array.forEach(element => {
+            });
+            divContenedor.appendChild(h1Nuevo)
             break;
         case 0:
             console.log("no tienes nada que tocar")
