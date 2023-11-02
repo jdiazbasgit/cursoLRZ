@@ -1,4 +1,4 @@
-import { Animal } from "./clases/Animal_Javi.js" // Ruta del archivo donde se crea la clase y sus propiedades
+import { Animal } from "./clases/Animal_Javi" // Ruta del archivo donde se crea la clase y sus propiedades
 
 document.querySelector("#boton").addEventListener("click", function () {
     let perro = new Animal("caniche", "canina")
