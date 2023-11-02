@@ -6,8 +6,8 @@ export class Instrumento{
         this.sonido=sonido
     }
 
-    sonar=()=>{
-        return this.sonido
-    }
+     //sonar(){
+    sonar=()=>this.sonido
+   
 
 }
