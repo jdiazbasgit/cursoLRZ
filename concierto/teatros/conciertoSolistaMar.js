@@ -3,7 +3,7 @@ import { Instrumento } from "../clases/InstrumentoMar.js";
 
 
 
-document.querySelector("#boton").addEventListener("click", function () {
+document.querySelector("#boton").addEventListener("click", function () { //emisor:document.querySelector("#boton")
     let selectInstrumentos = document.querySelector("#instrumentos");
     let instrumento = new Instrumento();
     let divContenido = document.querySelector("#contenido");
@@ -24,9 +24,9 @@ document.querySelector("#boton").addEventListener("click", function () {
 
 
 // let tambor = new Instrumento("pom, pom, pom");
-// let instrumentos = new Array();
-// instrumentos.push(tambor);//let instrumentos=[tambor]// instrumentos[0]=tambor; esta opción mejor NO
-// let solista = new Musico(instrumentos, "percusion");
+// let instrumentos = new Array();// con el spread eliminamos esta línea
+// instrumentos.push(tambor);//let instrumentos=[tambor]// instrumentos[0]=tambor; esta ulti opción mejor NO//con el spread eliminamos esta línea
+// let solista = new Musico("percusion", instrumentos); // con el spread let solista = new Musico("percusion", tambor);
 // solista.tocar();
 
 // document.querySelector("#hombreOrquesta").addEventListener("click", function () {
@@ -39,6 +39,6 @@ document.querySelector("#boton").addEventListener("click", function () {
 //     instrumentosOrquesta.push(trompeta);
 //     instrumentosOrquesta.push(guitarra);
 
-//     let hombreOrquesta = new Musico(instrumentosOrquesta, "varios")
+//     let hombreOrquesta = new Musico("varios",instrumentosOrquesta)
 //     hombreOrquesta.tocar()
 // })

@@ -5,7 +5,7 @@
 //constructores
 //métodos
 export class Instrumento{
-    sonido="";
+    sonido=""; //se le quita la palabra var por estar dentro de una clase
 
     constructor(sonido){
         this.sonido=sonido;
