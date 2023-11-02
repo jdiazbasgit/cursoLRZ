@@ -1,5 +1,5 @@
-import { Instrumento } from "../clases/Instrumento.js";
-import { Musico } from "../clases/Musico.js";
+import { Instrumento } from "./pooinstrumento.js";
+import { Musico } from "./poomusico.js";
 
 let tambor = new Instrumento("pom, pom, pom")
 let trompeta = new Instrumento("tuuuu, tuuuu, tuuuu")
@@ -18,6 +18,7 @@ let conciertoSolista = () => {
     switch (solista.instrumentos.length) {
         case 1:
             solista.tocar()
+            
             break;
         case 0:
             console.log("no tienes nada que tocar")
