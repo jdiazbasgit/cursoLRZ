@@ -4,14 +4,11 @@ import { Musico } from "../clases/Musico.js";
 let tambor = new Instrumento("pom, pom, pom")
 let trompeta = new Instrumento("tuuuu, tuuuu, tuuuu")
 //let instrumentos = new Array()
-//let instrumentos=[tambor]
-//instrumentos.push(tambor)
+//let instrumentos=[tambor] //instrumentos.push(tambor)
 //instrumentos.push(trompeta)
-//instrumentos[0] = tambor
 //let solista = new Musico( "percusion",instrumentos)
-let solista = new Musico("percusion", tambor)
-//let hombreOrquesta = new Musico("polivalente", tambor, trompeta)
-//hombreOrquesta.tocar()
+let solista = new Musico("percusión", tambor)
+
 
 // let conciertoSolista = () => {
 //     switch (solista.instrumentos.length) {
@@ -31,7 +28,19 @@ document.querySelector("#botonSolista").addEventListener("click", () => {
 
     switch (solista.instrumentos.length) {
         case 1:
-            solista.tocar()
+            //solista.tocar()
+            let contenido1 = document.querySelector("#contenido1")
+            let h1Tipo = document.createElement("h1");
+            h1Tipo.innerHTML = `Eres un músico de tipo "${solista.tipo}"`;
+            contenido1.appendChild(h1Tipo);
+
+            let h1Sonido = document.createElement("h1");
+
+            solista.instrumentos.forEach(instrumento => {
+                h1Sonido.innerHTML = `Tu sonido es "${instrumento.sonido}"`;
+                contenido1.appendChild(h1Sonido);
+            })
+
             break;
         case 0:
             console.log("no tienes nada que tocar")
@@ -52,18 +61,14 @@ let conciertoHombreOrquesta = () => {
         case 0:
             console.log("no tienes nada que tocar")
             break;
-        default:           
-            let contenido1 = document.querySelector("#contenido1")
+        default:
+            let contenido2 = document.querySelector("#contenido2")
             let h1Tipo = document.createElement("h1");
             h1Tipo.innerHTML = `Eres un músico de tipo "${hombreOrquesta.tipo}"`;
-            contenido1.appendChild(h1Tipo);
+            contenido2.appendChild(h1Tipo);
 
-            let contenido2 = document.querySelector("#contenido2")
-            let instrumentosOrquesta = new Array;
             hombreOrquesta.instrumentos.forEach(instrumento => {
-                instrumentosOrquesta.push(instrumento);
-                //console.log(instrumento);
-
+                console.log(instrumento);
                 let h1Sonido = document.createElement("h1");
                 h1Sonido.innerHTML = `Tu sonido es "${instrumento.sonido}"`;
                 contenido2.appendChild(h1Sonido);

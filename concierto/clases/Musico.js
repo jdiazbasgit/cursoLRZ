@@ -9,8 +9,9 @@ export class Musico {
     }*/
 
     constructor(tipo, ...instrumentos) {
-        this.instrumentos = instrumentos
-        this.tipo = tipo
+       this.tipo = tipo
+       this.instrumentos = instrumentos
+        
     }
 
 
