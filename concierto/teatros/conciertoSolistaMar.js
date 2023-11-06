@@ -1,39 +1,26 @@
 import { Instrumento } from "../clases/InstrumentoMar.js";
 //import { Musico } from "../clases/MusicoMar.js";
 
-let limpiaElemento = elementoAlimpiar => {
-    elementoAlimpiar.innerHTML="";
-}
 
-document.querySelector("#botonHombreOrquesta").addEventListener("click", function () { //emisor:document.querySelector("#boton")
-    let contenido1 = document.querySelector("#contenido1");
-    limpiaElemento(contenido1);
-    let selectInstrumentos = document.querySelector("#instrumentos");
+document.querySelector("#boton").addEventListener("click", function () { //emisor:document.querySelector("#boton")
+    let contenido = document.querySelector("#contenido");
+    let selectInstrumentos = document.querySelector("#selectinstrumentos");
     let instrumento = new Instrumento();
-    
 
-    for (let i=0; i<selectInstrumentos.options.length; i++) {
-    
+
+    for (let i = 0; i < selectInstrumentos.options.length; i++) {
+
         if (selectInstrumentos.options[i].selected) {
-           //console.log(selectInstrumentos.options[i].value);//punto de control
-            instrumento[i]=selectInstrumentos.options[i].value;
+            //console.log(selectInstrumentos.options[i].value);//punto de control
+            instrumento[i] = selectInstrumentos.options[i].value;
             let h1Sonido = document.createElement("h1");
             h1Sonido.innerHTML = `El sonido del instrumento seleccionado es: ${instrumento[i]}`;
-            contenido1.appendChild(h1Sonido);
+            contenido.appendChild(h1Sonido);
         }
     }
 
 })
 
-document.querySelector("#botonSolista").addEventListener("click", function () { //emisor:document.querySelector("#boton")
-    let contenido1 = document.querySelector("#contenido1");
-    limpiaElemento(contenido1);
-   
-    
-
-  
-
-})
 
 
 
