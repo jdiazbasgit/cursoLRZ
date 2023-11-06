@@ -1,4 +1,4 @@
-import { Instrumento } from "../clases/InstrumentoMar.js";
+//import { Instrumento } from "../clases/InstrumentoMar.js";
 //import { Musico } from "../clases/MusicoMar.js";
 
 
@@ -10,7 +10,7 @@ document.querySelector("#boton").addEventListener("click", function () { //emiso
     for (let i = 0; i < selectInstrumentos.options.length; i++) {
 
         if (selectInstrumentos.options[i].selected) {
-            //console.log(selectInstrumentos.options[i].value);//punto de control
+            //console.log(selectInstrumentos.options[i].value);//valor de value asignado en el html
             instrumento[i] = selectInstrumentos.options[i].value;
             let h1Sonido = document.createElement("h1");
             h1Sonido.innerHTML = `El sonido del instrumento seleccionado es: ${instrumento[i]}`;
