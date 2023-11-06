@@ -13,10 +13,10 @@ export class Instrumento{
     // creo la variable que necesito y la inicializo
 
     constructor(sonido){
-        this.sonido=sonido
+    this.sonido=sonido
     }
 // y ahora los metodos
-
+    // function sonar(){}
     sonar=()=>{
         return this.sonido
     }
