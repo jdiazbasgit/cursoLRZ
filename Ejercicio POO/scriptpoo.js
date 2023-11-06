@@ -32,17 +32,18 @@ let conciertoHombreOrquesta = () => {
     switch (hombreOrquesta.instrumentos.length) {
         case 1:
             console.log("tu no eres un solista")
-            var divContenedor = document.querySelector("#espectador")
-            var h1Nuevo = document.createElement("h1")
-            h1Nuevo.innerHTML = Instrumento.array.forEach(element => {
-            });
-            divContenedor.appendChild(h1Nuevo)
             break;
         case 0:
             console.log("no tienes nada que tocar")
             break;
         default:
             hombreOrquesta.tocar()
+            let h1 = document.createElement("h1")
+            h1.innerHTML = Instrumento.forEach(Instrumento => {
+                
+            });
+            document.querySelector("#sonidoHombreOrquesta").innerHTML = ""
+            document.querySelector("#sonidoHombreOrquesta").appendChild(h1)
     }
 }
 
@@ -53,11 +54,10 @@ document.querySelector("#botonSolista").addEventListener("click", () => {
     switch (solista.instrumentos.length) {
         case 1:
             solista.tocar()
-            var divContenedor = document.querySelector("#espectador")
-            var h1Nuevo = document.createElement("h1")
-            h1Nuevo.innerHTML = Instrumento.array.forEach(element => {
-            });
-            divContenedor.appendChild(h1Nuevo)
+            let h1 = document.createElement("h1")
+            h1.innerHTML = Instrumento
+            document.querySelector("#sonidoSolista").innerHTML = ""
+            document.querySelector("#sonidoSolista").appendChild(h1)
             break;
         case 0:
             console.log("no tienes nada que tocar")
