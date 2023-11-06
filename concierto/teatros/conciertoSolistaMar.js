@@ -5,8 +5,7 @@ import { Instrumento } from "../clases/InstrumentoMar.js";
 document.querySelector("#boton").addEventListener("click", function () { //emisor:document.querySelector("#boton")
     let contenido = document.querySelector("#contenido");
     let selectInstrumentos = document.querySelector("#selectinstrumentos");
-    let instrumento = new Instrumento();
-
+    let instrumento = new Array();
 
     for (let i = 0; i < selectInstrumentos.options.length; i++) {
 
