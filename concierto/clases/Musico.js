@@ -10,18 +10,15 @@ export class Musico {
 
     constructor(tipo, ...instrumentos) {
        this.tipo = tipo
-       this.instrumentos = instrumentos
-        
+       this.instrumentos = instrumentos       
     }
 
+    // tocar = () => {
+    //     console.log(`el musico es de tipo ${this.tipo}`)
 
-    tocar = () => {
-        console.log(`el musico es de tipo ${this.tipo}`)
-
-        this.instrumentos.forEach(instrumento => {  
-            console.log(instrumento.sonar())
-        })
-
-    }
-
+    //     this.instrumentos.forEach(instrumento => {  
+    //         console.log(instrumento.sonar())          
+    //     })
+    //  
+    // }
 }
