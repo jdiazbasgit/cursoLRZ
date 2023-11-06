@@ -20,7 +20,8 @@ export class Musico {
         // return this.tipo
         this.instrumentos.forEach(instrumento =>
             console.log(instrumento.sonar()))
-            // return this.instrumentos
+            // return this.instrumentos. 
             // return this.sonido
+            // NO se puede hacer nada despues de un return, porque te saca de la función
     }
 }

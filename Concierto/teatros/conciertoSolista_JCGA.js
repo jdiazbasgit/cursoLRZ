@@ -21,6 +21,7 @@ document.querySelector("#solista").addEventListener("click", function () {
     let h1tipo = document.createElement("h1")
     h1tipo.innerHTML = `el tipo de musico es ${solista.tipo}`
     let divContenido = document.querySelector("#concierto")
+    limpiaElemento(divContenido)
     divContenido.appendChild(h1tipo)
 
     solista.instrumentos.forEach(element => {
@@ -43,6 +44,7 @@ document.querySelector("#solista").addEventListener("click", function () {
 //     default:
 //         console.log("tu eres un hombre orquesta")
 // }}
+// Si metemos el switch, por buenas practicas deberíamos meter todos los textos en una constante (MENSAJE_NO_INSTRUMENTO="no tienes nada que tocar")
 
 document.querySelector("#hombreOrquesta").addEventListener("click", function () {
     let tambor = new Instrumento("pom, pom, pom")
@@ -54,6 +56,7 @@ document.querySelector("#hombreOrquesta").addEventListener("click", function () 
     let h1tipo = document.createElement("h1")
     h1tipo.innerHTML = `el tipo de musico es ${hombreOrquesta.tipo}`
     let divContenido = document.querySelector("#concierto")
+    limpiaElemento(divContenido)
     divContenido.appendChild(h1tipo)
 
     hombreOrquesta.instrumentos.forEach(element => {
@@ -64,7 +67,10 @@ document.querySelector("#hombreOrquesta").addEventListener("click", function () 
     });
 })
 
-
+// deberiamos hacer una funcion tipo limpia() donde antes de lanzar la función x() le hacemos que limpie la pantalla
+let limpiaElemento=(elementoALimpiar)=>{
+    elementoALimpiar.innerHTML="";
+}
 
 // nueva función para los seleccionados
 
