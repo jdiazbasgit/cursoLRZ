@@ -7,7 +7,8 @@ export class Instrumento{
     }
     sonar (){ // Método - entre parentis va la cantidad de veces que quiero reproducir el sonido. En una clase, no se coloca la palabra Function porque hmtl reconoce que lo que tiene () es una funcion
     //sonar=()=>{ // Otro tipo de funcion con arrow (=>). 
-        return this.sonido
+        return this.sonido //definimos que hace (sonar) y como lo hace (sonido)
+        //
     }
 
 }
