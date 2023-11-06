@@ -77,7 +77,7 @@ let conciertoHombreOrquesta = () => {
             contenido1.appendChild(h1Tipo);
             break;
         default:       
-            h1Tipo.innerHTML = `Eres un músico de tipo "${hombreOrquesta.tipo}"`;
+            h1Tipo.innerHTML = `Eres un músico de tipo ${hombreOrquesta.tipo}`;
             contenido1.appendChild(h1Tipo);
 
             hombreOrquesta.instrumentos.forEach(instrumento => {

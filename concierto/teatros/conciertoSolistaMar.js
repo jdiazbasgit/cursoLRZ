@@ -1,12 +1,14 @@
 import { Instrumento } from "../clases/InstrumentoMar.js";
 //import { Musico } from "../clases/MusicoMar.js";
 
+let limpiaElemento = elementoAlimpiar => {
+    elementoAlimpiar.innerHTML="";
+}
 
-
-document.querySelector("#boton").addEventListener("click", function () { //emisor:document.querySelector("#boton")
+document.querySelector("#botonHombreOrquesta").addEventListener("click", function () { //emisor:document.querySelector("#boton")
     let selectInstrumentos = document.querySelector("#instrumentos");
     let instrumento = new Instrumento();
-    let divContenido = document.querySelector("#contenido");
+    let divContenido = document.querySelector("#contenido1");
 
     for (let i=0; i<selectInstrumentos.options.length; i++) {
     
