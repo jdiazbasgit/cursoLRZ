@@ -37,7 +37,7 @@ let contenido1 = document.querySelector("#contenido1")
 //document.querySelector("#botonSolista").addEventListener("click",conciertoSolista())
 //let botonSolista=document.querySelector("#botonSolista")
 //botonSolista.addEventListener("click", () => {
-document.querySelector("#botonSolista").botonSolista.addEventListener("click", () => {
+document.querySelector("#botonSolista").addEventListener("click", () => {
 
     limpiaElemento(contenido1);
     let h1Tipo = document.createElement("h1");
@@ -66,6 +66,7 @@ document.querySelector("#botonSolista").botonSolista.addEventListener("click", (
 
 let conciertoHombreOrquesta = () => {
     limpiaElemento(contenido1);
+    let h1Tipo = document.createElement("h1");
     //limpiaElemento(h1Tipo); redundante xq al limpiar contenido1 esto ya lo limpia
     switch (hombreOrquesta.instrumentos.length) {
         case 1:        

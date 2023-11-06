@@ -6,9 +6,11 @@ let limpiaElemento = elementoAlimpiar => {
 }
 
 document.querySelector("#botonHombreOrquesta").addEventListener("click", function () { //emisor:document.querySelector("#boton")
+    let contenido1 = document.querySelector("#contenido1");
+    limpiaElemento(contenido1);
     let selectInstrumentos = document.querySelector("#instrumentos");
     let instrumento = new Instrumento();
-    let divContenido = document.querySelector("#contenido1");
+    
 
     for (let i=0; i<selectInstrumentos.options.length; i++) {
     
@@ -17,9 +19,19 @@ document.querySelector("#botonHombreOrquesta").addEventListener("click", functio
             instrumento[i]=selectInstrumentos.options[i].value;
             let h1Sonido = document.createElement("h1");
             h1Sonido.innerHTML = `El sonido del instrumento seleccionado es: ${instrumento[i]}`;
-            divContenido.appendChild(h1Sonido);
+            contenido1.appendChild(h1Sonido);
         }
     }
+
+})
+
+document.querySelector("#botonSolista").addEventListener("click", function () { //emisor:document.querySelector("#boton")
+    let contenido1 = document.querySelector("#contenido1");
+    limpiaElemento(contenido1);
+   
+    
+
+  
 
 })
 
