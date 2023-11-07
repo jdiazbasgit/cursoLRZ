@@ -11,7 +11,7 @@ let cargarInstrumentos = () => {
         let instrumento = new Instrumento(selectInstrumentos.selectedOptions[i].value)
         instrumentos.push(instrumento)
     }
-    solista = new Musico("percusión", instrumentos)
+    solista = new Musico(selectInstrumentos.selectedOptions[0].getAttribute("tipo"), instrumentos)
     hombreOrquesta = new Musico("polivalente", instrumentos)
 }
 
@@ -30,7 +30,9 @@ const MENSAJE_NO_SOLISTA = "tú no eres un solista"
 const MENSAJE_NO_HOMBRE_ORQUESTA = "tú no eres un hombre orquesta"
 
 let contenido1 = document.querySelector("#contenido1")
+contenido1.setAttribute("color","rojo")
 
+//contenido1.setAttribute("apellido","garcia")
 let h1Tipo = document.createElement("h1");
 document.querySelector("#botonSolista").addEventListener("click", () => {
 
@@ -63,6 +65,8 @@ document.querySelector("#botonSolista").addEventListener("click", () => {
 let conciertoHombreOrquesta = () => {
     limpiaElemento(contenido1);
     cargarInstrumentos()
+   // if(contenido1.getAttribute("color")==="rojo")
+   // contenido1.classList.add("text-danger")
     switch (hombreOrquesta.instrumentos.length) {
         case 1:
             h1Tipo.innerHTML = MENSAJE_NO_SOLISTA;
