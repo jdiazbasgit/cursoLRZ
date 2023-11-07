@@ -1,46 +1,42 @@
 import { Instrumento } from "../clases/Instrumento.js";
 import { Musico } from "../clases/Musico.js";
 
-let tambor = new Instrumento("pom, pom, pom")
-let trompeta = new Instrumento("tuuuu, tuuuu, tuuuu")
-//let instrumentos = new Array()
-//let instrumentos=[tambor] //instrumentos.push(tambor)
-//instrumentos.push(trompeta)
-//let solista = new Musico( "percusion",instrumentos)
-let solista = new Musico("percusión", tambor)
-let hombreOrquesta = new Musico("polivalente", tambor, trompeta)
+var instrumentos = new Array()
+let solista
+let hombreOrquesta
+let cargarInstrumentos = () => {
+    instrumentos = []
+    let selectInstrumentos = document.querySelector("#selectInstrumentos")
+    for (let i = 0; i < selectInstrumentos.selectedOptions.length; i++) {
+        let instrumento = new Instrumento(selectInstrumentos.selectedOptions[i].value)
+        instrumentos.push(instrumento)
+    }
+    solista = new Musico("percusión", instrumentos)
+    hombreOrquesta = new Musico("polivalente", instrumentos)
+}
+
+
+
+
 
 //function limpiaElemento (elementoAlimpiar){
 let limpiaElemento = elementoAlimpiar => {
-    elementoAlimpiar.innerHTML="";
+    elementoAlimpiar.innerHTML = "";
 }
 
-// let conciertoSolista = () => {
-//     switch (solista.instrumentos.length) {
-//         case 1:
-//             solista.tocar()
-//             break;
-//         case 0:
-//             console.log("no tienes nada que tocar")
-//             break;
-//         default:
-//             console.log("tu no eres un hombre orquesta")
-//     }
-// }
 
-//los textos estáticos mejor declarados dentro de una CONSTANTE
-const MENSAJE_NO_INSTRUMENTO="no tienes nada que tocar"
-const MENSAJE_NO_SOLISTA="tú no eres un solista"
-const MENSAJE_NO_HOMBRE_ORQUESTA="tú no eres un hombre orquesta"
+const MENSAJE_NO_INSTRUMENTO = "no tienes nada que tocar"
+const MENSAJE_NO_SOLISTA = "tú no eres un solista"
+const MENSAJE_NO_HOMBRE_ORQUESTA = "tú no eres un hombre orquesta"
 
 let contenido1 = document.querySelector("#contenido1")
-//document.querySelector("#botonSolista").addEventListener("click",conciertoSolista())
-//let botonSolista=document.querySelector("#botonSolista")
-//botonSolista.addEventListener("click", () => {
-document.querySelector("#botonSolista").botonSolista.addEventListener("click", () => {
 
+let h1Tipo = document.createElement("h1");
+document.querySelector("#botonSolista").addEventListener("click", () => {
+
+    cargarInstrumentos()
     limpiaElemento(contenido1);
-    let h1Tipo = document.createElement("h1");
+
     switch (solista.instrumentos.length) {
         case 1:
             //solista.tocar()
@@ -66,17 +62,17 @@ document.querySelector("#botonSolista").botonSolista.addEventListener("click", (
 
 let conciertoHombreOrquesta = () => {
     limpiaElemento(contenido1);
-    //limpiaElemento(h1Tipo); redundante xq al limpiar contenido1 esto ya lo limpia
+    cargarInstrumentos()
     switch (hombreOrquesta.instrumentos.length) {
-        case 1:        
+        case 1:
             h1Tipo.innerHTML = MENSAJE_NO_SOLISTA;
             contenido1.appendChild(h1Tipo);
             break;
-        case 0:      
+        case 0:
             h1Tipo.innerHTML = MENSAJE_NO_INSTRUMENTO;
             contenido1.appendChild(h1Tipo);
             break;
-        default:       
+        default:
             h1Tipo.innerHTML = `Eres un músico de tipo ${hombreOrquesta.tipo}`;
             contenido1.appendChild(h1Tipo);
 
