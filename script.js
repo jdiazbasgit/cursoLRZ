@@ -36,5 +36,22 @@ if (a > 4)
     texto = "a es mayos que 4"
 console.log(texto);
 
+for (let i = 0; i < 10; i++) {
+    if (i % 3 === 0) {
+        console.log(i);
+    }
+
+}
+let numeros = [4, 7, 45, -8,5.56, 5, 345, 90]
+let numero = 0
+posicion = 0
+while (numero < 200 || posicion===numeros.length) {
+    console.log(numeros[posicion])
+    posicion++
+    numero = numeros[posicion]
+    
+    
+}
+
 
 
