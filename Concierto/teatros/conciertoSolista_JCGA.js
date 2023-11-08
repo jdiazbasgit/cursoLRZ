@@ -12,7 +12,7 @@ document.querySelector("#solista").addEventListener("click", function () {
     // instrumentos[0]=tambor
     // let solista=new Musicoc
     // solista.tocar()
-    
+
     let tambor = new Instrumento("pom, pom, pom")
     let solista = new Musico("solista", tambor)
     // como tengo definido el musico como ("tipo", ...instrumento), simplemente le paso uno a uno los instrumentos
@@ -68,113 +68,29 @@ document.querySelector("#hombreOrquesta").addEventListener("click", function () 
 })
 
 // deberiamos hacer una funcion tipo limpia() donde antes de lanzar la función x() le hacemos que limpie la pantalla
-let limpiaElemento=(elementoALimpiar)=>{
-    elementoALimpiar.innerHTML="";
+let limpiaElemento = (elementoALimpiar) => {
+    elementoALimpiar.innerHTML = "";
 }
 
 // nueva función para los seleccionados
+// En teoría esto no funciona, porque al estar definido el musico con un spread, no puedo pasarle uno a uno los instrumentos...., pero lo voy a intentar. SI no lo consigo, sustituiré los cuatro ficheros por los del profe
 
 document.querySelector("#orquesta").addEventListener("click", function () {
-    
-    
-    
-    let tambor = new Instrumento("pom, pom, pom")
-    let trompeta = new Instrumento("tu, tu, tun")
-    let guitarra = new Instrumento("tlan,tlan, tlan")
-    let instrumentosSeleccionados = new Array()
-    var checked =document.querySelectorAll("#instrumentos:checked");
-    console.log(checked)
-    var selected = [...checked].map(option => option.value);
-    console.log(+selected)
-
-    // var checked = document.querySelectorAll('#pets :checked');
-    // var selected = [...checked].map(option => option.value);
-
-    for(instrumento in instrumentos.options[instrumentos.selectedIndex].value){
-    let seleccion = instrumentosSeleccionados.options[instrumentos.selectedIndex].value;
-    instrumentosSeleccionados.push("value")
-    let orquesta = new Musico("orquesta", instrumentosSeleccionados)}
-    orquesta.tocar()
-
-    // var idprovincia = document.getElementById("idprovincia");
-    // var pro = idprovincia.options[idprovincia.selectedIndex].value;
-
-
-    console.log("Los instrumentos seleccionados son " +instrumentosSeleccionados)
-    
-    // var seleccion = new Array()
-    // seleccion = instrumentosSeleccionados.options[instrumentos.selectedIndex].value;
-    console.log("la seleccion es " +seleccion)
-})
-// Nos traemos los valores de la selección
-    // var instrumentosSeleccionados = new Array()
-    // instrumentosSeleccionados =document.getElementById("instrumentos");
-    // // instrumentos.selectedIndex.forEach(seleccion =>{
-    // for(value in instrumentos.selectedIndex){
-    //     var newSeleccion = instrumentosSeleccionados.options[instrumentos.selectedIndex].value;
-        
-    //     console.log(newSelecion)
-    // }
-    
-        // let newSeleccion=instrumentos.selectedIndex.value;
-        // console.log(newSeleccion)
-    // })
-    // hombreOrquesta.instrumentos.forEach(element => {
-    
-
+    // Por como esta definido en el html el select, que ya me da los sonidos, no necesito los instrumentos
     // let tambor = new Instrumento("pom, pom, pom")
     // let trompeta = new Instrumento("tu, tu, tun")
     // let guitarra = new Instrumento("tlan,tlan, tlan")
-    // let orquesta = new Musico("varios", [instrumentosSeleccionados])
-    // orquesta.tocar()
-    // // vamos a escribirlo en pantalla
-    // let h1tipo = document.createElement("h1")
-    // h1tipo.innerHTML = `el tipo de musico es ${hombreOrquesta.tipo}`
-    // let divContenido = document.querySelector("#concierto")
-    // divContenido.appendChild(h1tipo)
-
-    // hombreOrquesta.instrumentos.forEach(element => {
-    //     let h1sonido = document.createElement("h1")
-    //     h1sonido.innerHTML = `El sonido de tu instrumento es ${element.sonido}`
-    //     let divContenido = document.querySelector("#concierto")
-    //     divContenido.appendChild(h1sonido)
-    // });
+    let orquesta = new Musico("orquesta", instrumentos)
+    let instrumentos = new Array()
+    let cargarInstrumentos = () => {
+        let selectInstrumentos = document.querySelector("#instrumentos")
+        for (let i = 0; i < selectInstrumentos.selectedOptions.length; i++) {
+            let instrumento = new Instrumento(selectInstrumentos.selectedOptions[i].value)
+            instrumentos.push(instrumento)
+        }
+    }
+// Antes poniamos un "orquesta.tocar()", pero esto ya no tiene sentido porque al crear el instrumento lo tengo definido por su sonido, directamente..., que era lo que deciamos en el constructor del instrumento """constructor(sonido)"""
+// Hay que ver como sacamos por pantalla y por console log lo que queremos
 
 
-// document.querySelector("#seleccion").addEventListener("click",function(){
-//     let tambor=new Instrumento("pom, pom, pom")
-//     let trompeta=new Instrumento("tu, tu, tun")
-//     let guitarra=new Instrumento("tlan,tlan, tlan")
-
-//     let orquesta=new Musico("orquesta,instrumentos)
-//     let instrumentos=new Array
-//     instrumentos.foreach((instrumentos.value)=>{
-//         instrumentos.push(value)
-
-//     })
-// EJEMPLO de como funcionaria
-//Guardamos en una variable el nombre del campo provincia.
-// var idprovincia = document.getElementById("idprovincia");
-// var pro = idprovincia.options[idprovincia.selectedIndex].value;
-// //Creamos un nodo de texto que agregaremos al div.
-// var pro_valor = document.createTextNode("Provincia: "+pro);
-// //Añadimos el nuevo nodo al final de la lista.
-// div.appendChild(pro_valor);
-
-// let seleccion=new Array()
-// console.log(+instrumentos.value)
-// })
-//     let hombreOrquesta=new Musico([tambor,trompeta,guitarra],"varios")
-//     hombreOrquesta.tocar()
-// })
-
-// let selectInstrumentos=document.querySelector("#instrumentos")
-//     console.log(selectInstrumentos.options)
-
-//     let h1tipo=document.createElement("h1")
-//     let h1sonido=document.createElement("h1")
-//     h1tipo.innerHTML=`el tipo de musico es ${this.tipo}`
-//     h1sonido.innerHTML=`El sonido de tu instrumento es ${instrumento.sonar()}`
-//     let divContenido=document.querySelector("#concierto")
-//     divContenido.appendChild(h1tipo)
-//     divContenido.appendChild(h1sonido)
+})
