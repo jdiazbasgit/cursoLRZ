@@ -3,9 +3,9 @@ export class Musico {
     instrumentos = new Array()
     //instrumentos=[]
     
-    constructor(tipo, instrumentos) {
-        this.instrumentos = instrumentos
+    constructor(tipo, instrumentos) {    
         this.tipo = tipo
+        this.instrumentos = instrumentos
     }
 
     // constructor(tipo, ...instrumentos) {

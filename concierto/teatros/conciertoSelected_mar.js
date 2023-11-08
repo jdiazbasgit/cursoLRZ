@@ -12,8 +12,6 @@ let limpiaElemento = elementoAlimpiar => {
     elementoAlimpiar.innerHTML="";
 }
 
-// POR DEPURAR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 let cargarInstrumentos = () =>{   
     let instrumentos = new Array();
     let selectInstrumentos = document.querySelector("#selectinstrumentos");
@@ -21,13 +19,10 @@ let cargarInstrumentos = () =>{
     for (let i = 0; i < selectInstrumentos.selectedOptions.length; i++) { 
         let instrumento = new Instrumento (selectInstrumentos.selectedOptions[i].value);//mete p.ej. tlan tlan tlan
         instrumentos.push(instrumento)  
-        
-       
-       // let tipo= selectInstrumentos.selectedOptions[i].value.split(-)
     }
-    //hacer un split del value para meterlo en tipo o instrumentos
+    
 
-    solista = new Musico("solista", instrumentos)
+    solista = new Musico(selectInstrumentos.selectedOptions[0].getAttribute("tipo"), instrumentos) //getAtributte("nombreAtributodelHTML"o)
     hombreOrquesta = new Musico("polivalente", instrumentos)
 }
 
