@@ -3,56 +3,77 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-right: 20px;
-}
 
-#logo {
-    display: flex;
-    width: 60%;
-}
-
-#logo h1 {
-    margin-left: 350px;
-    margin-top: 30px;
-}
-#login {
-    /* margin-top: 1em; */
-    margin: 20px auto;
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px;
     text-align: center;
-    background-color: rgb(113, 115, 115);
-    width: 40%;
-    color: white;
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 3px;
-    cursor: pointer;
-
+}
+.header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 2fr 6fr 3fr;
+    grid-template-rows: 100px;
+    background-color: rgb(239, 215, 34);
+}
+.main {
+    display: grid;
+    gap: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    grid-template-columns: 4fr 4fr 4fr;
+    grid-template-rows: 800px;
+    margin-bottom: 70px;
 }
 
-#login:hover {
-    background-color: rgb(24, 24, 24);
-}
 
-#buscar-btn{
-    padding: 5px 10px;
-    background-color: gold;
-    font-weight: 700;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-input{
-    height: 25px;
-    border: 1px solid rgb(218, 214, 214);
-    border-radius: 2px;
+.columna1{
+    display: grid;
+    margin-top: 50px;
+    margin-bottom: 250px;
+    height: 900px;
+    background-color: antiquewhite;
     
 }
+.columna1 h3{
+    padding-top: 20px;
+}
 
-div {
-    width: 300px;
+.article {
+    display: grid;
+    margin: 30px 100px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+    border-radius: 10px;
+    background-color: rgb(246, 241, 241);
+}
+
+.footer {
+display: grid;
+margin-top: 150px;
+padding-top: 50px;
+cursor: pointer;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 150px;
+background-color: rgb(246, 241, 241);
+}
+
+img{
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    height: 70px;
+}
+
+#input{
+    border-radius: 5px;
+    border: none;
 }
