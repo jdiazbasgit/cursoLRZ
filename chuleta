@@ -1,0 +1,16 @@
+las clases tienen 3 elemetos:
+propiedades (color) son variables que tienen toda la vida del objeto
+los constructores: son funciones que me devuelvem el objeto y reciben parametros
+los metodos: son funciones que te devileve otra cosa que no es tu objeto
+polimorfismo:
+-encapsulacion:
+-sobrecarga:
+-redefinición:puedo redefinir cosas de mi padre (las interfaces me aportan solo conocomiento)
+(herencia: clases abstractas y clases concretas) las relaciones entre clases solo puedem ser de dos tipos de pertenencia o de herencia
+hay una tercera clse que es la interface si tiene todo abstracto, y tiene todos los métodos son todos abstractos, todos concretos es una clase normal
+instaciar un objeto es contruir un objeto, cuando se habla de instanciar tiene que tener un new
+el orden dentro de codigo:
+primero la propiedad, despues los constructores y al final los metodos
+los numeros enmteros se inicializan a 0, los numeros decimales se inicializan a 0,0, 
+los nombres de los archivos de clases e interfaces son en pascalcase. Los nombres de los metodos  o funcion y nombre sde variables en camelcase.
+las constantes todas en mayuscula (PI) si lleva varias palabras separadas por _
