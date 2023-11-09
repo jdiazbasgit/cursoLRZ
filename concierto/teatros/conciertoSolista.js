@@ -11,7 +11,7 @@ let cargarInstrumentos = () => {
         let instrumento = new Instrumento(selectInstrumentos.selectedOptions[i].value)
         instrumentos.push(instrumento)
     }
-    solista = new Musico("percusión", instrumentos)
+    solista = new Musico(selectInstrumentos.selectedOptions[0].getAttribute("tipo"), instrumentos)
     hombreOrquesta = new Musico("polivalente", instrumentos)
 }
 
