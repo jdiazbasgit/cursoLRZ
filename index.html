@@ -1,15 +1,58 @@
 <!doctype html>
-<html lang="ES-es">	<!--Inicio de la página-->
-<head>				<!--Inicio del HEAD-->
-	<meta charset="utf-8"/>
-	<meta name="Description"  content="Descripcion de la pagina"/>
+<html lang="ES-es"> <!--Inicio de la página-->
+
+<head> <!--Inicio del HEAD-->
+	<meta charset="utf-8" />
+	<meta name="Description" content="Descripcion de la pagina" />
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Pagina de profe</title>
-	 <script src="ficheroDeVida.js" type="module"></script>
-  </head>
-  <body>
+	<style>
+		.grid {
+			display: grid;
+			grid-template-columns: 150px 400px;
+			grid-template-rows: 400px 175px;
+		}
 
-   
-    
+		.grid1{
+			display:grid;
+			grid-template-columns:3fr 1fr;
+			grid-template-rows: 5fr 1fr
+		}
+
+		.hueco1 {
+			background-color: aqua;
+		}
+
+		.hueco2 {
+			background-color: bisque;
+		}
+
+		.hueco3 {
+			background-color: cadetblue;
+		}
+
+		.hueco4 {
+			background-color: fuchsia;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="grid1">
+		<div class="hueco1">hueco1</div>
+		<div class="hueco2">hueco2</div>
+		<div class="hueco3">hueco3 <br> otro hueco <br> otro hueco</div>
+		<div class="hueco4">hueco4</div>
+	</div>
+	<h1>separador</h1>
+	<div class="grid">
+		<div class="hueco1">hueco11</div>
+		<div class="hueco2">hueco21</div>
+		<div class="hueco3">hueco31</div>
+		<div class="hueco4">hueco41</div>
+	</div>
+
+
 </body>
+
 </html>
