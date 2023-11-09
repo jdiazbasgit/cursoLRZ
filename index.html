@@ -5,11 +5,48 @@
 	<meta name="Description"  content="Descripcion de la pagina"/>
 	<meta name="Keywords" content="Palabras clave, separadas por comas" />
 	<title>Pagina de profe</title>
+	<style>
+		.grid{
+			display: grid;
+			grid-template-columns: 50px 300px; 
+			grid-template-rows: 200px 75px;
+		}
+		.grid1{
+			display: grid;
+			grid-template-columns: 3fr 1fr; 
+			grid-template-rows: 5fr 1fr;
+		}
+
+		.hueco1{
+			background-color: aqua;
+		}
+		.hueco2{
+			background-color: brown;
+		}
+		.hueco3{
+			background-color: blue;
+		}
+		.hueco4{
+			background-color: chartreuse;
+		}
+
+	</style>
 	 
   </head>
   <body>
-
+	<div class="grid">
+		<div class="hueco1">HUECO 1</div>
+		<div class="hueco2">HUECO 2</div>
+		<div class="hueco3">HUECO 3</div>
+		<div class="hueco4">HUECO 4</div>
+	</div>
    
+	<div class="grid1">
+		<div class="hueco5">HUECO 5</div>
+		<div class="hueco6">HUECO 6</div>
+		<div class="hueco7">HUECO 7</div>
+		<div class="hueco8">HUECO 8</div>
+	</div>
     
 </body>
 </html>
