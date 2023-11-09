@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="teatros/conciertoSolistaProfe.js"></script>
+</head>
+
+<body>
+
+    <!-- 
+        sin clases en javascript
+        <button id="boton onclick="conciertoSolista()">solista</button> -->
+
+    <div>
+        <button id="botonSolista">solista</button>
+
+        <button id="botonHombreOrquesta">Hombre Orquesta</button>
+    </div>
+
+    <div>
+        instrumentos:<select  id="selectInstrumentos" multiple>
+            <option value="0" disabled>Selecciona instrumento...</option>
+            <option value="pom, pom, pom" selected>Tambor</option>
+            <option value="tuuu, tuuu, tuuu">Trompeta</option>
+            <option value="tlan, tlan, tlan" selected>guitarra</option>
+        </select>
+    </div>
+
+
+    <input type="submit" value="Concierto Solista" id="botonConciertoSolista">
+
+    <input type="submit" value="Concierto Orquesta" id="botonConciertoOrquesta">
+
+    <div id="contenido">
+
+    </div>
+</body>
+
+</html>
