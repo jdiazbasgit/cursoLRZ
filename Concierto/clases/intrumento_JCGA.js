@@ -8,16 +8,16 @@
 // nombredecarpeta
 // const PI  ...   NOMBRE_DE_CONST
 
+//  El nombre de las clases e interfaces empliezan siempre en mayusculas
 export class Instrumento{
     sonido=""
-    // creo la variable que necesito y la inicializo
 
     constructor(sonido){
-    this.sonido=sonido
+        this.sonido=sonido
     }
-// y ahora los metodos
-    // function sonar(){}
-    sonar=()=>{
-        return this.sonido
-    }
+
+     //sonar(){
+    sonar=()=>this.sonido
+   
+
 }

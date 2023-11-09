@@ -8,21 +8,14 @@
     <script type="module" src="teatros/conciertoSolista_JCGA.js"></script>
 </head>
 <body>
-    <div class container>
-        <button id="solista">Solista</button>
-        <button id="hombreOrquesta">Hombre Orquesta</button>
-    <br><br>
-       <!--me creo un atributo inventado que es el "tipo"  -->
-    <select id="instrumentos" multiple>
-            <option value="0" disabled>Selecciona los instrumentos</option>
-            <option value="pom, pom, pom" tipo="percusión">Tambor</option>
-            <option value="tu, tu, tu" tipo="viento">Trompeta</option>
-            <option value="pi, pi, pi" tipo="viento">Pito</option>
-            <option value="tlan, tlan, tlan" tipo="cuerda">Guitarra</option>
-        </select>
-        <button id="orquesta">Toca los elementos seleccionados</button>
-
-    <div id="concierto"></div>
+    <div class="container">
+        
+        <!-- sin clases en javascript se pueden usar eventos así:
+            <button id="boton onclick="conciertoSolista()">solista</button> -->
+            <button id="botonSolista">solista</button>
+            <button id="botonHombreOrquesta">Hombre Orquesta</button>
+            <div id="contenido1"></div>
     </div>
 </body>
+
 </html>

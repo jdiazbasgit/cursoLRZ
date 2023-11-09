@@ -1,27 +1,26 @@
 
 
 export class Musico {
-
-    instrumentos = new Array()
     tipo
-
-    // como puede tocar varios instrumentos, necesito un array para meter los diferentes instrumentos
-
-    // defino instrumentos sin decir cuantos instrumentos voy a recibir..., aunque no necesitaria hacer el spread(...) y quedaria como (instrumentos,tipo)
-    constructor(tipo,... instrumentos) {
+    instrumentos = new Array()
+    //instrumentos=[]
+    
+    constructor(tipo, instrumentos) {
         this.instrumentos = instrumentos
         this.tipo = tipo
     }
 
-    // y ahora el metodo..., la función
+    /*constructor(tipo, ...instrumentos) {
+       this.tipo = tipo
+       this.instrumentos = instrumentos       
+    }*/
 
-    tocar = () => {
-        console.log(`El musico es de tipo ${this.tipo}`)
-        // return this.tipo
-        this.instrumentos.forEach(instrumento =>
-            console.log(instrumento.sonar()))
-            // return this.instrumentos. 
-            // return this.sonido
-            // NO se puede hacer nada despues de un return, porque te saca de la función
-    }
+    // tocar = () => {
+    //     console.log(`el musico es de tipo ${this.tipo}`)
+
+    //     this.instrumentos.forEach(instrumento => {  
+    //         console.log(instrumento.sonar())          
+    //     })
+    //  
+    // }
 }
