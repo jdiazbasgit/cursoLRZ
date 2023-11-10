@@ -25,11 +25,13 @@
 			grid-template-columns: 100px repeat(2, 300px);
 			grid-template-rows: repeat(2, 5fr 1fr);
 		}
-/* el minmax se nota cuando disminuyo la pantalla*/
+
+		/* el minmax se nota cuando disminuyo la pantalla*/
 		.grid4 {
 			display: grid;
+			height: 200px;
 			grid-template-columns: 300px repeat(2, minmax(100px, 500px));
-			grid-template-rows: repeat(4, 5fr 1fr);
+			grid-template-rows: repeat(1, 1fr 1fr);
 		}
 
 		.hueco1 {
@@ -67,34 +69,47 @@
 		.hueco9 {
 			background-color: chartreuse;
 		}
+
+		#titulo {
+			text-align: center;
+			vertical-align: middle;
+			padding-top: 7.5%;
+		}
+
+		#barraDeBusqueda {
+			text-align: center;
+			vertical-align: middle;
+			padding-top: 7.5%;
+		}
 	</style>
 
 </head>
 
 <body>
-	<header>
-
+	<header class="grid4">
+		<div class="hueco9" id="logo"> <img
+				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK8AAACvCAMAAAC8TH5HAAAArlBMVEX///8AtagYmJ8Fr6YKqaQTnqEOpKMdkp0Po6IZl58DsacCs6cVnKAJqqUHraUUnaAgvrP4/f05o6vK7uyc4t3k9PTN7OzX8PDw+/qA2tRk0spNy8I7xrwtwreSy9BQq7OT39qFxsu16OVpub9wusEguLCe0NXL5+m93+JmzMcjtK9jur520MxCvbl8xsmx2t6o395ax8NHs7ah2dpErrJrw8SD0tB1xMdDrLGx6OTIu8HAAAAD20lEQVR4nO3aaVeqQBzHcURAUDBx30qjzLQsl7b7/t/YZVhk/izjk+tM59zf92Fpfg7NDAyoaQghhBBCCCGEEEIIIYQQQgghhBBCCCGEEELoP23c60+ms/ltZ05+fOc4jayFIlyu4XLWqaV1yK/uG43f5fWDaafVatUqvI+/y9vbrJqtqArvAz8cGg+KmHF+f15vhlEw9S7I+H1UJGX5y1WoLYKpt+vw4HtFVnZsV+16vQxMvL7jRODE/KSK21u1w0rBxLvWCfhZjXa8aceVgYn3yUnBUQMl3GDrtavBxPsScxOw4yvQ+q9eWDWY9/qunoIdRcvvYGd4QjDvXes6D1awPAy3hiEG8943PQYng/hdOjfwDOMCmPP6XZeApU+3vZFUBDPu7Ww6mfSzl7+7Og/+kc+1qsCrzX5UeP3RJWDZw3dvhZWBV8uiNWzoumcwO75rudzAskrBm17FG17cGJwc4q5UrTa0rDLwa+UkGt7cxODkEN/J1GoDyy4BHwRT/uhSsNTVwT/adgG8DQTvOJmm6XLgF2lW1pttF8CbseANA9vMwGzWSb02e7btPNjbC99xNE0C/pAkjRpbdh68HQrf8WWaKTgWSz0Xf5pmDrwVz57AtilY6uEdss8l4J2YO4z+HzxY6uj9MHPgrWimadooGT4ZWOricEo+9wy+MBhG59Gejgmz9Hx9pfwfk4It8VRjJ8IcWOqVzunGpWDxQhZfZhDwUea+zf9xKfhT+PIvwyqAZY4G7RSuRjz4Q3Swwt2dkS7RZ/BJmpX14VKwaGXqR9ulHFj8//jXrePz6Rks+PTeLrkOImCpg1fTvnUCtiuXst7B84wi2JK7yfSjDQLzxuDvipftd9Hlu5cHW1LnWnhhxq5dOXDZ0fKDzZZtjHhwKq7aK12rb52AC6N3HCxnzXSfXATL5mpd5s3A3JltMp3O5qtmvRnu5ivAhvhEeIVG0U7xDOavCmutVovdJWE3d8rBFy6Rr9GTQ8D8Fpc9FRKCL1xzXqUHh4D5yR55BeCDipu9XT0FMzO5ARZ7I3EErvNgz+tX/clrNo7ue53BZPHt1DJws5mbdTvJy27S2iFgsmfs1CrB7S8VYyHs3SFgMoHYE2MOzK1rBzUHV4uervNg8rv4CXerMOt2ops+V+6xwYPp/ebkiXwOrFIbLmcNHkw3uek3CHjwQfr5l7ZweDC9Njt/4yEdxKulmseBXN0GD6a73OwbGkw7nyibZFzdBg+mN5wz73zyR3z/RFqLLh99uj6bz2bTST9QPggQQgghhBBCCCGEEEIIIYQQQgghhBBCCCGEkLL+AjOMX5pyCjSfAAAAAElFTkSuQmCC"
+				alt="" srcset=""></div>
+		<div class="hueco8" id="titulo">
+			<h1 id="primerh1">Titulo de Pagina</h1>
+		</div>
+		<div class="hueco7" id="barraDeBusqueda">
+			<input type="search" name="" id="">
+			<input type="button" value="search">
+		</div>
 	</header>
 	<section>
-	<H1>PAGINA DE PRUEBA DE GRID</H1>
+		<div class="grid4">
+			<div class="hueco1">hueco1</div>
+			<div class="hueco2">hueco2</div>
+			<div class="hueco3">hueco3</div>
+		</div>
+		<br><br>
+	</section>
 
-	<div class="grid4">
-		<div class="hueco1">hueco1</div>
-		<div class="hueco2">hueco2</div>
-		<div class="hueco3">hueco3</div>
-		<div class="hueco4">hueco4</div>
-		<div class="hueco5">hueco5</div>
-		<div class="hueco6">hueco6</div>
-		<div class="hueco7">hueco7</div>
-		<div class="hueco8">hueco8</div>
-		<div class="hueco9">hueco9</div>
-	</div>
-	<br><br>
-</section>
-
-<footer>
-
-</footer>
+	<footer>
+		<div></div>
+	</footer>
 
 </body>
 
