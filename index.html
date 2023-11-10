@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            display:grid;
+            grid-template-columns:50px 300px;
+            grid-template-rows:200px 75px;
+
+        }
+
+        
+        .grid1{
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 5fr 1fr;
+
+        }
+
+        .grid3{
+            display: grid;
+            grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(3, 3fr);
+
+        }
+
+        .grid4{
+            display: grid;
+            grid-template-columns: 300px repeat (3, minmax(100px, 500px));
+            grid-template-rows: repeat(3, 3fr);
+
+        }
+
+        .hueco1{
+            background-color: aqua;
+        }
+
+        .hueco2{
+            background-color:bisque;
+
+        }
+
+        .hueco3{
+
+            background-color: brown;
+        }
+
+        .hueco4{
+            background-color:blueviolet;
+        }
+
+
+        .grid2{
+            display:grid;
+            grid-template-columns:50px 100px 200px;
+            grid-template-rows:200px 300px 400px;
+        }
+
+        .hueco1{
+            background-color: aqua;
+        }
+
+        .hueco2{
+            background-color:bisque;
+
+        }
+
+        .hueco3{
+
+            background-color: brown;
+        }
+
+        .hueco4{
+            background-color:blueviolet;
+        }
+
+        .hueco5{
+            background-color: aqua;
+        }
+
+        .hueco6{
+            background-color:bisque;
+
+        }
+
+        .hueco7{
+
+            background-color: brown;
+        }
+
+        .hueco8{
+            background-color:blueviolet;
+        }
+        .hueco9{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="hueco1">hueco1</div>
+        <div class="hueco2">hueco2</div>
+        <div class="hueco3">hueco3</div>
+        <div class="hueco4">hueco4</div>
+
+    </div>
+
+    <h1>separador</h1>
+
+    <div class="grid1">
+        <div class="hueco1">hueco1</div>
+        <div class="hueco2">hueco2</div>
+        <div class="hueco3">hueco3 </div>
+        <div class="hueco4">hueco4</div>
+
+    </div>
+    <h1>separador</h1>
+    <div class="grid3">
+        <div class="hueco1">hueco1</div>
+        <div class="hueco2">hueco2</div>
+        <div class="hueco3">hueco3</div>
+        <div class="hueco4">hueco4</div>
+        <div class="hueco5">hueco5</div>
+        <div class="hueco6">hueco6</div>
+        <div class="hueco7">hueco7</div>
+        <div class="hueco8">hueco8</div>
+        <div class="hueco9">hueco9</div>
+
+    </div>
+    
+</body>
+</html>
