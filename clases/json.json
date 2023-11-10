@@ -1,0 +1,89 @@
+{
+    "empleados": [
+        {
+            "nombre": "pepe garcia",
+            "dni": "6543278h",
+            "fechaNacimiento": "01/01/2000",
+            "fechaAlta": "01/01/2018",
+            "datosPersonales": {
+                "estadoCivil": "soltero",
+                "hijos": {
+                    "numeroDeChicos": 3,
+                    "numeroDeChicas": 5
+                }
+            },
+            "datosLaborales": {
+                "salario": 5000,
+                "cargo": "jefe de proyecto"
+            }
+        },
+        {
+            "nombre": "pepe garcia",
+            "dni": "6543278h",
+            "fechaNacimiento": "01/01/2000",
+            "fechaAlta": "01/01/2018",
+            "datosPersonales": {
+                "estadoCivil": "soltero",
+                "hijos": {
+                    "numeroDeChicos": 3,
+                    "numeroDeChicas": 5
+                }
+            },
+            "datosLaborales": {
+                "salario": 5000,
+                "cargo": "jefe de proyecto"
+            }
+        },
+        {
+            "nombre": "pepe garcia",
+            "dni": "6543278h",
+            "fechaNacimiento": "01/01/2000",
+            "fechaAlta": "01/01/2018",
+            "datosPersonales": {
+                "estadoCivil": "soltero",
+                "hijos": {
+                    "numeroDeChicos": 3,
+                    "numeroDeChicas": 5
+                }
+            },
+            "datosLaborales": {
+                "salario": 5000,
+                "cargo": "jefe de proyecto"
+            }
+        },
+        {
+            "nombre": "pepe garcia",
+            "dni": "6543278h",
+            "fechaNacimiento": "01/01/2000",
+            "fechaAlta": "01/01/2018",
+            "datosPersonales": {
+                "estadoCivil": "soltero",
+                "hijos": {
+                    "numeroDeChicos": 3,
+                    "numeroDeChicas": 5
+                }
+            },
+            "datosLaborales": {
+                "salario": 5000,
+                "cargo": "jefe de proyecto"
+            }
+        },
+        {
+            "nombre": "pepe garcia",
+            "dni": "6543278h",
+            "fechaNacimiento": "01/01/2000",
+            "fechaAlta": "01/01/2018",
+            "datosPersonales": {
+                "estadoCivil": "soltero",
+                "hijos": {
+                    "numeroDeChicos": 3,
+                    "numeroDeChicas": 5
+                }
+            },
+            "datosLaborales": {
+                "salario": 5000,
+                "cargo": "jefe de proyecto"
+            }
+        }
+    ]
+}
