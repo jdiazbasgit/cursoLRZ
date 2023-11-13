@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Javascript_Mar</title>
+    <!-- librerias Bootstrap para CSS y Javascript -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Con defer el script se carga despues del DOM -->
+    <script src="script_Mar.js" defer></script>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <button class="bg-danger" onclick="ver(this)">PÚLSAME</button> 
+     </div> 
+    rellenamos el div con Javascript inner.HTML
+   <div id="divContenedor"></div>
+     -->
+
+     <!-- meterlo siempre en un div con class=container -->
+    <!-- <div class="container"> 
+        <div id="contenedorpares"></div>
+        <div id="contenedorimpares"></div> 
+    </div>-->
+    <div class="container">
+        <button onclick="ejemploSwitch(1)">uno</button>
+        <button onclick="ejemploSwitch(2)">dos</button>
+        <button onclick="ejemploSwitch(3)">tres</button>
+        <button onclick="ejemploSwitch(4)">cuatro</button>
+        <button onclick="ejemploSwitch(5)">cinco</button>
+        <button onclick="ejemploSwitch(500)">otro boton</button>
+        <div id="contenido">
+        </div>
+    </div>
+</body>
+
+</html>
