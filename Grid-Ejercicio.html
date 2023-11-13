@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio GRID final de clase 09-11-2023</title>
+    <style>
+        .gridHeader {
+            display: grid;
+            grid-template-columns: 1fr 7fr 1fr;
+            grid-row: 5fr 1fr;
+            background-color: aqua;
+        }
+
+        .encabezado {
+            text-align: center;
+            font-size: xx-large;
+            padding: 15px;
+        }
+
+        .botones {
+            background-color: lightsteelblue;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+
+        .gridPrincipal {
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr;
+            background-color: lightcyan;
+        }
+
+        .gridColumna1 {
+            display: grid;
+            grid-template-columns: 3fr;
+            grid-template-rows: 3 fr;
+            background-color: lightgreen;
+            padding: 15px;
+            border: 1px solid black;
+            margin: 15px;
+
+        }
+
+        .gridColumna2 {
+            display: grid;
+            grid-template-columns: 3fr;
+            background-color: lightyellow;
+            padding: 15px;
+            border: 1px solid black;
+            margin: 15px;
+
+
+        }
+
+        .gridColumna3 {
+            display: grid;
+            grid-template-columns: 3fr;
+            background-color: lightcoral;
+            padding: 15px;
+            border: 1px solid black;
+            margin: 15px;
+
+
+        }
+
+        .pieDePagina {
+            background-color: lightblue;
+            padding: 15px;
+            border: 1px solid black;
+
+        }
+
+        [class^="celda"] {
+            padding: 15px;
+            border: 1px solid black;
+            margin: 15px;
+        }
+
+        [class^="gridColumna"] {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="gridHeader">
+        <div class="logo"><img src="logo.jpg" alt="Lorem Impsum"></div>
+        <div class="encabezado"> Lorem Impsum</div>
+        <div class="botones">
+            <form>
+                <label for="usuario">Usu:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Pass:</label><br>
+                <input type="text" id="lname" name="lname">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </header>
+    <div class="gridPrincipal">
+        <div class="gridColumna1">Columna 1
+            <div class="celda col 1 fila 2">Celda</div>
+            <div class="celda col 1 fila 1">Celda</div>
+            <div class="celda col 1 fila 3">Celda</div>
+        </div>
+        <div class="gridColumna2">Columna 2
+            <div class="celda col 2 fila 1">Celda</div>
+            <div class="celda col 2 fila 2">Celda</div>
+            <div class="celda col 2 fila 3">Celda</div>
+
+        </div>
+        <div class="gridColumna3">Columna 3
+            <div class="celda col 3 fila 1">Celda</div>
+            <div class="celda col 3 fila 2">Celda</div>
+            <div class="celda col 3 fila 3">Celda</div>
+
+        </div>
+
+    </div>
+    <footer class="pieDePagina">
+        <div>Quienes somos</div>
+        <div>Datos de contacto</div>
+        <div>Avisos Legales</div>
+    </footer>
+
+</body>
+
+</html>
