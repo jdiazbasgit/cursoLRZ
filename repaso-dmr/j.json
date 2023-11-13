@@ -1,0 +1,14 @@
+{
+    "location": {
+        "ancestorOrigins": {},
+        "href": "http://localhost:5500/",
+        "origin": "http://localhost:5500",
+        "protocol": "http:",
+        "host": "localhost:5500",
+        "hostname": "localhost",
+        "port": "5500",
+        "pathname": "/",
+        "search": "",
+        "hash": ""
+    }
+}

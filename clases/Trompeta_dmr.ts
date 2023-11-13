@@ -1,4 +1,4 @@
-import { Instrumento } from "./Instrumento.js";
+import { Instrumento } from "./Instrumento_dmr.js";
 
 export class Trompeta extends Instrumento{
 

@@ -1,4 +1,4 @@
-import { Musico } from "./Musico.js";
+import { Musico } from "./Musico_dmr.js";
 
 export class HombreOrquesta extends Musico{
     tocar(): void {
