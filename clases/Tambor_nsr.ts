@@ -1,4 +1,4 @@
-import { Instrumento } from "./Instrumento.js";
+import { Instrumento } from "./Instrumento_nsr.js";
 
 export class Tambor extends Instrumento{
     

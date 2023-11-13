@@ -1,4 +1,4 @@
-import { Musico } from "./Musico.js";
+import { Musico } from "./Musico_nsr.js";
 export class Solista extends Musico {
     // si no mse redefinen las propiedades no se necesita redefinir el constructor
     tocar() {

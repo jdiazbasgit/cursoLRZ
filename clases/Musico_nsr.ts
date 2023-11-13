@@ -1,5 +1,5 @@
-import { MusicoInterface } from "../interfaces/MusicoInterface.js";
-import { Instrumento } from "./Instrumento.js";
+import { MusicoInterface } from "../interfaces/MusicoInterface_nsr.js";
+import { Instrumento } from "./Instrumento_nsr.js";
 
 export abstract class Musico implements MusicoInterface{
    
