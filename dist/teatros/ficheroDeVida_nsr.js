@@ -12,4 +12,4 @@ console.log("va a tocar el solista");
 solista.tocar();
 console.log("va a tocar el hombre orquesta");
 hombreOrquesta.tocar();
-trompeta.dondeEstoy();
+//trompeta.dondeEstoy()

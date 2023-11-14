@@ -1,4 +1,4 @@
 export interface MusicoInterface{
 
-    tocar():void;
+    tocar():void; //devuelve un vacio
 }
