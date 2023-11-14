@@ -1,4 +1,4 @@
-import { Paises } from "./clases/Paises.js";
+import { Paises } from "./clases/Paises_nsr.js";
 
 let paises = new Paises()
 let paisesRecibidos: Array<any> = []
