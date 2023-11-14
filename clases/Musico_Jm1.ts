@@ -1,6 +1,6 @@
-import { InstrumentoInterface } from "../interfaces/InstrumentoInterface.js";
-import { MusicoInterface } from "../interfaces/MusicoInterface.js";
-import { Instrumento } from "./Instrumento.js";
+import { InstrumentoInterface } from "../interfaces/InstrumentoInterface_Jm1.js";
+import { MusicoInterface } from "../interfaces/MusicoInterface_Jm1.js";
+import { Instrumento } from "./Instrumento_Jm1.js";
 
 export abstract class Musico implements MusicoInterface{
     instrumentos:Array<InstrumentoInterface> //Array de objetos instrumentos

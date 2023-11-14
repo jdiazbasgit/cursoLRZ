@@ -1,5 +1,5 @@
 
-import { Musico } from "./Musico.js";
+import { Musico } from "./Musico_Jm1.js";
 
 export class Solista extends Musico{
 

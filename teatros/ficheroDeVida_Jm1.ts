@@ -1,9 +1,9 @@
-import { HombreOrquesta } from "../clases/HombreOrquesta.js";
-import { Instrumento } from "../clases/Instrumento.js";
-import { Solista } from "../clases/Solista.js";
-import { Tambor } from "../clases/Tambor.js";
-import { Trompeta } from "../clases/Trompeta.js";
-import { InstrumentoInterface } from "../interfaces/InstrumentoInterface.js";
+import { HombreOrquesta } from "../clases/HombreOrquesta_Jm1.js";
+import { Instrumento } from "../clases/Instrumento_Jm1.js";
+import { Solista } from "../clases/Solista_Jm1.js";
+import { Tambor } from "../clases/Tambor_Jm1.js";
+import { Trompeta } from "../clases/Trompeta_Jm1.js";
+import { InstrumentoInterface } from "../interfaces/InstrumentoInterface_Jm1.js";
 
 var tambor:Tambor= new Tambor("pom, pom, pom","tambor")
 var trompeta:Trompeta= new Trompeta("tuuu, tuuu, tuuu","trompeta")

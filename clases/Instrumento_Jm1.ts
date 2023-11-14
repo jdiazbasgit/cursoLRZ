@@ -1,4 +1,4 @@
-import { InstrumentoInterface } from "../interfaces/InstrumentoInterface.js";
+import { InstrumentoInterface } from "../interfaces/InstrumentoInterface_Jm1.js";
 
 export class Instrumento implements InstrumentoInterface{
 
