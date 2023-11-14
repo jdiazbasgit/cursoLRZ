@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ES-es"> <!--Inicio de la página-->
+
+<head> <!--Inicio del HEAD-->
+	<meta charset="utf-8" />
+	<meta name="Description" content="Descripcion de la pagina" />
+	<meta name="Keywords" content="Palabras clave, separadas por comas" />
+	<title>Ejercicio Mar</title>
+	<link rel="stylesheet" href="reset.css" >
+	<style>	
+		header{
+			background-color: rgb(216, 216, 96);
+			display:flex;
+			align-items: center;
+		}	
+		#logo{
+			padding: 10px;
+			border: 1px solid grey;		
+		}
+		#titulo{	
+			border: 1px solid grey;
+			padding: 10px;
+			width:63%;		
+		}
+		#bloqueder{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border: 1px solid grey;
+			padding: 10px;
+		}
+		h1{
+			color: rgb(23, 97, 35);
+			font-size: 2em;
+			text-align: center;
+		}
+		.buscador {
+			margin:18px auto;
+			text-align: center;
+		}
+		p {
+			margin:1em auto;
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<div id="logo">
+			<a href="index.html"><img src="logo.png" title="logo de mi web" width=200px; alt="No se encuentra la imagen"></a>
+		</div>
+		<div id="titulo">
+			<h1>PÁGINA WEB MAR</h1>
+		</div>
+		<div id="bloqueder">
+			<div class="buscador">		
+					<label for="buscador"></label>
+					<input type="search" id="buscador" placeholder="Buscar..." name="buscador">
+					<label for="buscar"></label>
+					<input type="button" id="buscar" value="Buscar">		
+			</div>
+			<div class="buscador">
+				<label for="login"></label>
+				<input type="button" id="login" value="Sign up">
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<p>HOLA MUNDO</p>
+	</main>
+
+	<footer>
+		<p>footer</p>
+	</footer>
+
+</body>
+
+</html>
