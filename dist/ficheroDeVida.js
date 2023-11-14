@@ -19,8 +19,10 @@ let div = document.querySelector("#contenido");
 (_a = document.querySelector("#continente")) === null || _a === void 0 ? void 0 : _a.addEventListener("change", () => {
     let selectContinentes = document.querySelector("#continente");
     let selectPaises = document.querySelector("#paises");
+    let selectNombresOficiales = document.querySelector("#nombreOfficial");
     paises.getDatos("https://restcountries.com/v3.1/region/" +
         selectContinentes.selectedOptions[0].value).then(datos => {
+        selectNombresOficiales.innerHTML = "";
         selectPaises.innerHTML = "";
         var optionInicial = document.createElement("option");
         optionInicial.value = "0";
@@ -30,6 +32,12 @@ let div = document.querySelector("#contenido");
             option.value = pais.name.common;
             option.text = pais.name.common;
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
+            datos.forEach((pais) => {
+                let option = document.createElement("option");
+                option.value = pais.name.official;
+                option.text = pais.name.official;
+                selectNombresOficiales === null || selectNombresOficiales === void 0 ? void 0 : selectNombresOficiales.appendChild(option);
+            });
         });
     });
 });

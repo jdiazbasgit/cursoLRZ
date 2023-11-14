@@ -20,9 +20,11 @@ let div = document.querySelector("#contenido")
 document.querySelector("#continente")?.addEventListener("change",()=>{
     let selectContinentes=document.querySelector("#continente")
    let selectPaises=document.querySelector("#paises")
+   let selectNombresOficiales=document.querySelector("#nombreOfficial")
     paises.getDatos("https://restcountries.com/v3.1/region/"+
      (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then(datos=>{
-        (selectPaises as HTMLSelectElement).innerHTML=""
+        (selectNombresOficiales as HTMLSelectElement).innerHTML="";
+        (selectPaises as HTMLSelectElement).innerHTML="";
         var optionInicial:HTMLOptionElement= document.createElement("option");
        (optionInicial as HTMLOptionElement).value="0";
        (optionInicial as HTMLOptionElement).text="Seleccciona pais...";
@@ -30,9 +32,15 @@ document.querySelector("#continente")?.addEventListener("change",()=>{
         let option=document.createElement("option");
         (option as HTMLOptionElement).value=pais.name.common;
         (option as HTMLOptionElement).text=pais.name.common;
-        selectPaises?.appendChild(option)
+        selectPaises?.appendChild(option);
+
+            datos.forEach((pais: { name: { official: string; }; }) => {
+            let option=document.createElement("option");
+            (option as HTMLOptionElement).value=pais.name.official;
+            (option as HTMLOptionElement).text=pais.name.official;
+            selectNombresOficiales?.appendChild(option)
        });
-        
+        })
 
      })
 })
