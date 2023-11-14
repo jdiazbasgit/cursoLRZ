@@ -1,7 +1,6 @@
 var _a;
 import { Paises } from "./clases/Paises.js";
 let paises = new Paises();
-let paisesRecibidos = [];
 let div = document.querySelector("#contenido");
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
     paisesRecibidos = datos
@@ -19,6 +18,7 @@ let div = document.querySelector("#contenido");
 (_a = document.querySelector("#continente")) === null || _a === void 0 ? void 0 : _a.addEventListener("change", () => {
     let selectContinentes = document.querySelector("#continente");
     let selectPaises = document.querySelector("#paises");
+    let paisesRecibidos = [];
     paises.getDatos("https://restcountries.com/v3.1/region/" +
         selectContinentes.selectedOptions[0].value).then(datos => {
         selectPaises.innerHTML = "";
@@ -26,9 +26,13 @@ let div = document.querySelector("#contenido");
         optionInicial.value = "0";
         optionInicial.text = "Seleccciona pais...";
         datos.forEach((pais) => {
+            paisesRecibidos.push(pais.name.common);
+        });
+        paisesRecibidos.sort();
+        paisesRecibidos.forEach(p => {
             let option = document.createElement("option");
-            option.value = pais.name.common;
-            option.text = pais.name.common;
+            option.value = p; //crea atributo value del select
+            option.text = p; //crea el texto del select
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
         });
     });

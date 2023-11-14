@@ -7,9 +7,9 @@ export class Paises {
         this.getDatos = (url) => {
             return new Promise(function (resolve, reject) {
                 fetch(url).then(response => {
-                    if (response.status !== 200)
+                    if (response.status !== 200) //si código de respuesta es incorrecto mandar mens de error
                         reject("se ha producido un error " + response.statusText);
-                    response.json().then(datos => resolve(datos));
+                    response.json().then(datos => resolve(datos)); //si ok: utiliza el metodo json de response y vuelca los datos
                 });
             });
         };
