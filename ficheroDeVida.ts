@@ -20,7 +20,7 @@ document.querySelector("#continente")?.addEventListener("change", () => { //even
     let selectContinentes = document.querySelector("#continente")
     let selectPaises = document.querySelector("#paises")
 
-    let paisesRecibidos: Array<any> = []; 
+    let paisesRecibidos: Array<string> = []; 
 
     paises.getDatos("https://restcountries.com/v3.1/region/" +
         (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then(datos => {
@@ -31,7 +31,7 @@ document.querySelector("#continente")?.addEventListener("change", () => { //even
             datos.forEach((pais: { name: { common: string; }; }) => {
                 paisesRecibidos.push(pais.name.common);
             })  
-                       
+
             paisesRecibidos.sort() 
             
             paisesRecibidos.forEach(p => {
