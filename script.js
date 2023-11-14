@@ -1,6 +1,8 @@
 edad = 28
 const PI = 3.1416
-
+console.log("tipo1:"+typeof(edad))
+edad="pepe"
+console.log("tipo2:"+typeof(edad))
 /*
 Tipos de datos
 texto
@@ -58,8 +60,26 @@ function suma(a, b) {
 }
 
 //let suma=(a,b)=>a+b
-
 let divContenido = document.querySelector("#contenido")
+let botonCambiar= document.querySelector("#cambiar")
+botonCambiar.addEventListener("click",function(){
+divContenido.innerHTML=""
+let img=document.createElement("img")
+img.src="./camion.jpg"
+img.width=200
+img.height=100
+divContenido.appendChild(img)
+
+})
+
+
+let boton= document.createElement("button")
+boton.innerHTML="aregar fila"
+boton.classList.add("bg-danger")
+boton.addEventListener("click",function(){
+    agregarFila()
+})
+divContenido.appendChild(boton)
 let tabla = document.createElement("table")
 tabla.border = 1
 tabla.align="center"
@@ -76,6 +96,8 @@ trCabecera.appendChild(th3)
 tabla.appendChild(trCabecera)
 divContenido.appendChild(tabla)
 
+
+
 let agregarFila = () => {
     let tr = document.createElement("tr")
     let td1 = document.createElement("td")
@@ -90,9 +112,8 @@ let agregarFila = () => {
     tabla.appendChild(tr)
 }
 
-let divJson= document.querySelector("#json")
-divJson.innerHTML=JSON.stringify(document)
-console.log(document.location.port)
+
+
 
 
 
