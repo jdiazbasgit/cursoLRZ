@@ -17,22 +17,23 @@ let div = document.querySelector("#contenido")
     div?.appendChild(h1)
 })*/
 
-document.querySelector("#continente")?.addEventListener("change",()=>{
-    let selectContinentes=document.querySelector("#continente")
-   let selectPaises=document.querySelector("#paises")
-    paises.getDatos("https://restcountries.com/v3.1/region/"+
-     (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then(datos=>{
-        (selectPaises as HTMLSelectElement).innerHTML=""
-        var optionInicial:HTMLOptionElement= document.createElement("option");
-       (optionInicial as HTMLOptionElement).value="0";
-       (optionInicial as HTMLOptionElement).text="Seleccciona pais...";
-       datos.forEach((pais: { name: { common: string; }; }) => {
-        let option=document.createElement("option");
-        (option as HTMLOptionElement).value=pais.name.common;
-        (option as HTMLOptionElement).text=pais.name.common;
-        selectPaises?.appendChild(option)
-       });
-        
+document.querySelector("#continente")?.addEventListener("change", () => {
+    
+    let selectContinentes = document.querySelector("#continente")
+    let selectPaises = document.querySelector("#paises")
+    paises.getDatos("https://restcountries.com/v3.1/region/" +
+        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then(datos => {
+            (selectPaises as HTMLSelectElement).innerHTML = ""
+            var optionInicial: HTMLOptionElement = document.createElement("option");
+            (optionInicial as HTMLOptionElement).value = "0";
+            (optionInicial as HTMLOptionElement).text = "Seleccciona pais...";
+            datos.forEach((pais: { name: { common: string; }; }) => {
+                let option = document.createElement("option");
+                (option as HTMLOptionElement).value = pais.name.common;
+                (option as HTMLOptionElement).text = pais.name.common;
+                selectPaises?.appendChild(option)
+            });
 
-     })
+
+        })
 })
