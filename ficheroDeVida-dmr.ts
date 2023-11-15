@@ -29,7 +29,7 @@ document.querySelector("#continente")?.addEventListener("change", () => {
         (selectPaises as HTMLSelectElement).innerHTML = "";
         let option = document.createElement("option");
         option.value = "0";
-        option.text = "Seleciona Pais....";
+        option.text = "Selecciona Pais....";
         (h1 as HTMLHeadingElement).innerHTML = "Deber seleccionar un continente"
         selectPaises?.appendChild(option)
     }
