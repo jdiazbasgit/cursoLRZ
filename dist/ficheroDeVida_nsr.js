@@ -31,12 +31,15 @@ let div = document.querySelector("#contenido");
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
     }
     paises.getDatos("https://restcountries.com/v3.1/region/" +
-        selectContinentes.selectedOptions[0].value).then(datos => {
+        selectContinentes.selectedOptions[0].value).then((datos) => {
         selectPaises.innerHTML = "";
         var optionInicial = document.createElement("option");
         optionInicial.value = "0";
         optionInicial.text = "Seleccciona pais...";
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(optionInicial);
+        datos.sort((a, b) => {
+            return a.translations.spa.common.localeCompare(b.translations.spa.common);
+        });
         datos.forEach((pais) => {
             var _a, _b, _c, _d;
             // (pais) me pongo encima del error y sale corrección rápida

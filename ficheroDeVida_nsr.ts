@@ -35,12 +35,15 @@ document.querySelector("#continente")?.addEventListener("change", () => {
     }
 
     paises.getDatos("https://restcountries.com/v3.1/region/" +
-        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then(datos => {
+        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then((datos:Array<any>) => {
             (selectPaises as HTMLSelectElement).innerHTML = ""
             var optionInicial = document.createElement("option");
             optionInicial.value = "0";
             optionInicial.text = "Seleccciona pais...";
             selectPaises?.appendChild(optionInicial)
+            datos.sort((a,b)=>{
+                return a.translations.spa.common.localeCompare(b.translations.spa.common)
+            })
             datos.forEach((pais:
                 {
                     name: {
@@ -64,7 +67,6 @@ document.querySelector("#continente")?.addEventListener("change", () => {
                     option.text = pais.translations?.spa?.common;
                 selectPaises?.appendChild(option)
             });
-
 
         })
 })
