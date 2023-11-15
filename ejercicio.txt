@@ -1,0 +1,19 @@
+al pulsar boton generales sacar:
+nombre comun name.common
+nombre oficial name.official
+capital capital
+poblacion population
+
+al pulsar geograficos sacar
+area area
+fronteras borders
+enlaces google maps open street maps
+
+maps.googleMaps
+maps.openStreetMaps
+
+al pulsar en banderas sacar
+escudo coatOfArms.svg
+bandera flags.svg
+
+traducciones translations
