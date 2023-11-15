@@ -1,4 +1,4 @@
-var _a, _b;
+var _a;
 import { Paises } from "./clases/Paises_JCGA.js";
 // Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
 let paises = new Paises();
@@ -40,6 +40,7 @@ let div = document.querySelector("#contenido");
     //     // Y le tengo que decri que es un array de cero para que no espere más que un valor
     paises.getDatos("https://restcountries.com/v3.1/region/" +
         selectContinentes.selectedOptions[0].value).then((datos) => {
+        var _a, _b;
         // Lo anterior, para que me lo deje en blanco, el selector de paises
         // Y a continuación, dado que lo hemos dejado en blanco, le meto la opción por defecto
         selectPaises.innerHTML = "";
@@ -64,23 +65,29 @@ let div = document.querySelector("#contenido");
             // El "?" dice que aunque falta algo por indefinido, siga la ejecución. Si no, si no encuentra un pais traducido, se pararía
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
         });
-        // let paisSeleccionado:string=
+        // controlamos que este seleccionado el pais
+        (_a = document.querySelector("#paises")) === null || _a === void 0 ? void 0 : _a.addEventListener("change", () => {
+            let h1 = document.querySelector("#error");
+            h1.innerHTML = "";
+            let selectContinentes = document.querySelector("#continente");
+            let selectPaises = document.querySelector("#paises");
+            // Doy de alta las 2 variables vinculadas a los id
+            let value = selectPaises.selectedOptions[0].value;
+            // Meto un if para tratar si no ha elegido nada
+            if (value === "0") {
+                selectPaises.innerHTML = "";
+                let option = document.createElement("option");
+                option.value = "0";
+                option.text = "Seleciona Pais....";
+                h1.innerHTML = "Deber seleccionar un pais";
+                selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
+            }
+        });
+        // Vamos a llamar al primer boton..."Generales"
+        (_b = document.querySelector("#generales")) === null || _b === void 0 ? void 0 : _b.addEventListener("click", () => {
+            paises.getDatos("https://restcountries.com/v3.1/region/" +
+                selectContinentes.selectedOptions[0].value).then((datos) => {
+            });
+        });
     });
-});
-(_b = document.querySelector("#paises")) === null || _b === void 0 ? void 0 : _b.addEventListener("change", () => {
-    let h1 = document.querySelector("#error");
-    h1.innerHTML = "";
-    let selectContinentes = document.querySelector("#continente");
-    let selectPaises = document.querySelector("#paises");
-    // Doy de alta las 2 variables vinculadas a los id
-    let value = selectPaises.selectedOptions[0].value;
-    // Meto un if para tratar si no ha elegido nada
-    if (value === "0") {
-        selectPaises.innerHTML = "";
-        let option = document.createElement("option");
-        option.value = "0";
-        option.text = "Seleciona Pais....";
-        h1.innerHTML = "Deber seleccionar un pais";
-        selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
-    }
 });

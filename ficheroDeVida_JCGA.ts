@@ -52,7 +52,7 @@ document.querySelector("#continente")?.addEventListener("change", () => {
             optionInicial.text = "Seleccciona pais...";
             selectPaises?.appendChild(optionInicial)
             // ordeno el array de datos recibido
-            datos.sort((a,b) => {
+            datos.sort((a, b) => {
                 return a.translations.spa.common.localeCompare(b.translations.spa.common);
             })
             // Para cada pais encontrado en el continente, le creo una entrada en el selector de paises
@@ -80,27 +80,42 @@ document.querySelector("#continente")?.addEventListener("change", () => {
                 // El "?" dice que aunque falta algo por indefinido, siga la ejecución. Si no, si no encuentra un pais traducido, se pararía
                 selectPaises?.appendChild(option)
             })
+            // controlamos que este seleccionado el pais
+
+            document.querySelector("#paises")?.addEventListener("change", () => {
+                let h1 = document.querySelector("#error");
+                (h1 as HTMLHeadingElement).innerHTML = ""
+                let selectContinentes = document.querySelector("#continente")
+                let selectPaises = document.querySelector("#paises")
+                // Doy de alta las 2 variables vinculadas a los id
+                let value = (selectPaises as HTMLSelectElement).selectedOptions[0].value;
+                // Meto un if para tratar si no ha elegido nada
+                if (value === "0") {
+                    (selectPaises as HTMLSelectElement).innerHTML = "";
+                    let option = document.createElement("option");
+                    option.value = "0";
+                    option.text = "Seleciona Pais....";
+                    (h1 as HTMLHeadingElement).innerHTML = "Deber seleccionar un pais"
+                    selectPaises?.appendChild(option)
+                }
+            })
+
+            // Vamos a llamar al primer boton..."Generales"
+
+            document.querySelector("#generales")?.addEventListener("click", () => {
+
+                paises.getDatos("https://restcountries.com/v3.1/region/" +
+                    (selectContinentes as HTMLSelectElement).selectedOptions[0].value+"/"+(selectPaises as HTMLSelectElement).selectedOptions[0].value).then((datos: Array<any>) => {
 
 
-            // let paisSeleccionado:string=
+
+                    })
+
+
+
+            })
+
 
         })
 })
 
-document.querySelector("#paises")?.addEventListener("change", () => {
-    let h1 = document.querySelector("#error");
-    (h1 as HTMLHeadingElement).innerHTML = ""
-    let selectContinentes = document.querySelector("#continente")
-    let selectPaises = document.querySelector("#paises")
-    // Doy de alta las 2 variables vinculadas a los id
-    let value = (selectPaises as HTMLSelectElement).selectedOptions[0].value;
-    // Meto un if para tratar si no ha elegido nada
-    if (value === "0") {
-        (selectPaises as HTMLSelectElement).innerHTML = "";
-        let option = document.createElement("option");
-        option.value = "0";
-        option.text = "Seleciona Pais....";
-        (h1 as HTMLHeadingElement).innerHTML = "Deber seleccionar un pais"
-        selectPaises?.appendChild(option)
-    }
-})
