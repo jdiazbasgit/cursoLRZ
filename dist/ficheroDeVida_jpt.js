@@ -1,4 +1,4 @@
-var _a;
+var _a, _b;
 import { Paises } from "./clases/Paises_jpt.js";
 let paises = new Paises();
 let paisesRecibidos = [];
@@ -52,4 +52,21 @@ let div = document.querySelector("#contenido");
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
         });
     });
+});
+(_b = document.querySelector("#paises")) === null || _b === void 0 ? void 0 : _b.addEventListener("change", () => {
+    let h1 = document.querySelector("#error");
+    h1.innerHTML = "";
+    let selectContinentes = document.querySelector("#continente");
+    let selectPaises = document.querySelector("#paises");
+    // Doy de alta las 2 variables vinculadas a los id
+    let value = selectPaises.selectedOptions[0].value;
+    // Meto un if para tratar si no ha elegido nada
+    if (value === "0") {
+        selectPaises.innerHTML = "";
+        let option = document.createElement("option");
+        option.value = "0";
+        option.text = "Seleciona Pais....";
+        h1.innerHTML = "Deber seleccionar un pais";
+        selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
+    }
 });
