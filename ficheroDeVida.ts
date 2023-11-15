@@ -50,17 +50,18 @@ document.querySelector("#continente")?.addEventListener("change", () => {
                     translations: {
                         spa: {
                             official: string;
+                            common: string;
                         };
                         
                     };
                 }) => {
-                // (pais) me pongo encima del error y sale correccion rápida
+                // (pais) me pongo encima del error y sale corrección rápida
                 let option = document.createElement("option");
                 option.value = pais.name.common;
                 if (pais.translations?.spa === undefined)
-                    option.text = pais.name?.official;
+                    option.text = pais.name?.common;
                 else
-                    option.text = pais.translations?.spa?.official;
+                    option.text = pais.translations?.spa?.common;
                 selectPaises?.appendChild(option)
             });
 

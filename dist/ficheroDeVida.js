@@ -39,13 +39,13 @@ let div = document.querySelector("#contenido");
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(optionInicial);
         datos.forEach((pais) => {
             var _a, _b, _c, _d;
-            // (pais) me pongo encima del error y sale correccion rápida
+            // (pais) me pongo encima del error y sale corrección rápida
             let option = document.createElement("option");
             option.value = pais.name.common;
             if (((_a = pais.translations) === null || _a === void 0 ? void 0 : _a.spa) === undefined)
-                option.text = (_b = pais.name) === null || _b === void 0 ? void 0 : _b.official;
+                option.text = (_b = pais.name) === null || _b === void 0 ? void 0 : _b.common;
             else
-                option.text = (_d = (_c = pais.translations) === null || _c === void 0 ? void 0 : _c.spa) === null || _d === void 0 ? void 0 : _d.official;
+                option.text = (_d = (_c = pais.translations) === null || _c === void 0 ? void 0 : _c.spa) === null || _d === void 0 ? void 0 : _d.common;
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
         });
     });
