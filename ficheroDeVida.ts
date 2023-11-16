@@ -66,7 +66,24 @@ document.querySelector("#continente")?.addEventListener("change", () => {
                 else
                     option.text = pais.translations?.spa?.common;
                 selectPaises?.appendChild(option)
+
+                
             });
+
+            document.querySelector("#generales")  => {
+                let h1 = document.querySelector("#error");
+                (h1 as HTMLHeadingElement).innerHTML = ""
+                let selectContinentes = document.querySelector("#continente")
+                let selectPaises = document.querySelector("#paises")
+                let value = (selectContinentes as HTMLSelectElement).selectedOptions[0].value;
+                if (value === "0") {
+                    (selectPaises as HTMLSelectElement).innerHTML = "";
+                    let option = document.createElement("option");
+                    option.value = "0";
+                    option.text = "Seleciona Pais....";
+                    (h1 as HTMLHeadingElement).innerHTML = "Deber seleccionar un continente"
+                    selectPaises?.appendChild(option)
+                }
 
 
         })

@@ -36,10 +36,7 @@ let div = document.querySelector("#contenido");
         var optionInicial = document.createElement("option");
         optionInicial.value = "0";
         optionInicial.text = "Seleccciona pais...";
-<<<<<<< HEAD
-=======
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(optionInicial);
->>>>>>> rest
         datos.sort((a, b) => {
             return a.translations.spa.common.localeCompare(b.translations.spa.common);
         });
@@ -53,18 +50,14 @@ let div = document.querySelector("#contenido");
             else
                 option.text = (_d = (_c = pais.translations) === null || _c === void 0 ? void 0 : _c.spa) === null || _d === void 0 ? void 0 : _d.common;
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
-            let selectNombresOficiales = document.querySelector("#nombreOfficial");
-            selectNombresOficiales.innerHTML = "";
-            datos.sort((a, b) => {
-                return a.translations.spa.common.localeCompare(b.translations.spa.common);
-            });
-            datos.forEach((pais) => {
-                let option = document.createElement("option");
-                option.value = pais.name.official;
-                option.text = pais.name.official;
-                option.ariaSort = "ascending";
-                selectNombresOficiales === null || selectNombresOficiales === void 0 ? void 0 : selectNombresOficiales.appendChild(option);
-            });
+        });
+        let selectNombresOficiales = document.querySelector("#generales");
+        selectNombresOficiales.innerHTML = "";
+        datos.forEach((pais) => {
+            let option = document.createElement("option");
+            option.value = pais.name.official;
+            option.text = pais.name.official;
+            selectNombresOficiales === null || selectNombresOficiales === void 0 ? void 0 : selectNombresOficiales.appendChild(option);
         });
     });
 });
