@@ -1,5 +1,6 @@
-var _a;
+var _a, _b, _c, _d, _e, _f;
 import { Paises } from "./clases/Paises.js";
+var pais;
 let paises = new Paises();
 let paisesRecibidos = [];
 let div = document.querySelector("#contenido");
@@ -52,4 +53,49 @@ let div = document.querySelector("#contenido");
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
         });
     });
+});
+(_b = document.querySelector("#paises")) === null || _b === void 0 ? void 0 : _b.addEventListener("change", () => {
+    //creo las acciones para la select de paises
+    let h1 = document.createElement("h1");
+    let divContenido = document.querySelector("#contenido");
+    limpiar(divContenido);
+    h1.innerHTML =
+        `he cambiado al pais 
+    ${document.querySelector("#paises").selectedOptions[0].value}`;
+    divContenido.appendChild(h1);
+});
+let limpiar = (elemento) => {
+    elemento.innerHTML = "";
+};
+(_c = document.querySelector("#geograficos")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
+    //colocar en pantallas datos geograficos
+    let h1 = document.createElement("h1");
+    let divContenido = document.querySelector("#contenido");
+    limpiar(divContenido);
+    h1.innerHTML = "estoy en geograficos";
+    divContenido.appendChild(h1);
+});
+(_d = document.querySelector("#banderas")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
+    //colocar en pantallas datos banderas
+    let h1 = document.createElement("h1");
+    let divContenido = document.querySelector("#contenido");
+    limpiar(divContenido);
+    h1.innerHTML = "estoy en banderas";
+    divContenido.appendChild(h1);
+});
+(_e = document.querySelector("#traducciones")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
+    //colocar en pantallas datos traducciones
+    let h1 = document.createElement("h1");
+    let divContenido = document.querySelector("#contenido");
+    limpiar(divContenido);
+    h1.innerHTML = "estoy en traducciones";
+    divContenido.appendChild(h1);
+});
+(_f = document.querySelector("#generales")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", () => {
+    //colocar en pantallas datos generales
+    let h1 = document.createElement("h1");
+    let divContenido = document.querySelector("#contenido");
+    limpiar(divContenido);
+    h1.innerHTML = "estoy en generales";
+    divContenido.appendChild(h1);
 });

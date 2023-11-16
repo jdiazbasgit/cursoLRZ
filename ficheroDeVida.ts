@@ -1,5 +1,6 @@
 import { Paises } from "./clases/Paises.js";
-var pais:any
+import { Pais } from "./types/Pais.js";
+var pais:Pais
 let paises = new Paises()
 let paisesRecibidos: Array<any> = []
 let div = document.querySelector("#contenido")
@@ -41,23 +42,10 @@ document.querySelector("#continente")?.addEventListener("change", () => {
             optionInicial.value = "0";
             optionInicial.text = "Seleccciona pais...";
             selectPaises?.appendChild(optionInicial)
-            datos.sort((a,b)=>{
+            datos.sort((a:Pais,b:Pais)=>{
             return a.translations.spa.common.localeCompare(b.translations.spa.common)
             })
-            datos.forEach((pais:
-                {
-                    name: {
-                        common: string;
-                        official:string;
-                    };
-                    translations: {
-                        spa: {
-                            official: string;
-                            common: string;
-                        };
-
-                    };
-                }) => {
+            datos.forEach((pais:Pais) => {
                 // (pais) me pongo encima del error y sale corrección rápida
                 let option = document.createElement("option");
                 option.value = pais.name.common;
@@ -73,23 +61,48 @@ document.querySelector("#continente")?.addEventListener("change", () => {
 
         })
 })
-
 document.querySelector("#paises")?.addEventListener("change",()=>{
-//creo las aciones para la select de paises
-
+    //creo las acciones para la select de paises
+    let h1=document.createElement("h1")
+    let divContenido=document.querySelector("#contenido");
+    limpiar(divContenido as HTMLDivElement)
+    h1.innerHTML=
+    `he cambiado al pais 
+    ${(document.querySelector("#paises") as HTMLSelectElement).selectedOptions[0].value}`;
+    (divContenido as HTMLDivElement).appendChild(h1)
+})
+let limpiar=(elemento:HTMLDivElement)=>{
+    elemento.innerHTML=""
+}
+document.querySelector("#geograficos")?.addEventListener("click",()=>{
+    //colocar en pantallas datos geograficos
+    let h1=document.createElement("h1")
+    let divContenido=document.querySelector("#contenido");
+    limpiar(divContenido as HTMLDivElement)
+    h1.innerHTML="estoy en geograficos";
+    (divContenido as HTMLDivElement).appendChild(h1)
+})
+document.querySelector("#banderas")?.addEventListener("click",()=>{
+    //colocar en pantallas datos banderas
+    let h1=document.createElement("h1")
+    let divContenido=document.querySelector("#contenido");
+    limpiar(divContenido as HTMLDivElement)
+    h1.innerHTML="estoy en banderas";
+    (divContenido as HTMLDivElement).appendChild(h1)
+})
+document.querySelector("#traducciones")?.addEventListener("click",()=>{
+    //colocar en pantallas datos traducciones
+    let h1=document.createElement("h1")
+    let divContenido=document.querySelector("#contenido");
+    limpiar(divContenido as HTMLDivElement)
+    h1.innerHTML="estoy en traducciones";
+    (divContenido as HTMLDivElement).appendChild(h1)
 })
 document.querySelector("#generales")?.addEventListener("click",()=>{
-
+    //colocar en pantallas datos generales
+    let h1=document.createElement("h1")
+    let divContenido=document.querySelector("#contenido");
+    limpiar(divContenido as HTMLDivElement)
+    h1.innerHTML="estoy en generales";
+    (divContenido as HTMLDivElement).appendChild(h1)
 })
-document.querySelector("#geograficos")?.addEventListener("click",()=>{
-let h1=document.createElement("h1");
-let divContenido=document.querySelector("#contenido");
-limpiar(divContenido as HTMLDivElement)
-h1.innerHTML="Estoy en Geográficos";
-})
-document.querySelector("#banderas")?.addEventListener("click",()=>{})
-
-document.querySelector("#traducciones")?.addEventListener("click",()=>{})
-
-
-
