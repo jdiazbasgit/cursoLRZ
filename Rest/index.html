@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center fw-bold">INFORMACIÓN MUNDIAL DE PAISES</h1>
+        <div class="mt-5 mb-3">Continente: <select id="continente">
+                <option value="0">Selecciona continente....</option>
+                <option value="europe">Europa</option>
+                <option value="africa">Africa</option>
+                <option value="asia">Asia</option>
+                <option value="americas">America</option>
+                <option value="oceania">Oceania</option>
+            </select> </div>
+        <div class="mb-5">Paises: <select id="paises">
+                <option value="0">Selecciona pais....</option>
+            </select></div>
+        <div class="text-center">
+            <h1 id="error" class="text-danger"></h1>
+        </div>
+        <div><button id="generales" class="btn btn-warning">Generales</button>
+            <button id="geograficos" class="btn btn-success">Geográficos</button>
+            <button id="banderas" class="btn btn-danger">Banderas</button>
+            <button id="traducciones" class="btn btn-info">Traducciones</button>
+        </div>
+        <div id="contenido" class="border border-sucess border-4 bg-light mt-5 p-3 rounded-2 text-center"></div>
+    </div>
+    <script src="./dist/ficheroDeVida.js" type="module"></script>
+</body>
+</html>
