@@ -1,7 +1,7 @@
 import { Paises } from "./clases/Paises.js";
 var pais:any
 let paises = new Paises()
-let paisesRecibidos: Array<any> = []
+
 let div = document.querySelector("#contenido")
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
     paisesRecibidos = datos
@@ -74,12 +74,12 @@ document.querySelector("#continente")?.addEventListener("change", () => {
 document.querySelector("#paises")?.addEventListener("change",()=>{
     //creo las acciones para la select de paises
     let h1=document.createElement("h1")
-    let divContenido=document.querySelector("#contenido");
-    limpiar(divContenido as HTMLDivElement)
+    
+    limpiar(div  as HTMLDivElement)
     h1.innerHTML=
     `he cambiado al pais 
     ${(document.querySelector("#paises") as HTMLSelectElement).selectedOptions[0].value}`;
-    (divContenido as HTMLDivElement).appendChild(h1)
+    (div as HTMLDivElement).appendChild(h1)
 })
 let limpiar=(elemento:HTMLDivElement)=>{
     elemento.innerHTML=""
@@ -87,32 +87,30 @@ let limpiar=(elemento:HTMLDivElement)=>{
 document.querySelector("#geograficos")?.addEventListener("click",()=>{
     //colocar en pantallas datos geograficos
     let h1=document.createElement("h1")
-    let divContenido=document.querySelector("#contenido");
-    limpiar(divContenido as HTMLDivElement)
+    limpiar(div as HTMLDivElement)
     h1.innerHTML="estoy en geograficos";
-    (divContenido as HTMLDivElement).appendChild(h1)
+    (div as HTMLDivElement).appendChild(h1)
 })
 document.querySelector("#banderas")?.addEventListener("click",()=>{
     //colocar en pantallas datos banderas
     let h1=document.createElement("h1")
-    let divContenido=document.querySelector("#contenido");
-    limpiar(divContenido as HTMLDivElement)
+   
+    limpiar(div as HTMLDivElement)
     h1.innerHTML="estoy en banderas";
-    (divContenido as HTMLDivElement).appendChild(h1)
+    (div as HTMLDivElement).appendChild(h1)
 })
 document.querySelector("#traducciones")?.addEventListener("click",()=>{
     //colocar en pantallas datos traducciones
     let h1=document.createElement("h1")
-    let divContenido=document.querySelector("#contenido");
-    limpiar(divContenido as HTMLDivElement)
+   
+    limpiar(div as HTMLDivElement)
     h1.innerHTML="estoy en traducciones";
-    (divContenido as HTMLDivElement).appendChild(h1)
+    (div as HTMLDivElement).appendChild(h1)
 })
 document.querySelector("#generales")?.addEventListener("click",()=>{
     //colocar en pantallas datos generales
     let h1=document.createElement("h1")
-    let divContenido=document.querySelector("#contenido");
-    limpiar(divContenido as HTMLDivElement)
+    limpiar(div as HTMLDivElement)
     h1.innerHTML="estoy en generales";
-    (divContenido as HTMLDivElement).appendChild(h1)
+    (div as HTMLDivElement).appendChild(h1)
 })
