@@ -1,5 +1,11 @@
 import { Paises } from "./clases/Paises.js";
+import { CoatOfArms } from "./types/coatOfArms.js";
+import { Flags } from "./types/Flags.js";
+import { Maps } from "./types/Maps.js";
+import { Name } from "./types/Name.js";
 import { Pais } from "./types/Pais.js";
+import { Spa } from "./types/Spa.js";
+import { Translations } from "./types/Translations.js";
 var pais:Pais
 let paises = new Paises()
 let paisesRecibidos: Array<any> = []
