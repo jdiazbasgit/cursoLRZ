@@ -1,11 +1,11 @@
 import { Paises } from "./clases/Paises.js";
-
+var pais:any
 let paises = new Paises()
 let paisesRecibidos: Array<any> = []
 let div = document.querySelector("#contenido")
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
     paisesRecibidos = datos
-  
+
     paisesRecibidos.forEach(pais => {
         let h1 = document.createElement("h1")
         h1.innerHTML = `${pais.name.official} - ${pais.capital}`
@@ -55,7 +55,7 @@ document.querySelector("#continente")?.addEventListener("change", () => {
                             official: string;
                             common: string;
                         };
-                        
+
                     };
                 }) => {
                 // (pais) me pongo encima del error y sale corrección rápida
@@ -67,24 +67,29 @@ document.querySelector("#continente")?.addEventListener("change", () => {
                     option.text = pais.translations?.spa?.common;
                 selectPaises?.appendChild(option)
 
-                
-            });
 
-            document.querySelector("#generales")  => {
-                let h1 = document.querySelector("#error");
-                (h1 as HTMLHeadingElement).innerHTML = ""
-                let selectContinentes = document.querySelector("#continente")
-                let selectPaises = document.querySelector("#paises")
-                let value = (selectContinentes as HTMLSelectElement).selectedOptions[0].value;
-                if (value === "0") {
-                    (selectPaises as HTMLSelectElement).innerHTML = "";
-                    let option = document.createElement("option");
-                    option.value = "0";
-                    option.text = "Seleciona Pais....";
-                    (h1 as HTMLHeadingElement).innerHTML = "Deber seleccionar un continente"
-                    selectPaises?.appendChild(option)
-                }
+            });
 
 
         })
 })
+
+document.querySelector("#paises")?.addEventListener("change",()=>{
+//creo las aciones para la select de paises
+
+})
+document.querySelector("#generales")?.addEventListener("click",()=>{
+
+})
+document.querySelector("#geograficos")?.addEventListener("click",()=>{
+let h1=document.createElement("h1");
+let divContenido=document.querySelector("#contenido");
+limpiar(divContenido as HTMLDivElement)
+h1.innerHTML="Estoy en Geográficos";
+})
+document.querySelector("#banderas")?.addEventListener("click",()=>{})
+
+document.querySelector("#traducciones")?.addEventListener("click",()=>{})
+
+
+

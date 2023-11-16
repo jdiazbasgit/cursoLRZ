@@ -5,7 +5,7 @@ let paisesRecibidos = [];
 let div = document.querySelector("#contenido");
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
     paisesRecibidos = datos
-  
+
     paisesRecibidos.forEach(pais => {
         let h1 = document.createElement("h1")
         h1.innerHTML = `${pais.name.official} - ${pais.capital}`
@@ -50,14 +50,6 @@ let div = document.querySelector("#contenido");
             else
                 option.text = (_d = (_c = pais.translations) === null || _c === void 0 ? void 0 : _c.spa) === null || _d === void 0 ? void 0 : _d.common;
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
-        });
-        let selectNombresOficiales = document.querySelector("#generales");
-        selectNombresOficiales.innerHTML = "";
-        datos.forEach((pais) => {
-            let option = document.createElement("option");
-            option.value = pais.name.official;
-            option.text = pais.name.official;
-            selectNombresOficiales === null || selectNombresOficiales === void 0 ? void 0 : selectNombresOficiales.appendChild(option);
         });
     });
 });
