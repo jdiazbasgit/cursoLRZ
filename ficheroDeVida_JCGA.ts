@@ -1,11 +1,15 @@
 import { Paises } from "./clases/Paises_JCGA.js";
-import { Pais } from "./types/Pais.js";
+import { Pais } from "./types/Pais_JCGA.js";
 
+// Defino los elementos generales de todo el ejercicio
+let paises = new Paises();
+let pais: Pais;
+let div = document.querySelector("#contenido");
 
 // Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
-let paises = new Paises()
-let paisesRecibidos: Array<any> = []
-let div = document.querySelector("#contenido")
+
+// let paisesRecibidos: Array<any> = []
+
 // paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
 //     paisesRecibidos = datos
 
@@ -21,7 +25,7 @@ let div = document.querySelector("#contenido")
 //     div?.appendChild(h1)
 // })
 
-// Segundo ejercicio, para tener un selector de continente, en función de el, para que le pase los nombre de los paises en ese continente y los paises, en función del elegido, que empiece a escribir parte de sus datos por pantalla 
+// Segundo ejercicio, para tener un selector de continente, en función de el, para que le pase los nombre de los paises en ese continente y los paises, en función del elegido, que empiece a escribir parte de sus datos por pantalla con los botones definidos
 
 // Creo una función que me va a rellenar todos los paises en el selector. Como la voy a usar varias veces, la meto en una función independiente
 let buscarPaises=()=>{
@@ -60,7 +64,7 @@ let buscarPaises=()=>{
     })
 }
 
-// Creo una función que me va a limpiar la pantalla, para cualqeuir elemento
+// Creo una función que me va a limpiar la pantalla, para cualquier elemento
 let limpiar=(elemento:HTMLDivElement)=>{
     elemento.innerHTML=""
 }
@@ -83,10 +87,10 @@ document.querySelector("#continente")?.addEventListener("change", () => {
         (h1 as HTMLHeadingElement).innerHTML = "Deber seleccionar un continente"
         selectPaises?.appendChild(option)
     }
-    //     // A continuación le paso a la web, lo que quiero que me devuelva..., es decir, los paises de la region seleccionada
+    // A continuación le paso a la web, lo que quiero que me devuelva..., es decir, los paises de la region seleccionada
   
-buscarPaises()
-    })
+    buscarPaises()
+})
 
 
     

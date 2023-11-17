@@ -1,9 +1,10 @@
 var _a, _b, _c, _d, _e, _f, _g;
 import { Paises } from "./clases/Paises_JCGA.js";
-// Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
+// Defino los elementos generales de todo el ejercicio
 let paises = new Paises();
-let paisesRecibidos = [];
 let div = document.querySelector("#contenido");
+// Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
+// let paisesRecibidos: Array<any> = []
 // paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
 //     paisesRecibidos = datos
 //     paisesRecibidos.forEach(pais => {
@@ -58,7 +59,7 @@ let buscarPaises = () => {
 let limpiar = (elemento) => {
     elemento.innerHTML = "";
 };
-// Selector de Paises vinculado al selector de Continentes
+// Selector de Paises vinculado al selector de Continentes, cuando cambie el selector de continentes
 // Lo vinculo con un listener para cuando cambie en el selector de continente
 (_a = document.querySelector("#continente")) === null || _a === void 0 ? void 0 : _a.addEventListener("change", () => {
     let h1 = document.querySelector("#error");
@@ -79,6 +80,7 @@ let limpiar = (elemento) => {
     //     // A continuación le paso a la web, lo que quiero que me devuelva..., es decir, los paises de la region seleccionada
     buscarPaises();
 });
+// Cambio de Pais = Selector de Pais
 (_b = document.querySelector("#paises")) === null || _b === void 0 ? void 0 : _b.addEventListener("change", () => {
     //creo las acciones para la select de paises
     let h2 = document.createElement("h2");

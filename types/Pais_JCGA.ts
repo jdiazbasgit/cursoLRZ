@@ -1,7 +1,7 @@
-import { Flags } from "./Flags.js"
-import { Maps } from "./Maps.js"
-import { Name } from "./Name.js"
-import { Translations } from "./Translations.js"
+import { Flags } from "./Flags_JCGA.js"
+import { Maps } from "./Maps_JCGA.js"
+import { Name } from "./Name_JCGA.js"
+import { Translations } from "./Translations_JCGA.js"
 
 export type Pais={
     name:Name
