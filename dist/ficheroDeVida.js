@@ -70,8 +70,36 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
         pais = datos[0]; //aquí metemos el objeto país (y coges la primera posicion)
     });
 });
+(_c = document.querySelector("#generales")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
+    limpiar(divContenido);
+    let h1 = document.createElement("h1");
+    let valuep = selectPaises.selectedOptions[0].value;
+    if (valuep === "0") {
+        selectPaises.innerHTML = "";
+        let option = document.createElement("option");
+        option.value = "0";
+        option.text = "Selecciona Pais....";
+        selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
+        h1.innerHTML = "Debes seleccionar un país";
+        h1.classList.add("text-danger");
+        divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
+        return;
+    }
+    let parrafo1 = document.createElement("p");
+    let parrafo2 = document.createElement("p");
+    let parrafo3 = document.createElement("p");
+    let parrafo4 = document.createElement("p");
+    parrafo1.innerHTML = `Nombre común: ${pais.name.common}`;
+    parrafo2.innerHTML = `Nombre oficial: ${pais.name.official}`;
+    parrafo3.innerHTML = `Capital: ${pais.capital}`;
+    parrafo4.innerHTML = `Poblacion: ${pais.population} habitantes`;
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo1);
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo2);
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo3);
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo4);
+});
 //evento clic del boton Geograficos
-(_c = document.querySelector("#geograficos")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
+(_d = document.querySelector("#geograficos")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
     limpiar(divContenido);
     let h1 = document.createElement("h1");
     let valuep = selectPaises.selectedOptions[0].value;
@@ -125,35 +153,6 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo4);
     parrafo3.appendChild(a1);
     parrafo4.appendChild(a2);
-});
-//evento clic del boton
-(_d = document.querySelector("#generales")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
-    limpiar(divContenido);
-    let h1 = document.createElement("h1");
-    let valuep = selectPaises.selectedOptions[0].value;
-    if (valuep === "0") {
-        selectPaises.innerHTML = "";
-        let option = document.createElement("option");
-        option.value = "0";
-        option.text = "Selecciona Pais....";
-        selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
-        h1.innerHTML = "Debes seleccionar un país";
-        h1.classList.add("text-danger");
-        divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
-        return;
-    }
-    let parrafo1 = document.createElement("p");
-    let parrafo2 = document.createElement("p");
-    let parrafo3 = document.createElement("p");
-    let parrafo4 = document.createElement("p");
-    parrafo1.innerHTML = `Nombre común: ${pais.name.common}`;
-    parrafo2.innerHTML = `Nombre oficial: ${pais.name.official}`;
-    parrafo3.innerHTML = `Capital: ${pais.capital}`;
-    parrafo4.innerHTML = `Poblacion: ${pais.population} habitantes`;
-    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo1);
-    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo2);
-    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo3);
-    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo4);
 });
 (_e = document.querySelector("#banderas")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
     limpiar(divContenido);
