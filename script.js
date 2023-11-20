@@ -1,8 +1,8 @@
 edad = 28
 const PI = 3.1416
-console.log("tipo1:"+typeof(edad))
-edad="pepe"
-console.log("tipo2:"+typeof(edad))
+console.log("tipo1:" + typeof (edad))
+edad = "pepe"
+console.log("tipo2:" + typeof (edad))
 /*
 Tipos de datos
 texto
@@ -61,28 +61,28 @@ function suma(a, b) {
 
 //let suma=(a,b)=>a+b
 let divContenido = document.querySelector("#contenido")
-let botonCambiar= document.querySelector("#cambiar")
-botonCambiar.addEventListener("click",function(){
-divContenido.innerHTML=""
-let img=document.createElement("img")
-img.src="./camion.jpg"
-img.width=200
-img.height=100
-divContenido.appendChild(img)
+let botonCambiar = document.querySelector("#cambiar")
+botonCambiar.addEventListener("click", function () {
+    divContenido.innerHTML = ""
+    let img = document.createElement("img")
+    img.src = "./camion.jpg"
+    img.width = 200
+    img.height = 100
+    divContenido.appendChild(img)
 
 })
 
 
-let boton= document.createElement("button")
-boton.innerHTML="aregar fila"
+let boton = document.createElement("button")
+boton.innerHTML = "aregar fila"
 boton.classList.add("bg-danger")
-boton.addEventListener("click",function(){
+boton.addEventListener("click", function () {
     agregarFila()
 })
 divContenido.appendChild(boton)
 let tabla = document.createElement("table")
 tabla.border = 1
-tabla.align="center"
+tabla.align = "center"
 let trCabecera = document.createElement("tr")
 let th1 = document.createElement("th")
 let th2 = document.createElement("th")
@@ -103,9 +103,9 @@ let agregarFila = () => {
     let td1 = document.createElement("td")
     let td2 = document.createElement("td")
     let td3 = document.createElement("td")
-    td1.innerHTML="pepe"
-    td2.innerHTML="garcia"
-    td3.innerHTML="8765435f"
+    td1.innerHTML = "pepe"
+    td2.innerHTML = "garcia"
+    td3.innerHTML = "8765435f"
     tr.appendChild(td1)
     tr.appendChild(td2)
     tr.appendChild(td3)
@@ -113,7 +113,25 @@ let agregarFila = () => {
 }
 
 
+function teclado(tecla) {
+    let h1 = document.querySelector("#h1")
+    let input=document.querySelector("#input")
+    input.value=input.value.toUpperCase()
+    console.log(tecla)
+    if (tecla.key === " "){
+        nombre="federiceo"
+        console.log(nombre.substring(2))
+        console.log(nombre.charAt(3))
+        console.log(nombre.indexOf("ed"))
+        console.log(nombre.replaceAll("e","-------"))
+        console.log(nombre.lastIndexOf("edfdgdfg"))
+        input.value=input.value.substring(0,input.value.length-1)
+        return
+    }
+    h1.innerHTML=h1.innerHTML+tecla.key.toUpperCase()
 
+
+}
 
 
 
