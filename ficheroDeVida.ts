@@ -99,7 +99,7 @@ document.querySelector("#paises")?.addEventListener("change", () => {
         (h1 as HTMLHeadingElement).innerHTML = "Debes seleccionar un país";
         (h1 as HTMLHeadingElement).classList.add("text-danger");
         divContenido?.appendChild(h1);
-        return //para que no hafa la linea 89
+        return //para que no siga a la linea 104
     }
 
     paises.getDatos("https://restcountries.com/v3.1/name/" +
@@ -161,9 +161,6 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
         divContenido?.appendChild(h1);
     }
 
-
-    //si se ha seleccionado un país se cumple la promesa:
-
     let parrafo1 = document.createElement("p");
     let parrafo2 = document.createElement("p");
     let parrafo3 = document.createElement("p");
@@ -174,20 +171,31 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
 
     //Bucle for para todas las fronteras:
     let fronteras: Array<string> = [];
+
+    let ul = document.createElement("ul");
+
     for (let i = 0; i < pais.borders.length; i++) {
         fronteras.push(pais.borders[i]);
+        console.log(fronteras)
+
+        //URL con cca3 
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" +
+            fronteras[i]).then((datos: Array<any>) => {
+
+                datos.forEach((pais:
+                    {
+                        name: {
+                            common: string,
+                        }
+                    }) => {
+                    let li = document.createElement("li");
+                    ul.appendChild(li);
+                    (li as HTMLLIElement).innerHTML = `${fronteras[i]} : ${pais.name.common}`; //${fronteras.name.common}
+
+                })
+            })
     }
-    let ul = document.createElement("ul");
-    fronteras.forEach((frontera) => {
-        let li = document.createElement("li");
-        ul.appendChild(li);
-        (li as HTMLLIElement).innerHTML = frontera;
-    })
 
-    //para cambiar de cca3 a nombre completo
-    // paises.getDatos("https://restcountries.com/v3.1/alpha/" + fronteras.then((datos: Array<any>) => {
-
-    // })
 
     divContenido?.appendChild(parrafo2);
     divContenido?.appendChild(ul);
@@ -211,9 +219,6 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
     divContenido?.appendChild(parrafo4);
     parrafo3.appendChild(a1);
     parrafo4.appendChild(a2);
-
-
-
 })
 
 

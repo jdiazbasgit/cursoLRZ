@@ -63,7 +63,7 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
         h1.innerHTML = "Debes seleccionar un país";
         h1.classList.add("text-danger");
         divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
-        return; //para que no hafa la linea 89
+        return; //para que no siga a la linea 104
     }
     paises.getDatos("https://restcountries.com/v3.1/name/" +
         selectPaises.selectedOptions[0].value).then((datos) => {
@@ -113,7 +113,6 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
         h1.classList.add("text-danger");
         divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
     }
-    //si se ha seleccionado un país se cumple la promesa:
     let parrafo1 = document.createElement("p");
     let parrafo2 = document.createElement("p");
     let parrafo3 = document.createElement("p");
@@ -122,18 +121,20 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
     parrafo2.innerHTML = `Fronteras: `;
     //Bucle for para todas las fronteras:
     let fronteras = [];
+    let ul = document.createElement("ul");
     for (let i = 0; i < pais.borders.length; i++) {
         fronteras.push(pais.borders[i]);
+        console.log(fronteras);
+        //URL con cca3 
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" +
+            fronteras[i]).then((datos) => {
+            datos.forEach((pais) => {
+                let li = document.createElement("li");
+                ul.appendChild(li);
+                li.innerHTML = `${fronteras[i]} : ${pais.name.common}`; //${fronteras.name.common}
+            });
+        });
     }
-    let ul = document.createElement("ul");
-    fronteras.forEach((frontera) => {
-        let li = document.createElement("li");
-        ul.appendChild(li);
-        li.innerHTML = frontera;
-    });
-    //para cambiar de cca3 a nombre completo
-    // paises.getDatos("https://restcountries.com/v3.1/alpha/" + fronteras.then((datos: Array<any>) => {
-    // })
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo2);
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(ul);
     parrafo3.innerHTML = `Google Map: `;
