@@ -1,9 +1,40 @@
 import { Paises } from "./clases/Paises.js";
 
+type Pais= //si TipoPais se va a utilizar en otro archivo añadir '  export   ' antes de type
+                {
+                    name: {
+                        common: string;
+                        official: string;
+                    };
+                    translations: {
+                        spa: {
+                            official: string;
+                            common: string;
+                        };
+                    };
+                    cca3:string;
+                    population: number;
+                    capital: string;
+                    area: number;
+                    borders: Array<string>;
+                    maps: {
+                        googleMaps: string;
+                        openStreetMaps: string;
+                        
+                    };
+                    flags: {
+                        svg: string;
+                    }
+                    coatOfArms: {
+                        svg: string;
+                    }
+
+                }
+
 
 let paises = new Paises();
 
-var pais: any; //variable en la q estará el país seleccionado 
+var pais: Pais; //variable en la q estará el país seleccionado de tipo Pais
 let divContenido = document.querySelector("#contenido");
 
 let limpiar = (elemento: HTMLDivElement) => {
@@ -30,7 +61,7 @@ document.querySelector("#continente")?.addEventListener("change", () => {
     }
 
     paises.getDatos("https://restcountries.com/v3.1/region/" +
-        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then((datos: Array<any>) => {
+        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then((datos: Array<Pais>) => {
             (selectPaises as HTMLSelectElement).innerHTML = "";
             var optionInicial = document.createElement("option");
             optionInicial.value = "0";
@@ -39,35 +70,7 @@ document.querySelector("#continente")?.addEventListener("change", () => {
             datos.sort((a, b) => {
                 return a.translations.spa.common.localeCompare(b.translations.spa.common)
             })
-            datos.forEach((pais:
-                {
-                    name: {
-                        common: string;
-                        official: string;
-                    };
-                    translations: {
-                        spa: {
-                            official: string;
-                            common: string;
-                        };
-                    };
-                    population: number;
-                    capital: string;
-                    area: number;
-                    borders: Array<string>;
-                    maps: {
-                        googleMaps: string;
-                        OpenStreetMaps: string;
-                    };
-                    flags: {
-                        svg: string;
-                    }
-                    coatOfArms: {
-                        svg: string;
-                    }
-
-                }) => {
-                // (pais) me pongo encima del error y sale corrección rápida
+            datos.forEach((pais) => {
                 let option = document.createElement("option");
                 option.value = pais.name.common;
                 if (pais.translations?.spa === undefined)
@@ -170,35 +173,22 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
     (parrafo2 as HTMLParagraphElement).innerHTML = `Fronteras: `;
 
     //Bucle for para todas las fronteras:
-    let fronteras: Array<string> = [];
+    // let fronteras: Array<string> = [];
 
     let ul = document.createElement("ul");
-
-    for (let i = 0; i < pais.borders.length; i++) {
-        fronteras.push(pais.borders[i]);
-        console.log(fronteras)
-
-        //URL con cca3 
-        paises.getDatos("https://restcountries.com/v3.1/alpha/" +
-            fronteras[i]).then((datos: Array<any>) => {
-
-                datos.forEach((pais:
-                    {
-                        name: {
-                            common: string,
-                        }
-                    }) => {
-                    let li = document.createElement("li");
-                    ul.appendChild(li);
-                    (li as HTMLLIElement).innerHTML = `${fronteras[i]} : ${pais.name.common}`; //${fronteras.name.common}
-
-                })
-            })
-    }
-
-
     divContenido?.appendChild(parrafo2);
     divContenido?.appendChild(ul);
+
+    for (let i = 0; i < pais.borders.length; i++) {
+
+        //URL con cca3 
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos: Array<Pais>) => { //ya está definido el type TipoPais al ppio del archivo
+
+            let li = document.createElement("li");
+            ul.appendChild(li);
+            (li as HTMLLIElement).innerHTML = `${datos[0].cca3} : ${datos[0].name.common}`; //datos[0].cca3 = pais.borders[i]
+        })
+    }
 
     (parrafo3 as HTMLParagraphElement).innerHTML = `Google Map: `;
     let a1 = document.createElement("a");

@@ -35,7 +35,6 @@ limpiar(divContenido);
         });
         datos.forEach((pais) => {
             var _a, _b, _c, _d;
-            // (pais) me pongo encima del error y sale corrección rápida
             let option = document.createElement("option");
             option.value = pais.name.common;
             if (((_a = pais.translations) === null || _a === void 0 ? void 0 : _a.spa) === undefined)
@@ -120,23 +119,18 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
     parrafo1.innerHTML = `Área: ${pais.area} km^2`;
     parrafo2.innerHTML = `Fronteras: `;
     //Bucle for para todas las fronteras:
-    let fronteras = [];
+    // let fronteras: Array<string> = [];
     let ul = document.createElement("ul");
-    for (let i = 0; i < pais.borders.length; i++) {
-        fronteras.push(pais.borders[i]);
-        console.log(fronteras);
-        //URL con cca3 
-        paises.getDatos("https://restcountries.com/v3.1/alpha/" +
-            fronteras[i]).then((datos) => {
-            datos.forEach((pais) => {
-                let li = document.createElement("li");
-                ul.appendChild(li);
-                li.innerHTML = `${fronteras[i]} : ${pais.name.common}`; //${fronteras.name.common}
-            });
-        });
-    }
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo2);
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(ul);
+    for (let i = 0; i < pais.borders.length; i++) {
+        //URL con cca3 
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos) => {
+            let li = document.createElement("li");
+            ul.appendChild(li);
+            li.innerHTML = `${datos[0].borders[i]} : ${datos[0].name.common}`; // pais.borders[i]
+        });
+    }
     parrafo3.innerHTML = `Google Map: `;
     let a1 = document.createElement("a");
     a1.href = pais.maps.googleMaps;
