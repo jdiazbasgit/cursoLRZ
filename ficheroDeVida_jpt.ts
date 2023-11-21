@@ -89,3 +89,4 @@ document.querySelector("#paises")?.addEventListener("change", () => {
         selectPaises?.appendChild(option)
     }
 })
+
