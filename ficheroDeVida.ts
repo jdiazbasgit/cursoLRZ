@@ -117,6 +117,7 @@ document.querySelector("#generales")?.addEventListener("click", () => {
 
     let h1 = document.createElement("h1");
     let valuep = (selectPaises as HTMLSelectElement).selectedOptions[0].value;
+
     if (valuep === "0") {
         (selectPaises as HTMLSelectElement).innerHTML = "";
         let option = document.createElement("option");
@@ -149,9 +150,10 @@ document.querySelector("#generales")?.addEventListener("click", () => {
 //evento clic del boton Geograficos
 document.querySelector("#geograficos")?.addEventListener("click", () => {
     limpiar(divContenido as HTMLDivElement);
-    let h1 = document.createElement("h1");
 
+    let h1 = document.createElement("h1");
     let valuep = (selectPaises as HTMLSelectElement).selectedOptions[0].value;
+
     if (valuep === "0") {
         (selectPaises as HTMLSelectElement).innerHTML = "";
         let option = document.createElement("option");
@@ -162,6 +164,7 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
         (h1 as HTMLHeadingElement).innerHTML = "Debes seleccionar un país";
         (h1 as HTMLHeadingElement).classList.add("text-danger");
         divContenido?.appendChild(h1);
+        return
     }
 
     let parrafo1 = document.createElement("p");

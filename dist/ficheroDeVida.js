@@ -111,6 +111,7 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
         h1.innerHTML = "Debes seleccionar un país";
         h1.classList.add("text-danger");
         divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
+        return;
     }
     let parrafo1 = document.createElement("p");
     let parrafo2 = document.createElement("p");
