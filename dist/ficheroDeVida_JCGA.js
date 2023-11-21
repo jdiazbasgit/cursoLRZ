@@ -1,8 +1,19 @@
-var _a, _b, _c, _d, _e, _f, _g;
+var _a, _b, _c, _d, _e;
 import { Paises } from "./clases/Paises_JCGA.js";
 // Defino los elementos generales de todo el ejercicio
 let paises = new Paises();
+let pais;
 let div = document.querySelector("#contenido");
+var official;
+var translations;
+var capital;
+var population;
+var area;
+var borders;
+var google;
+var open;
+var coatofarms;
+var flags;
 // Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
 // let paisesRecibidos: Array<any> = []
 // paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
@@ -18,7 +29,7 @@ let div = document.querySelector("#contenido");
 //     h1.innerHTML=error
 //     div?.appendChild(h1)
 // })
-// Segundo ejercicio, para tener un selector de continente, en función de el, para que le pase los nombre de los paises en ese continente y los paises, en función del elegido, que empiece a escribir parte de sus datos por pantalla 
+// Segundo ejercicio, para tener un selector de continente, en función de el, para que le pase los nombre de los paises en ese continente y los paises, en función del elegido, que empiece a escribir parte de sus datos por pantalla con los botones definidos
 // Creo una función que me va a rellenar todos los paises en el selector. Como la voy a usar varias veces, la meto en una función independiente
 let buscarPaises = () => {
     let selectContinentes = document.querySelector("#continente");
@@ -28,9 +39,9 @@ let buscarPaises = () => {
     // Y le tengo que decri que es un array de cero para que no espere más que un valor
     paises.getDatos("https://restcountries.com/v3.1/region/" +
         selectContinentes.selectedOptions[0].value).then((datos) => {
+        selectPaises.innerHTML = "";
         // Lo anterior, para que me lo deje en blanco, el selector de paises
         // Y a continuación, dado que lo hemos dejado en blanco, le meto la opción por defecto
-        selectPaises.innerHTML = "";
         var optionInicial = document.createElement("option");
         optionInicial.value = "0";
         optionInicial.text = "Seleccciona pais...";
@@ -55,7 +66,7 @@ let buscarPaises = () => {
         // controlamos que este seleccionado el pais
     });
 };
-// Creo una función que me va a limpiar la pantalla, para cualqeuir elemento
+// Creo una función que me va a limpiar la pantalla, para cualquier elemento
 let limpiar = (elemento) => {
     elemento.innerHTML = "";
 };
@@ -77,7 +88,7 @@ let limpiar = (elemento) => {
         h1.innerHTML = "Deber seleccionar un continente";
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
     }
-    //     // A continuación le paso a la web, lo que quiero que me devuelva..., es decir, los paises de la region seleccionada
+    // A continuación le paso a la web, lo que quiero que me devuelva..., es decir, los paises de la region seleccionada
     buscarPaises();
 });
 // Cambio de Pais = Selector de Pais
@@ -101,10 +112,30 @@ let limpiar = (elemento) => {
         option.text = "Seleciona Pais....";
         h1.innerHTML = "Deber seleccionar un pais";
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
-        // Meto la funcion qeu me rellena el selector de paises, puesto que lo he dejado a cero
+        // Meto la funcion qeu me rellena el selector de paises, puesto que lo he dejado a cero..., asi que tengo que volver a rellenar el selector
         buscarPaises();
     }
+    // Grabo los valores para el pais seleccionado
+    paises.getDatos("https://restcountries.com/v3.1/name/" +
+        selectPaises.selectedOptions[0].value).then((datos) => {
+        pais = datos[0];
+        official = pais.name.official;
+        translations = pais.translations;
+        capital = pais.capital;
+        population = pais.population;
+        area = pais.area;
+        borders = pais.borders;
+        google = pais.maps.googleMaps;
+        open = pais.maps.openStreetMaps;
+        coatofarms = pais.coatOfArms;
+        flags = pais.flags;
+        console.log(`El pais seleccionado es ${official}`);
+    });
 });
+// Vamos con la parte de los botones. Vanmos a sacar antes todo lo que es comun, que basicamente es una función qeu me cargue en variables todos los valores buscados
+// Me voy a traer las variables que luego voy a utilizar. Lo hago una sola vez.
+// Invoco a la función para que me traiga los datos del pais seleccionado
+// Primer boton Generales 
 (_c = document.querySelector("#geograficos")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
     //colocar en pantallas datos geograficos
     let h1 = document.createElement("h1");
@@ -126,35 +157,3 @@ let limpiar = (elemento) => {
     h1.innerHTML = "estoy en traducciones";
     div.appendChild(h1);
 });
-(_f = document.querySelector("#generales")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", () => {
-    //colocar en pantallas datos generales
-    let h1 = document.createElement("h1");
-    limpiar(div);
-    h1.innerHTML = "estoy en generales";
-    div.appendChild(h1);
-});
-(_g = document.querySelector("#paises")) === null || _g === void 0 ? void 0 : _g.addEventListener("change", () => {
-    let h1 = document.querySelector("#error");
-    h1.innerHTML = "";
-    let selectContinentes = document.querySelector("#continente");
-    let selectPaises = document.querySelector("#paises");
-    // Doy de alta las 2 variables vinculadas a los id
-    let value = selectPaises.selectedOptions[0].value;
-    // Meto un if para tratar si no ha elegido nada
-    if (value === "0") {
-        selectPaises.innerHTML = "";
-        let option = document.createElement("option");
-        option.value = "0";
-        option.text = "Seleciona Pais....";
-        h1.innerHTML = "Deber seleccionar un pais";
-        selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
-    }
-});
-// Vamos a llamar al primer boton..."Generales"
-// document.querySelector("#generales")?.addEventListener("click", () => {
-//     paises.getDatos("https://restcountries.com/v3.1/region/" +
-//         (selectContinentes as HTMLSelectElement).selectedOptions[0].value + "/" + (selectPaises as HTMLSelectElement).selectedOptions[0].value).then((datos: Array<any>) => {
-//             paisesRecibidos = datos;
-//                 let h1 = document.createElement("h1")
-//                 h1.innerHTML = `${pais.name.official} - ${pais.capital}`
-//                 div?.appendChild(h1)
