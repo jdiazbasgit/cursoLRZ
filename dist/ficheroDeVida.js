@@ -2,7 +2,26 @@ var _a, _b, _c, _d, _e, _f;
 import { Paises } from "./clases/Paises.js";
 var pais;
 let paises = new Paises();
-let paisesRecibidos = [];
+paises.getDatos("https://restcountries.com/v3.1/name/Panama").then((datos) => {
+    /* Object.entries(datos[0].translations).forEach((dato:any)=>{
+         console.log(dato)
+         let valores=Object.entries(dato[1])
+         console.log("propiedad:"+dato[0]+" - "+valores[0][1])
+     })*/
+    Object.entries(datos[0].currencies).forEach((moneda) => {
+        console.log(moneda[0] + " - " + moneda[1].symbol);
+    });
+});
+let divContenido = document.querySelector("#contenido");
+let h1 = document.createElement("h1");
+h1.innerHTML = "esperamos 5 segundos";
+divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
+setTimeout(() => {
+    divContenido.innerHTML = "";
+    let h1 = document.createElement("h1");
+    h1.innerHTML = "resultado del timeout";
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(h1);
+}, 5000);
 let div = document.querySelector("#contenido");
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
     paisesRecibidos = datos
@@ -57,12 +76,11 @@ let div = document.querySelector("#contenido");
 (_b = document.querySelector("#paises")) === null || _b === void 0 ? void 0 : _b.addEventListener("change", () => {
     //creo las acciones para la select de paises
     let h1 = document.createElement("h1");
-    let divContenido = document.querySelector("#contenido");
-    limpiar(divContenido);
+    limpiar(div);
     h1.innerHTML =
         `he cambiado al pais 
     ${document.querySelector("#paises").selectedOptions[0].value}`;
-    divContenido.appendChild(h1);
+    div.appendChild(h1);
 });
 let limpiar = (elemento) => {
     elemento.innerHTML = "";
@@ -70,32 +88,28 @@ let limpiar = (elemento) => {
 (_c = document.querySelector("#geograficos")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
     //colocar en pantallas datos geograficos
     let h1 = document.createElement("h1");
-    let divContenido = document.querySelector("#contenido");
-    limpiar(divContenido);
+    limpiar(div);
     h1.innerHTML = "estoy en geograficos";
-    divContenido.appendChild(h1);
+    div.appendChild(h1);
 });
 (_d = document.querySelector("#banderas")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
     //colocar en pantallas datos banderas
     let h1 = document.createElement("h1");
-    let divContenido = document.querySelector("#contenido");
-    limpiar(divContenido);
+    limpiar(div);
     h1.innerHTML = "estoy en banderas";
-    divContenido.appendChild(h1);
+    div.appendChild(h1);
 });
 (_e = document.querySelector("#traducciones")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
     //colocar en pantallas datos traducciones
     let h1 = document.createElement("h1");
-    let divContenido = document.querySelector("#contenido");
-    limpiar(divContenido);
+    limpiar(div);
     h1.innerHTML = "estoy en traducciones";
-    divContenido.appendChild(h1);
+    div.appendChild(h1);
 });
 (_f = document.querySelector("#generales")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", () => {
     //colocar en pantallas datos generales
     let h1 = document.createElement("h1");
-    let divContenido = document.querySelector("#contenido");
-    limpiar(divContenido);
+    limpiar(div);
     h1.innerHTML = "estoy en generales";
-    divContenido.appendChild(h1);
+    div.appendChild(h1);
 });

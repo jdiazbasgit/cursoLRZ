@@ -2,6 +2,35 @@ import { Paises } from "./clases/Paises.js";
 var pais:any
 let paises = new Paises()
 
+paises.getDatos("https://restcountries.com/v3.1/name/Panama").then((datos:any)=>{
+   /* Object.entries(datos[0].translations).forEach((dato:any)=>{
+        console.log(dato)
+        let valores=Object.entries(dato[1])
+        console.log("propiedad:"+dato[0]+" - "+valores[0][1])
+    })*/
+
+    Object.entries(datos[0].currencies).forEach((moneda:any) => {
+
+        console.log(moneda[0]+" - "+moneda[1].symbol)
+        
+    });
+})
+
+
+
+
+
+
+let divContenido= document.querySelector("#contenido");
+let h1= document.createElement("h1")
+h1.innerHTML="esperamos 5 segundos"
+divContenido?.appendChild(h1)
+setTimeout(()=>{
+   (divContenido  as HTMLDivElement).innerHTML=""
+    let h1= document.createElement("h1")
+    h1.innerHTML="resultado del timeout"
+    divContenido?.appendChild(h1)
+},5000)
 let div = document.querySelector("#contenido")
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
     paisesRecibidos = datos
