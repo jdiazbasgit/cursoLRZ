@@ -172,21 +172,19 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
     (parrafo1 as HTMLParagraphElement).innerHTML = `Área: ${pais.area} km^2`;
     (parrafo2 as HTMLParagraphElement).innerHTML = `Fronteras: `;
 
-    //Bucle for para todas las fronteras:
-    // let fronteras: Array<string> = [];
-
     let ul = document.createElement("ul");
     divContenido?.appendChild(parrafo2);
     divContenido?.appendChild(ul);
 
+    //Bucle for para todas las fronteras:
     for (let i = 0; i < pais.borders.length; i++) {
 
         //URL con cca3 
-        paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos: Array<Pais>) => { //ya está definido el type TipoPais al ppio del archivo
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos: Array<Pais>) => { //ya está definido el type Pais al ppio del archivo
 
             let li = document.createElement("li");
             ul.appendChild(li);
-            (li as HTMLLIElement).innerHTML = `${datos[0].cca3} : ${datos[0].name.common}`; //datos[0].cca3 = pais.borders[i]
+            (li as HTMLLIElement).innerHTML = `${datos[0].cca3}: ${datos[0].name.common}`; //datos[0].cca3 = pais.borders[i]
         })
     }
 

@@ -1,7 +1,7 @@
 var _a, _b, _c, _d, _e, _f;
 import { Paises } from "./clases/Paises.js";
 let paises = new Paises();
-var pais; //variable en la q estará el país seleccionado 
+var pais; //variable en la q estará el país seleccionado de tipo Pais
 let divContenido = document.querySelector("#contenido");
 let limpiar = (elemento) => {
     elemento.innerHTML = "";
@@ -118,17 +118,16 @@ let selectPaises = document === null || document === void 0 ? void 0 : document.
     let parrafo4 = document.createElement("p");
     parrafo1.innerHTML = `Área: ${pais.area} km^2`;
     parrafo2.innerHTML = `Fronteras: `;
-    //Bucle for para todas las fronteras:
-    // let fronteras: Array<string> = [];
     let ul = document.createElement("ul");
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(parrafo2);
     divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(ul);
+    //Bucle for para todas las fronteras:
     for (let i = 0; i < pais.borders.length; i++) {
         //URL con cca3 
         paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos) => {
             let li = document.createElement("li");
             ul.appendChild(li);
-            li.innerHTML = `${datos[0].borders[i]} : ${datos[0].name.common}`; // pais.borders[i]
+            li.innerHTML = `${datos[0].cca3}: ${datos[0].name.common}`; //datos[0].cca3 = pais.borders[i]
         });
     }
     parrafo3.innerHTML = `Google Map: `;
