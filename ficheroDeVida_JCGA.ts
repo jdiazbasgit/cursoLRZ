@@ -6,10 +6,12 @@ import { Pais } from "./types/Pais_JCGA.js";
 let paises = new Paises();
 let pais: Pais;
 let div = document.querySelector("#contenido");
-var official;
+
+var official: string;
+var common: string;
 var translations;
-var capital;
-var population;
+var capital: string;
+var population: number;
 var area;
 var borders;
 var google;
@@ -140,6 +142,7 @@ document.querySelector("#paises")?.addEventListener("change", () => {
 
             pais = datos[0]
 
+            common = pais.name.common
             official = pais.name.official
             translations = pais.translations
             capital = pais.capital
@@ -152,32 +155,54 @@ document.querySelector("#paises")?.addEventListener("change", () => {
             flags = pais.flags
 
             console.log(`El pais seleccionado es ${official}`)
-
+// Lo anterior es para comprobar que funciona y se guardan las variables
         })
 
 
 })
 
-// Vamos con la parte de los botones. Vanmos a sacar antes todo lo que es comun, que basicamente es una función qeu me cargue en variables todos los valores buscados
-// Me voy a traer las variables que luego voy a utilizar. Lo hago una sola vez.
-
-
-
-// Invoco a la función para que me traiga los datos del pais seleccionado
-
-
-
+// Vamos con la parte de los botones. 
 
 // Primer boton Generales 
+document.querySelector("#generales")?.addEventListener("click", () => {
+    //colocar en pantallas datos geograficos
+    let h1 = document.createElement("h1")
+    limpiar(div as HTMLDivElement)
+    h1.innerHTML = `El nombre comun del pais es ${common}` ;
+    (div as HTMLDivElement).appendChild(h1)
+    h1.innerHTML = `El nombre oficial del pais es ${official}` ;
+    (div as HTMLDivElement).appendChild(h1)
+    h1.innerHTML = `La capital del pais es ${capital}` ;
+    (div as HTMLDivElement).appendChild(h1)
+    h1.innerHTML = `La población del pais es ${population}` ;
+    (div as HTMLDivElement).appendChild(h1)
+
+
+
+
+})
+
 
 
 document.querySelector("#geograficos")?.addEventListener("click", () => {
     //colocar en pantallas datos geograficos
     let h1 = document.createElement("h1")
     limpiar(div as HTMLDivElement)
-    h1.innerHTML = "estoy en geograficos";
+    h1.innerHTML = `El nombre comun del pais es ${common}` ;
     (div as HTMLDivElement).appendChild(h1)
+    h1.innerHTML = `El nombre oficial del pais es ${official}` ;
+    (div as HTMLDivElement).appendChild(h1)
+    h1.innerHTML = `La capital del pais es ${capital}` ;
+    (div as HTMLDivElement).appendChild(h1)
+    h1.innerHTML = `La población del pais es ${population}` ;
+    (div as HTMLDivElement).appendChild(h1)
+
+
+
+
 })
+
+
 document.querySelector("#banderas")?.addEventListener("click", () => {
     //colocar en pantallas datos banderas
     let h1 = document.createElement("h1")

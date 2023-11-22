@@ -5,6 +5,7 @@ let paises = new Paises();
 let pais;
 let div = document.querySelector("#contenido");
 var official;
+var common;
 var translations;
 var capital;
 var population;
@@ -119,6 +120,7 @@ let limpiar = (elemento) => {
     paises.getDatos("https://restcountries.com/v3.1/name/" +
         selectPaises.selectedOptions[0].value).then((datos) => {
         pais = datos[0];
+        common = pais.name.common;
         official = pais.name.official;
         translations = pais.translations;
         capital = pais.capital;
@@ -130,17 +132,22 @@ let limpiar = (elemento) => {
         coatofarms = pais.coatOfArms;
         flags = pais.flags;
         console.log(`El pais seleccionado es ${official}`);
+        // Lo anterior es para comprobar que funciona y se guardan las variables
     });
 });
-// Vamos con la parte de los botones. Vanmos a sacar antes todo lo que es comun, que basicamente es una función qeu me cargue en variables todos los valores buscados
-// Me voy a traer las variables que luego voy a utilizar. Lo hago una sola vez.
-// Invoco a la función para que me traiga los datos del pais seleccionado
+// Vamos con la parte de los botones. 
 // Primer boton Generales 
 (_c = document.querySelector("#geograficos")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
     //colocar en pantallas datos geograficos
     let h1 = document.createElement("h1");
     limpiar(div);
-    h1.innerHTML = "estoy en geograficos";
+    h1.innerHTML = `El nombre comun del pais es ${common}`;
+    div.appendChild(h1);
+    h1.innerHTML = `El nombre oficial del pais es ${official}`;
+    div.appendChild(h1);
+    h1.innerHTML = `La capital del pais es ${capital}`;
+    div.appendChild(h1);
+    h1.innerHTML = `La población del pais es ${population}`;
     div.appendChild(h1);
 });
 (_d = document.querySelector("#banderas")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
