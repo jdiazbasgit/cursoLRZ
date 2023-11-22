@@ -1,0 +1,19 @@
+Al pulsar el boton genereles sacar
+*nombre.comun
+*nombre.oficial
+*capital.capital
+*poblacion.population
+
+
+al pulsar boton geograficos sacar:
+*area.area   kilometros cuadrados
+*fronteras.borders
+* maps.googleMaps
+*maps.openStreetMapsenlaces 
+
+al pulsar en boton banderas
+*escudo coatOfArms.svg
+*bandera flags.svg
+
+traducciones translations
+
