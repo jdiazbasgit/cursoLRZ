@@ -15,13 +15,18 @@
         </tr>
     </table>
   <h1 *ngIf="ver">{{texto}}</h1>
+
   <button (click)="cambiarValor()">cambiar valor de texto</button>
   <button (click)="verTexto()">ver texto</button>
   <button (click)="cambiarVer()">cambiar h1</button>
   <button (click)="ordenarNumeros()">ordenar</button>
   <table ngClass="table table-bordered" >
     <tr *ngFor="let numero of numeros ">
-        <td ngClass="text-center">{{numero}}</td>
+        <td ngClass="text-center">{{numero | sumaDiez:20:5 |  currency:'EUR':'2.1-2' }}</td>
+  </table>
+  <table ngClass="table table-bordered" >
+    <tr *ngFor="let letra of letras ">
+        <td ngClass="text-center">{{letra | uppercase}}</td>
   </table>
     <app-error></app-error>
 </div>   

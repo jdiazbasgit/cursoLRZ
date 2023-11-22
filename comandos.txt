@@ -1,0 +1,4 @@
+ng new [nombre de proyecto] - creo proyecto nuevo
+ng generate component [nombre del componente]
+ng generate pipe [nombre]
+ng generate service [nombre]
