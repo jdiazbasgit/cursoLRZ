@@ -1,5 +1,5 @@
-import { Paises } from "./clases/Paises.js";
-
+    import { Paises } from "./clases/Paises.js";
+var pais:any
 let paises = new Paises()
 let paisesRecibidos: Array<any> = []
 let div = document.querySelector("#contenido")
@@ -13,7 +13,7 @@ let div = document.querySelector("#contenido")
     })
 }).catch(error=>{//respuesta del error
     let h1= document.createElement("h1")
-    h1.innerHTML=error
+    h1.innerHTML=error 
     div?.appendChild(h1)
 })*/
 
@@ -35,12 +35,15 @@ document.querySelector("#continente")?.addEventListener("change", () => {
     }
 
     paises.getDatos("https://restcountries.com/v3.1/region/" +
-        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then(datos => {
+        (selectContinentes as HTMLSelectElement).selectedOptions[0].value).then((datos:Array<any>) => {
             (selectPaises as HTMLSelectElement).innerHTML = ""
             var optionInicial = document.createElement("option");
             optionInicial.value = "0";
             optionInicial.text = "Seleccciona pais...";
             selectPaises?.appendChild(optionInicial)
+            datos.sort((a,b)=>{
+            return a.translations.spa.common.localeCompare(b.translations.spa.common)
+            })
             datos.forEach((pais:
                 {
                     name: {
@@ -68,3 +71,87 @@ document.querySelector("#continente")?.addEventListener("change", () => {
 
         })
 })
+document.querySelector("#paises")?.addEventListener("change",()=>{
+    let h1=document.createElement("h1")
+    
+    limpiar(div  as HTMLDivElement)
+    h1.innerHTML=
+    `he cambiado al pais 
+    ${(document.querySelector("#paises") as HTMLSelectElement).selectedOptions[0].value}`;
+    (div as HTMLDivElement).appendChild(h1)
+})
+
+let limpiar=(elemento:HTMLDivElement)=>{
+    elemento.innerHTML=""
+}
+
+document.querySelector("#generales")?.addEventListener("click",()=>{
+    let h1=document.createElement("h1")
+    limpiar(div as HTMLDivElement)
+    
+    h1.innerHTML="estoy en generales";
+
+    (div as HTMLDivElement).appendChild(h1)
+})
+
+document.querySelector("#geograficos")?.addEventListener("click",()=>{
+    let h1=document.createElement("h1")
+    limpiar(div as HTMLDivElement)
+    h1.innerHTML="estoy en geograficos";
+    (div as HTMLDivElement).appendChild(h1)
+})
+
+document.querySelector("#banderas")?.addEventListener("click",()=>{
+    let h1=document.createElement("h1")
+    limpiar(div as HTMLDivElement)
+    h1.innerHTML="estoy en banderas";
+    (div as HTMLDivElement).appendChild(h1)
+})
+
+document.querySelector("#traducciones")?.addEventListener("click",()=>{
+    let h1=document.createElement("h1")
+    limpiar(div as HTMLDivElement)
+    h1.innerHTML="estoy en traducciones";
+    (div as HTMLDivElement).appendChild(h1)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Shadow DOM (DOM independiente del DOM normal)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

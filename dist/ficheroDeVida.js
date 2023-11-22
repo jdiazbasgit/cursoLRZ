@@ -1,5 +1,6 @@
-var _a;
+var _a, _b, _c, _d, _e, _f;
 import { Paises } from "./clases/Paises.js";
+var pais;
 let paises = new Paises();
 let paisesRecibidos = [];
 let div = document.querySelector("#contenido");
@@ -31,12 +32,15 @@ let div = document.querySelector("#contenido");
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
     }
     paises.getDatos("https://restcountries.com/v3.1/region/" +
-        selectContinentes.selectedOptions[0].value).then(datos => {
+        selectContinentes.selectedOptions[0].value).then((datos) => {
         selectPaises.innerHTML = "";
         var optionInicial = document.createElement("option");
         optionInicial.value = "0";
         optionInicial.text = "Seleccciona pais...";
         selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(optionInicial);
+        datos.sort((a, b) => {
+            return a.translations.spa.common.localeCompare(b.translations.spa.common);
+        });
         datos.forEach((pais) => {
             var _a, _b, _c, _d;
             // (pais) me pongo encima del error y sale corrección rápida
@@ -49,4 +53,44 @@ let div = document.querySelector("#contenido");
             selectPaises === null || selectPaises === void 0 ? void 0 : selectPaises.appendChild(option);
         });
     });
+});
+(_b = document.querySelector("#paises")) === null || _b === void 0 ? void 0 : _b.addEventListener("change", () => {
+    //creo las acciones para la select de paises
+    let h1 = document.createElement("h1");
+    limpiar(div);
+    h1.innerHTML =
+        `he cambiado al pais 
+    ${document.querySelector("#paises").selectedOptions[0].value}`;
+    div.appendChild(h1);
+});
+let limpiar = (elemento) => {
+    elemento.innerHTML = "";
+};
+(_c = document.querySelector("#generales")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
+    //colocar en pantallas datos generales
+    let h1 = document.createElement("h1");
+    limpiar(div);
+    h1.innerHTML = "estoy en generales";
+    div.appendChild(h1);
+});
+(_d = document.querySelector("#geograficos")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
+    //colocar en pantallas datos geograficos
+    let h1 = document.createElement("h1");
+    limpiar(div);
+    h1.innerHTML = "estoy en geograficos";
+    div.appendChild(h1);
+});
+(_e = document.querySelector("#banderas")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
+    //colocar en pantallas datos banderas
+    let h1 = document.createElement("h1");
+    limpiar(div);
+    h1.innerHTML = "estoy en banderas";
+    div.appendChild(h1);
+});
+(_f = document.querySelector("#traducciones")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", () => {
+    //colocar en pantallas datos traducciones
+    let h1 = document.createElement("h1");
+    limpiar(div);
+    h1.innerHTML = "estoy en traducciones";
+    div.appendChild(h1);
 });
