@@ -2,7 +2,7 @@ import { Name } from "./Name.js"
 import { Translations } from "./Translations.js"
 import { Maps } from "./Maps.js"
 import { Flags } from "./Flags.js"
-import { CoatOfArms } from "./coatOfArms.js"
+import { CoatOfArms } from "./CoatOfArms.js"
 
 export type Pais ={
     translations:Translations

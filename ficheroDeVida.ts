@@ -1,13 +1,34 @@
 import { Paises } from "./clases/Paises.js";
-import { CoatOfArms } from "./types/coatOfArms.js";
-import { Flags } from "./types/Flags.js";
-import { Maps } from "./types/Maps.js";
-import { Name } from "./types/Name.js";
 import { Pais } from "./types/Pais.js";
-import { Spa } from "./types/Spa.js";
-import { Translations } from "./types/Translations.js";
+
 var pais:Pais
 let paises = new Paises()
+// type Value={
+//     common:string,
+//     official:string
+// }
+// type Traduccion={
+//     nombre:string,
+//     valor:Value
+// }
+paises.getDatos("https://restcountries.com/v3.1/name/salvador").then((datos:any)=>{
+    // Object.entries(datos[0].translations).forEach((dato:any)=>{
+    //     console.log(dato)
+    //     let valores=Object.entries(dato[1])
+    //     console.log("propiedad:"+dato[0]+" - "+valores[1][0])
+    // })
+    Object.entries(datos[0].currencies).forEach((moneda:any)=>{
+        console.log(moneda[0]+" - "+moneda[1].symbol)
+});
+let divContenido=document.querySelector("#contenido")
+let h1=document.createElement("h1")
+h1.innerHTML="Esperams 5 segundos"
+divContenido?.appendChild
+setTimeout(()=>{
+
+
+
+})
 let paisesRecibidos: Array<any> = []
 let div = document.querySelector("#contenido")
 /*paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
