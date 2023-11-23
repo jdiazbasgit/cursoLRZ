@@ -1,0 +1,15 @@
+import { HombreOrquesta } from "../ClaseConcierto/HombreOrquetaMn.js";
+import { Solista } from "../ClaseConcierto/SolistaMn.js";
+import { Tambor } from "../ClaseConcierto/TamborMn.js";
+import { Trompeta } from "../ClaseConcierto/TrompetaMn.js";
+var tambor = new Tambor("pom, pom, pom", "tambor");
+var trompeta = new Trompeta("tuuu, tuuu, tuuu", "trompeta");
+var instrumentosSolista = [tambor];
+var instrumentosHombreOrquesta = [tambor, trompeta];
+var solista = new Solista(instrumentosSolista, "percusion");
+var hombreOrquesta = new HombreOrquesta(instrumentosHombreOrquesta, "polivalente");
+console.log("va a tocar el solista");
+solista.tocar();
+console.log("va a tocar el hombre orquesta");
+hombreOrquesta.tocar();
+trompeta.dondeEstoy();
