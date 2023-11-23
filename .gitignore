@@ -8,3 +8,4 @@
 .history/
 
 *.vyxs
+node_modules
