@@ -5,6 +5,9 @@ import { Name } from "./Name_JCGA.js"
 import { Translations } from "./Translations_JCGA.js"
 
 export type Pais={
+    open: string
+    google: string
+    cca3: any
     name:Name
     translations:Translations
     capital:string

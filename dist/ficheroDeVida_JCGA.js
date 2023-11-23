@@ -1,4 +1,4 @@
-var _a, _b, _c, _d, _e;
+var _a, _b, _c, _d, _e, _f;
 import { Paises } from "./clases/Paises_JCGA.js";
 // Defino los elementos generales de todo el ejercicio
 let paises = new Paises();
@@ -15,6 +15,8 @@ var google;
 var open;
 var coatofarms;
 var flags;
+var cca3;
+var divContenido = document.querySelector("#contenido");
 // Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
 // let paisesRecibidos: Array<any> = []
 // paises.getDatos("https://restcountries.com/v3.1/region/europe").then(datos => {
@@ -131,33 +133,73 @@ let limpiar = (elemento) => {
         open = pais.maps.openStreetMaps;
         coatofarms = pais.coatOfArms;
         flags = pais.flags;
+        cca3 = pais.cca3;
         console.log(`El pais seleccionado es ${official}`);
         // Lo anterior es para comprobar que funciona y se guardan las variables
     });
 });
 // Vamos con la parte de los botones. 
 // Primer boton Generales 
-(_c = document.querySelector("#geograficos")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
+(_c = document.querySelector("#generales")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", () => {
     //colocar en pantallas datos geograficos
-    let h1 = document.createElement("h1");
-    limpiar(div);
-    h1.innerHTML = `El nombre comun del pais es ${common}`;
-    div.appendChild(h1);
-    h1.innerHTML = `El nombre oficial del pais es ${official}`;
-    div.appendChild(h1);
-    h1.innerHTML = `La capital del pais es ${capital}`;
-    div.appendChild(h1);
-    h1.innerHTML = `La población del pais es ${population}`;
-    div.appendChild(h1);
+    limpiar(divContenido);
+    let dato1 = document.createElement("p");
+    let dato2 = document.createElement("p");
+    let dato3 = document.createElement("p");
+    let dato4 = document.createElement("p");
+    dato1.innerHTML = `El nombre comun del pais es ${common}`;
+    dato2.innerHTML = `El nombre oficial del pais es ${official}`;
+    dato3.innerHTML = `La capital del pais es ${capital}`;
+    dato4.innerHTML = `La población del pais es ${population} habitantes`;
+    divContenido.appendChild(dato1);
+    divContenido.appendChild(dato2);
+    divContenido.appendChild(dato3);
+    divContenido.appendChild(dato4);
 });
-(_d = document.querySelector("#banderas")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
+//colocar en pantalla datos geograficos
+(_d = document.querySelector("#geograficos")) === null || _d === void 0 ? void 0 : _d.addEventListener("click", () => {
+    limpiar(divContenido);
+    let dato1 = document.createElement("p");
+    let dato2 = document.createElement("p");
+    let dato3 = document.createElement("p");
+    let dato4 = document.createElement("p");
+    let ul = document.createElement("ul");
+    dato1.innerHTML = `La superficie del pais es ${area}`;
+    dato2.innerHTML = `Las fronteras del pais son `;
+    for (let i = 0; i < pais.borders.length; i++) {
+        //URL con cca3 
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos) => {
+            let li = document.createElement("li");
+            ul.appendChild(li);
+            li.innerHTML = `${datos[0].cca3}: ${datos[0].name.common}`;
+        });
+    }
+    divContenido.appendChild(dato1);
+    divContenido.appendChild(dato2);
+    divContenido.appendChild(ul);
+    dato3.innerHTML = `Para ver el pais en google  `;
+    let a1 = document.createElement("a");
+    a1.href = pais.maps.googleMaps;
+    a1.text = "pulsa aquí";
+    a1.target = "_blank";
+    dato4.innerHTML = `Para ver el pais en streetMap  `;
+    let a2 = document.createElement("a");
+    a2.href = pais.maps.openStreetMaps;
+    a2.text = "pulsa aquí";
+    a2.target = "_blank";
+    divContenido.appendChild(dato3);
+    dato3.appendChild(a1);
+    divContenido.appendChild(dato4);
+    dato4.appendChild(a2);
+});
+(_e = document.querySelector("#banderas")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
     //colocar en pantallas datos banderas
     let h1 = document.createElement("h1");
     limpiar(div);
     h1.innerHTML = "estoy en banderas";
     div.appendChild(h1);
 });
-(_e = document.querySelector("#traducciones")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
+(_f = document.querySelector("#traducciones")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", () => {
     //colocar en pantallas datos traducciones
     let h1 = document.createElement("h1");
     limpiar(div);

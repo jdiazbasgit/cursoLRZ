@@ -12,12 +12,15 @@ var common: string;
 var translations;
 var capital: string;
 var population: number;
-var area;
+var area: number;
 var borders;
 var google;
 var open;
 var coatofarms;
 var flags;
+var cca3;
+
+var divContenido = document.querySelector("#contenido");
 
 // Primera parte, para que me escriba en la pantalla los nombre de los paises y su capital
 
@@ -153,9 +156,10 @@ document.querySelector("#paises")?.addEventListener("change", () => {
             open = pais.maps.openStreetMaps
             coatofarms = pais.coatOfArms
             flags = pais.flags
+            cca3 = pais.cca3
 
             console.log(`El pais seleccionado es ${official}`)
-// Lo anterior es para comprobar que funciona y se guardan las variables
+            // Lo anterior es para comprobar que funciona y se guardan las variables
         })
 
 
@@ -166,41 +170,74 @@ document.querySelector("#paises")?.addEventListener("change", () => {
 // Primer boton Generales 
 document.querySelector("#generales")?.addEventListener("click", () => {
     //colocar en pantallas datos geograficos
-    let h1 = document.createElement("h1")
-    limpiar(div as HTMLDivElement)
-    h1.innerHTML = `El nombre comun del pais es ${common}` ;
-    (div as HTMLDivElement).appendChild(h1)
-    h1.innerHTML = `El nombre oficial del pais es ${official}` ;
-    (div as HTMLDivElement).appendChild(h1)
-    h1.innerHTML = `La capital del pais es ${capital}` ;
-    (div as HTMLDivElement).appendChild(h1)
-    h1.innerHTML = `La población del pais es ${population}` ;
-    (div as HTMLDivElement).appendChild(h1)
+    limpiar(divContenido as HTMLDivElement);
 
+    let dato1 = document.createElement("p")
+    let dato2 = document.createElement("p")
+    let dato3 = document.createElement("p")
+    let dato4 = document.createElement("p")
 
+    dato1.innerHTML = `El nombre comun del pais es ${common}`;
+    dato2.innerHTML = `El nombre oficial del pais es ${official}`;
+    dato3.innerHTML = `La capital del pais es ${capital}`;
+    dato4.innerHTML = `La población del pais es ${population} habitantes`;
 
+    (divContenido as HTMLDivElement).appendChild(dato1);
+    (divContenido as HTMLDivElement).appendChild(dato2);
+    (divContenido as HTMLDivElement).appendChild(dato3);
+    (divContenido as HTMLDivElement).appendChild(dato4);
 
 })
-
-
-
+//colocar en pantalla datos geograficos
 document.querySelector("#geograficos")?.addEventListener("click", () => {
-    //colocar en pantallas datos geograficos
-    let h1 = document.createElement("h1")
-    limpiar(div as HTMLDivElement)
-    h1.innerHTML = `El nombre comun del pais es ${common}` ;
-    (div as HTMLDivElement).appendChild(h1)
-    h1.innerHTML = `El nombre oficial del pais es ${official}` ;
-    (div as HTMLDivElement).appendChild(h1)
-    h1.innerHTML = `La capital del pais es ${capital}` ;
-    (div as HTMLDivElement).appendChild(h1)
-    h1.innerHTML = `La población del pais es ${population}` ;
-    (div as HTMLDivElement).appendChild(h1)
+
+    limpiar(divContenido as HTMLDivElement);
+
+    let dato1 = document.createElement("p")
+    let dato2 = document.createElement("p")
+    let dato3 = document.createElement("p")
+    let dato4 = document.createElement("p")
+    let ul = document.createElement("ul")
+
+    dato1.innerHTML = `La superficie del pais es ${area}`;
+    dato2.innerHTML = `Las fronteras del pais son `;
+
+    for (let i = 0; i < pais.borders.length; i++) {
+        //URL con cca3 
+        paises.getDatos("https://restcountries.com/v3.1/alpha/" + pais.borders[i]).then((datos: Array<Pais>) => {
+            let li = document.createElement("li");
+            ul.appendChild(li);
+            (li as HTMLLIElement).innerHTML = `${datos[0].cca3}: ${datos[0].name.common}`;
+        })
+    }
+    (divContenido as HTMLDivElement).appendChild(dato1);
+    (divContenido as HTMLDivElement).appendChild(dato2);
+    (divContenido as HTMLDivElement).appendChild(ul);
+
+    dato3.innerHTML = `Para ver el pais en google  `;
+    let a1=document.createElement("a")
+    a1.href=pais.maps.googleMaps;
+    a1.text="pulsa aquí";
+    a1.target="_blank";
+
+    dato4.innerHTML = `Para ver el pais en streetMap  `;
+    let a2=document.createElement("a")
+    a2.href=pais.maps.openStreetMaps;
+    a2.text="pulsa aquí";
+    a2.target="_blank";
+
+    (divContenido as HTMLDivElement).appendChild(dato3);
+    (dato3 as HTMLDivElement).appendChild(a1);
+    (divContenido as HTMLDivElement).appendChild(dato4);
+    (dato4 as HTMLDivElement).appendChild(a2);
 
 
 
 
-})
+    
+
+
+})   
 
 
 document.querySelector("#banderas")?.addEventListener("click", () => {
