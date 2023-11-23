@@ -29,9 +29,9 @@ export class LoginComponent {
     this.ver = !this.ver
   }    
 
-  ordenarNumeros=()=>{
+   ordenarNumeros=()=>{
     this.numeros.sort()
-    this.datos.getDatos("https://restcountries.com/v3.1/region/europe").subscribe((datos:any)=>{
+     this.datos.getDatos("https://restcountries.com/v3.1/region/europe").subscribe((datos:any)=>{
       console.log(datos)
     })
   }

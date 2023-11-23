@@ -9,13 +9,25 @@ import { FormsModule } from '@angular/forms';
 import { SumaDiezPipe } from './suma-diez.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { Axios } from 'axios';
+import { PapaComponent } from './papa/papa.component';
+import { GeneralesComponent } from './generales/generales.component';
+import { GeograficosComponent } from './geograficos/geograficos.component';
+import { BanderasComponent } from './banderas/banderas.component';
+import { TraduccionesComponent } from './traducciones/traducciones.component';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ErrorComponent,
-    SumaDiezPipe
+    SumaDiezPipe,
+    PapaComponent,
+    GeneralesComponent,
+    GeograficosComponent,
+    BanderasComponent,
+    TraduccionesComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
