@@ -15,7 +15,6 @@ import { EjemploTirarComponent } from './ejemplo-tirar/ejemplo-tirar.component';
     LoginComponent,
     ErrorComponent,
     PruebaComponent,
-    EjemploTirarComponent
   ],
   imports: [
     BrowserModule,
