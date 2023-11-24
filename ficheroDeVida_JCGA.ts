@@ -1,4 +1,5 @@
 import { Paises } from "./clases/Paises_JCGA.js";
+import { Flags } from "./types/Flags_JCGA.js";
 import { Pais } from "./types/Pais_JCGA.js";
 
 // Defino los elementos generales de todo el ejercicio
@@ -17,7 +18,7 @@ var borders;
 var google;
 var open;
 var coatofarms;
-var flags;
+var flags: Flags ;
 var cca3;
 
 var divContenido = document.querySelector("#contenido");
@@ -231,23 +232,41 @@ document.querySelector("#geograficos")?.addEventListener("click", () => {
     (divContenido as HTMLDivElement).appendChild(dato4);
     (dato4 as HTMLDivElement).appendChild(a2);
 
+})   
 
+  //colocar en pantalla bandera y escudo
+document.querySelector("#banderas")?.addEventListener("click", () => {
+  
+    limpiar(divContenido as HTMLDivElement);
+
+    let image1 = document.createElement("img");
+    let image2 = document.createElement("img");
+    
+    image1.src= pais.flags.svg;
+    image1.name= "La bandera del pais es ";
+    image1.vspace= 50;
+    image1.hspace= 50;
+    image1.width = 300;
+    
+    image2.src= pais.coatOfArms.svg;
+    image2.name= "El escudo del pais es ";
+    image2.hspace= 50;
+    image2.vspace= 50;
+    image2.width = 300;
+
+    (image1 as HTMLImageElement).innerHTML = `Bandera:`;
+    divContenido?.appendChild(image1);
+    (image2 as HTMLImageElement).innerHTML = `Escudo:`;
+    divContenido?.appendChild(image2);
 
 
     
 
 
-})   
-
-
-document.querySelector("#banderas")?.addEventListener("click", () => {
-    //colocar en pantallas datos banderas
-    let h1 = document.createElement("h1")
-
-    limpiar(div as HTMLDivElement)
-    h1.innerHTML = "estoy en banderas";
-    (div as HTMLDivElement).appendChild(h1)
 })
+
+
+
 document.querySelector("#traducciones")?.addEventListener("click", () => {
     //colocar en pantallas datos traducciones
     let h1 = document.createElement("h1")

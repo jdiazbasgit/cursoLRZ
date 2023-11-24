@@ -192,12 +192,25 @@ let limpiar = (elemento) => {
     divContenido.appendChild(dato4);
     dato4.appendChild(a2);
 });
+//colocar en pantalla bandera y escudo
 (_e = document.querySelector("#banderas")) === null || _e === void 0 ? void 0 : _e.addEventListener("click", () => {
-    //colocar en pantallas datos banderas
-    let h1 = document.createElement("h1");
-    limpiar(div);
-    h1.innerHTML = "estoy en banderas";
-    div.appendChild(h1);
+    limpiar(divContenido);
+    let image1 = document.createElement("img");
+    let image2 = document.createElement("img");
+    image1.src = pais.flags.svg;
+    image1.name = "La bandera del pais es ";
+    image1.vspace = 50;
+    image1.hspace = 50;
+    image1.width = 300;
+    image2.src = pais.coatOfArms.svg;
+    image2.name = "El escudo del pais es ";
+    image2.hspace = 50;
+    image2.vspace = 50;
+    image2.width = 300;
+    image1.innerHTML = `Bandera:`;
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(image1);
+    image2.innerHTML = `Escudo:`;
+    divContenido === null || divContenido === void 0 ? void 0 : divContenido.appendChild(image2);
 });
 (_f = document.querySelector("#traducciones")) === null || _f === void 0 ? void 0 : _f.addEventListener("click", () => {
     //colocar en pantallas datos traducciones
