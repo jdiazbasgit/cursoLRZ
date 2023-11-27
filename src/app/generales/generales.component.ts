@@ -7,7 +7,7 @@ import { Pais } from '../types/Pais';
   styleUrls: ['./generales.component.css']
 })
 export class GeneralesComponent {
-  @Input() pais:Pais | undefined
+  @Input() pais:Pais | undefined //te va a entrar un Input desde fuera
   @Input("valor") valor:number=0
 
 
