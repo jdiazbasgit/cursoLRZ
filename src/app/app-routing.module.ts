@@ -5,7 +5,7 @@ import { GeograficosComponent } from './geograficos/geograficos.component';
 import { TodoComponent } from './todo/todo.component';
 
 const routes: Routes = [
-  { path: 'generales/:valor', component: GeneralesComponent },
+  { path: 'generales', component: GeneralesComponent },
   { path: 'geograficos', component: GeograficosComponent },
   { path: 'todo', component: TodoComponent  }
 ];

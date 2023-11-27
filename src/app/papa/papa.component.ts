@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { DatosPaisesService } from '../datos-paises.service';
 import { Pais } from '../types/Pais';
 import { subscribeOn } from 'rxjs';
+import { GeneralesComponent } from '../generales/generales.component';
+import { Router } from '@angular/router';
 
 const urlRegion: string = "https://restcountries.com/v3.1/region/"
 const urlPais: string = "https://restcountries.com/v3.1/name/"
@@ -17,13 +19,13 @@ export class PapaComponent {
   //propiedades
   continentes: Array<Continente> = [{ valor: "europe", texto: "Europa" }, { valor: "asia", texto: "Asia" }, { valor: "americas", texto: "America" }, { valor: "africa", texto: "Africa" }, { valor: "oceania", texto: "Oceania" }]
   continenteSeleccionado: string = "0"
-  @ViewChild(Component) hijo: any;
+  @ViewChild(GeneralesComponent) hijoGenerales: any;
   error: string = ""
-  @Output() paisSeleccionado: Pais | undefined //se declara como undefined pq aun no sabemos el pais
+  paisSeleccionado: Pais | undefined //se declara como undefined pq aun no sabemos el pais
   paises: Array<Pais> = []
   nombreDelPaisSeleccionado: string = ""
   //constructor
-  constructor(private datos: DatosPaisesService) { }
+  constructor(private datos: DatosPaisesService, private router:Router) { }
 
   //metodos
   cargarPaises = () => {
@@ -33,7 +35,7 @@ export class PapaComponent {
       return
     }
     this.datos.getDatos(urlRegion + this.continenteSeleccionado).subscribe((datos: Array<Pais>) => {
-      this.paises = []
+      this.paises = []//=datos
       datos.forEach((pais: Pais) => {
         this.paises.push(pais)
       })
@@ -46,7 +48,15 @@ export class PapaComponent {
   cargarPais = () => {
     this.datos.getDatos(urlPais + this.nombreDelPaisSeleccionado).subscribe((datos: Array<Pais>) => {
       this.paisSeleccionado = datos[0];
-      this.hijo.pais=this.paisSeleccionado;
+      //this.router.navigate([`/` ])
     })
+  }
+  sendPais(elemento:string){
+    /*this.router.navigate([`/${elemento}` ],{
+      state:{
+        key:"pais",
+        data:this.paisSeleccionado
+      }
+    })*/
   }
 }
