@@ -1,8 +1,9 @@
-<div>
+<span *ngIf="pais">
     <h1>Area: {{pais?.area}}</h1>
     
     <h1>Fronteras: {{pais?.borders}}</h1>
     <h1>Maps {{pais?.maps?.googleMaps}}</h1>
     <h1>OpenStreet {{pais?.maps?.openStreetMaps}} Habitantes</h1>
 
-</div>
+</span>
+<h1 *ngIf="!pais">Selecciona un pais</h1>
