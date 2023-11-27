@@ -1,0 +1,19 @@
+<div>
+    Continente:<select (change)="cargarPaises()" [(ngModel)]="continenteSeleccionado">
+        <option value="0">Selecciona continente...</option>
+        <option *ngFor="let continente of continentes" value="{{continente.valor}}">{{continente.texto}}</option>
+    </select>
+    Pais:<select [(ngModel)]="nombreDelPaisSeleccionado" (change)="cargarPais()">
+        <option value="0" >Selecciona pais...</option>
+        <option *ngFor="let pais of paises" value="{{pais.name.common}}">{{pais.translations.spa.common}}</option>
+    </select>
+   <a class="btn btn-success" routerLink="generales">Generales</a>
+   <a class="btn btn-success" routerLink="geograficos">Geograficos</a>
+   <a class="btn btn-success" routerLink="todo">Todo</a>
+    <!-- el atributo de entrada entre corchetes
+    <app-generales [pais]="paisSeleccionado"></app-generales>-->
+</div>
+<router-outlet></router-outlet>
+<div>
+    <h1 class="text-center text-danger">{{error}}</h1>
+</div>
