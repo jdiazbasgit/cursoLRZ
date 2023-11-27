@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Pais } from '../types/Pais';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-generales',
@@ -7,8 +8,15 @@ import { Pais } from '../types/Pais';
   styleUrls: ['./generales.component.css']
 })
 export class GeneralesComponent {
-  @Input() pais:Pais | undefined
-  @Input("valor") valor:number=0
+   @Input() pais:Pais | undefined
 
+
+/*constructor(private route:Router){
+  this.cargarPais()
+}
+cargarPais(){
+  const params=this.route.getCurrentNavigation()?.extras?.state;
+  this.pais=params?.['data']
+}*/
 
 }

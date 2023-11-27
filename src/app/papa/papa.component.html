@@ -7,12 +7,16 @@
         <option value="0" >Selecciona pais...</option>
         <option *ngFor="let pais of paises" value="{{pais.name.common}}">{{pais.translations.spa.common}}</option>
     </select>
-   <a class="btn btn-success" routerLink="generales">Generales</a>
-   <a class="btn btn-success" routerLink="geograficos">Geograficos</a>
-   <a class="btn btn-success" routerLink="todo">Todo</a>
+   <button class="btn btn-success" (click)="sendPais('generales')">Generales</button>
+   <button class="btn btn-success" (click)="sendPais('geograficos')">Geograficos</button>
+   <button class="btn btn-success" routerLink="todo">Todo</button>
     <!-- el atributo de entrada entre corchetes
     <app-generales [pais]="paisSeleccionado"></app-generales>-->
 </div>
+<div>
+    <app-generales pais="paisSeleccionado"/>
+</div>
+
 <router-outlet></router-outlet>
 <div>
     <h1 class="text-center text-danger">{{error}}</h1>
