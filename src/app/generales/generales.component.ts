@@ -1,22 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { Pais } from '../types/Pais';
-import { Router } from '@angular/router';
+import { Router, Routes } from '@angular/router';
+import { OdinComponent } from '../odin/odin.component';
 
 @Component({
   selector: 'app-generales',
   templateUrl: './generales.component.html',
   styleUrls: ['./generales.component.css']
 })
-export class GeneralesComponent {
-   @Input() pais:Pais | undefined
-
-
-/*constructor(private route:Router){
-  this.cargarPais()
-}
-cargarPais(){
-  const params=this.route.getCurrentNavigation()?.extras?.state;
-  this.pais=params?.['data']
-}*/
+export class GeneralesComponent extends OdinComponent{
+   @Input() override pais:Pais | undefined
 
 }

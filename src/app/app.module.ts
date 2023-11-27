@@ -16,6 +16,7 @@ import { BanderasComponent } from './banderas/banderas.component';
 import { TraduccionesComponent } from './traducciones/traducciones.component';
 import { TodoComponent } from './todo/todo.component';
 import { CommonModule } from '@angular/common';
+import { OdinComponent } from './odin/odin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CommonModule } from '@angular/common';
     GeograficosComponent,
     BanderasComponent,
     TraduccionesComponent,
-    TodoComponent
+    TodoComponent,
+    OdinComponent
   ],
   imports: [
     BrowserModule,

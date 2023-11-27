@@ -52,11 +52,12 @@ export class PapaComponent {
     })
   }
   sendPais(elemento:string){
-    /*this.router.navigate([`/${elemento}` ],{
+    this.router.navigate([`/${elemento}` ],{
       state:{
         key:"pais",
-        data:this.paisSeleccionado
+        data:this.paisSeleccionado,
+        valor:"prueba de parametro"
       }
-    })*/
+    })
   }
 }
