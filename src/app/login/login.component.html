@@ -3,17 +3,30 @@
     <table>
         <tr>
             <td class="fabada">usuario</td>
-            <td> <input type="text"  ></td>
+            <td> <input type="text"  [(ngModel)]="texto"></td>
         </tr>
         <tr>
             <td>clave</td>
             <td><input type="text"></td>
         </tr>
         <tr>
-            <td colspan="2"><button (click)="pulsarBoton()" >entrar</button></td>
+            <td colspan="2"><button >entrar</button></td>
            
         </tr>
     </table>
-  <h1>{{texto}}</h1>
+  <h1 *ngIf="ver">{{texto}}</h1>
+
+  <button (click)="cambiarValor()">cambiar valor de texto</button>
+  <button (click)="verTexto()">ver texto</button>
+  <button (click)="cambiarVer()">cambiar h1</button>
+  <button (click)="ordenarNumeros()">ordenar</button>
+  <table ngClass="table table-bordered" >
+    <tr *ngFor="let numero of numeros ">
+        <td ngClass="text-center">{{numero | sumaDiez:20:5 |  currency:'EUR':'2.1-2' }}</td>
+  </table>
+  <table ngClass="table table-bordered" >
+    <tr *ngFor="let letra of letras ">
+        <td ngClass="text-center">{{letra | uppercase}}</td>
+  </table>
     <app-error></app-error>
 </div>   
