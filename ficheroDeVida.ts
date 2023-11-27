@@ -2,7 +2,44 @@ import { Paises } from "./clases/Paises.js";
 var pais:any
 let paises = new Paises()
 
-paises.getDatos("https://restcountries.com/v3.1/name/Panama").then((datos:any)=>{
+paises.getDatos("https://restcountries.com/v3.1/name/Panama                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+").then((datos:any)=>{
    /* Object.entries(datos[0].translations).forEach((dato:any)=>{
         console.log(dato)
         let valores=Object.entries(dato[1])
