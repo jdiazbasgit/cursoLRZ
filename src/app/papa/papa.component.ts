@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 const urlRegion: string = "https://restcountries.com/v3.1/region/"
 const urlPais: string = "https://restcountries.com/v3.1/name/"
 
-@Component({
+@Component({ //decorador de tipo componente
   selector: 'app-papa',
   templateUrl: './papa.component.html',
   styleUrls: ['./papa.component.css']
@@ -52,7 +52,7 @@ export class PapaComponent {
     })
   }
   sendPais(elemento:string){
-    this.router.navigate([`/${elemento}` ],{
+    this.router.navigate([`/${elemento}` ],{ //añade /elemento a la URL (/generales /geograficos etc)
       state:{
         key:"pais",
         data:this.paisSeleccionado,

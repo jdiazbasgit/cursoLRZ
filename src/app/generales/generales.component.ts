@@ -9,6 +9,6 @@ import { OdinComponent } from '../odin/odin.component';
   styleUrls: ['./generales.component.css']
 })
 export class GeneralesComponent extends OdinComponent{
-   @Input() override pais:Pais | undefined
+   @Input() override pais:Pais | undefined 
 
 }
