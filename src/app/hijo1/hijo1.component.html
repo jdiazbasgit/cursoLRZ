@@ -2,6 +2,8 @@
     <h1>HIJO 1</h1>
     <h1>Mi padre me saluda diciendo: {{saludo}}</h1>
    <h1>Mensaje a papa: <input type="text" [(ngModel)]="mensajeAPapa"></h1>
-   <h1>mensaje a papa en evento: <input type="text" [(ngModel)]="mensajeAPapaEvento"></h1>
-   <button (click)="enviarEventoAPapa(mensajeAPapaEvento)">enviar evento</button>
+   <h1>Código postal: <input type="text" [(ngModel)]="codigoPostal"></h1>
+  
+   <button (click)="enviarEventoAPapa(codigoPostal)">enviar evento</button>
+    <h1 class="text-warning">{{error}}</h1>
 </div>
