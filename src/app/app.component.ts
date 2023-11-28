@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'proyecto de paises';
+  title = 'Proyecto de paises con parámetros dinámicos';
 }
