@@ -16,7 +16,6 @@ import { TraduccionesComponent } from './traducciones/traducciones.component';
 import { TodoComponent } from './todo/todo.component';
 import { CommonModule } from '@angular/common';
 import { OdinComponent } from './odin/odin.component';
-import { EmpleadoComponent } from './empleado/empleado.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import { EmpleadoComponent } from './empleado/empleado.component';
     TraduccionesComponent,
     TodoComponent,
     OdinComponent,
-    EmpleadoComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +37,6 @@ import { EmpleadoComponent } from './empleado/empleado.component';
     FormsModule,
     HttpClientModule,
     CommonModule,
-    EmpleadoComponent
     
    
   ],
