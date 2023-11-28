@@ -12,11 +12,11 @@ export class PapaComponent {
   @Input() eventoHijo2: EventEmitter<string> | undefined
   @ViewChild(Hijo1Component) hijo1: Hijo1Component | undefined
   @ViewChild(Hijo2Component) hijo2: Hijo2Component | undefined
-  saludoAlHijo1: string = ""
+  saludoAlHijo1: string = "prueba de valor de variable"
   saludoAlHijo2: string = ""
 
   recibirEventoDeHijo1(event: any) {
-    this.eventoHijo1=event.texto
+    this.eventoHijo1=event.name.official
   }
 
   recibirEventoDeHijo2(event:any){
