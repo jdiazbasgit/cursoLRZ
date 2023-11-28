@@ -10,7 +10,7 @@ import { Hijo2Component } from '../hijo2/hijo2.component';
 export class PapaComponent {
   @Input() eventoHijo1: EventEmitter<string> | undefined //clase EventEmitter
   @Input() eventoHijo2: EventEmitter<string> | undefined
-  @ViewChild(Hijo1Component) hijo1: Hijo1Component | undefined
+  @ViewChild(Hijo1Component) hijo1: Hijo1Component | undefined //ver que cambia hijo 
   @ViewChild(Hijo2Component) hijo2: Hijo2Component | undefined
   saludoAlHijo1: string = ""
   saludoAlHijo2: string = ""
