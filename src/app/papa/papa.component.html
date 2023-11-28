@@ -1,6 +1,6 @@
 <h1> saludo al hijo1: <input type="text" [(ngModel)]="saludoAlHijo1"></h1>
 <h1>saludo al hij02: <input type="text" [(ngModel)]="saludoAlHijo2"></h1>
-<app-hijo1 [saludo]="saludoAlHijo1" (eventoParaPapa)="recibirEventoDeHijo1($event)"></app-hijo1>
+<app-hijo1 [saludo]="saludoAlHijo1" (eventoParaPapa)="recibirEventoDeHijo1($event)"></app-hijo1> //comprobar si lleva $ ¿?
 <h1>El hijo 1 me dice: {{hijo1?.mensajeAPapa}}</h1>
 <app-hijo2 [saludo]="saludoAlHijo2" (eventoAPapa)="recibirEventoDeHijo2($event)"></app-hijo2>
 <h1>El hijo 2 me dice:{{hijo2?.mensajeAPapa}}</h1>

@@ -12,7 +12,7 @@ export class Hijo1Component {
   mensajeAPapaEvento:string=""
 
   enviarEventoAPapa(mensaje: string) {
-    this.eventoParaPapa.emit({ texto: mensaje })
+    this.eventoParaPapa.emit({ texto: mensaje }) //texto:mensaje =bclave:valor
   }
 
 }

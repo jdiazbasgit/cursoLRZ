@@ -8,7 +8,7 @@ import { Hijo2Component } from '../hijo2/hijo2.component';
   styleUrls: ['./papa.component.css']
 })
 export class PapaComponent {
-  @Input() eventoHijo1: EventEmitter<string> | undefined
+  @Input() eventoHijo1: EventEmitter<string> | undefined //clase EventEmitter
   @Input() eventoHijo2: EventEmitter<string> | undefined
   @ViewChild(Hijo1Component) hijo1: Hijo1Component | undefined
   @ViewChild(Hijo2Component) hijo2: Hijo2Component | undefined

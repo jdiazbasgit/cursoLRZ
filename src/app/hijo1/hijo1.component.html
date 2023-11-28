@@ -1,7 +1,7 @@
 <div class="container bg-danger">
     <h1>HIJO 1</h1>
-    <h1>Mi padre me saluda diciendo: {{saludo}}</h1>
-   <h1>Mensaje a papa: <input type="text" [(ngModel)]="mensajeAPapa"></h1>
+    <h1>Mi padre me saluda diciendo: {{saludo}}</h1> //moustache sólo muestra el contenido de saludo
+   <h1>Mensaje a papa: <input type="text" [(ngModel)]="mensajeAPapa"></h1> //Si el hijo cambia mensajeaPapa por doble binding, éste cambia [(ngModel)]
    <h1>mensaje a papa en evento: <input type="text" [(ngModel)]="mensajeAPapaEvento"></h1>
    <button (click)="enviarEventoAPapa(mensajeAPapaEvento)">enviar evento</button>
 </div>
