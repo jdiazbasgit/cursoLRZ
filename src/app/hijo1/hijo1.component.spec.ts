@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Hijo1Component } from './hijo1.component';
+import { Hijo1Component } from './hijo1.component_JCGA';
 
 describe('Hijo1Component', () => {
   let component: Hijo1Component;

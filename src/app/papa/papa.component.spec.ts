@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PapaComponent } from './papa.component';
+import { PapaComponent } from './papa.component_JCGA';
 
 describe('PapaComponent', () => {
   let component: PapaComponent;

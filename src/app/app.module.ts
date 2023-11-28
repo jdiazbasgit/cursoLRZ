@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { PapaComponent } from './papa/papa.component';
-import { Hijo1Component } from './hijo1/hijo1.component';
-import { Hijo2Component } from './hijo2/hijo2.component';
+import { PapaComponent } from './papa/papa.component_JCGA';
+import { Hijo1Component } from './hijo1/hijo1.component_JCGA';
+import { Hijo2Component } from './hijo2/hijo2.component_JCGA';
 
 @NgModule({
   declarations: [
