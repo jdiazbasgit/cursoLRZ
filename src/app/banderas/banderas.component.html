@@ -1,1 +1,6 @@
-<p>banderas works!</p>
+<div *ngIf="pais">
+    <img src="{{pais.flags.svg}}" width="500" >
+    <img src="{{pais.coatOfArms.svg}}" width="500" >
+  
+</div>
+<h1 class="text-danger">{{error}}</h1>

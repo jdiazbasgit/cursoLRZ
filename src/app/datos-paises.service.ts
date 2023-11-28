@@ -9,8 +9,8 @@ export class DatosPaisesService {
   constructor(private http:HttpClient) { }
   //constructor() { }
 
-   getDatos=(url:string):any=>{
-    return this.http.get(url)
+ getDatos=(url:string):any=>{
+    return  this.http.get(url)
     //return    axios.get(url)
     
   }

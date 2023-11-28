@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { OdinComponent } from '../odin/odin.component';
+import { Pais } from '../types/Pais';
 
 @Component({
   selector: 'app-banderas',
@@ -7,5 +8,5 @@ import { OdinComponent } from '../odin/odin.component';
   styleUrls: ['./banderas.component.css']
 })
 export class BanderasComponent extends OdinComponent{
-
+@Input() override pais:Pais  | undefined
 }

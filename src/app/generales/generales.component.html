@@ -1,8 +1,9 @@
-<div class="bg-success">
-    <h1>Nombre Comun: {{pais?.name?.common}}</h1>
+<div class="bg-success" *ngIf="pais">
+    <h1>Nombre Comun: {{pais.name.common}}</h1>
     
-    <h1>Nombre Oficial: {{pais?.name?.official}}</h1>
-    <h1>Capital: {{pais?.capital}}</h1>
-    <h1>Poblacion: {{pais?.population}} Habitantes</h1>
-
+    <h1>Nombre Oficial: {{pais.name.official}}</h1>
+    <h1>Capital: {{pais.capital}}</h1>
+    <h1>Poblacion: {{pais.population}} Habitantes</h1>
+    
 </div>
+<h1 class="text-danger">{{error}}</h1>

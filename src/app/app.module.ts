@@ -18,6 +18,7 @@ import { TodoComponent } from './todo/todo.component';
 import { CommonModule } from '@angular/common';
 import { OdinComponent } from './odin/odin.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { OdinComponent } from './odin/odin.component';
     TraduccionesComponent,
     TodoComponent,
     OdinComponent
+    
   ],
   imports: [
     BrowserModule,

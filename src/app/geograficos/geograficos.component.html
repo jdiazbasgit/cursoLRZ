@@ -1,9 +1,16 @@
-<span *ngIf="pais">
-    <h1>Area: {{pais?.area}}</h1>
-    
-    <h1>Fronteras: {{pais?.borders}}</h1>
-    <h1>Maps {{pais?.maps?.googleMaps}}</h1>
-    <h1>OpenStreet {{pais?.maps?.openStreetMaps}} Habitantes</h1>
+<div class="bg-success" *ngIf="pais">
+   
+        <h1>Area: {{pais.area}}</h1>
 
-</span>
-<h1 *ngIf="!pais">Selecciona un pais</h1>
+        <h1>Fronteras: {{pais.borders}}</h1>
+        <h1>
+            <a href="{{pais.maps.googleMaps}}" target="_blank">Maps </a>
+        </h1>
+        <h1>
+            <a href="{{pais.maps.openStreetMaps}}" target="_blank">OpenStreet</a>
+        </h1>
+
+    
+    
+</div>
+<h1 class="text-danger">{{error}}</h1>
