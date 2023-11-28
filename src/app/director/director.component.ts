@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./director.component.css']
 })
 export class DirectorComponent {
+  digoAlempleado:string=""
 
 }
