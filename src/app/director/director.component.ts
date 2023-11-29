@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { EmpleadoComponent } from '../empleado/empleado.component';
 
 @Component({
   selector: 'app-director',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class DirectorComponent {
   digoAlempleado:string=""
+  @ViewChild (EmpleadoComponent) empleadoResponde:string ="";
 
 }
