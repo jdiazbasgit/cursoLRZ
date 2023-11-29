@@ -19,7 +19,7 @@ export class PapaComponent {
   //propiedades
   continentes: Array<Continente> = [{ valor: "europe", texto: "Europa" }, { valor: "asia", texto: "Asia" }, { valor: "americas", texto: "America" }, { valor: "africa", texto: "Africa" }, { valor: "oceania", texto: "Oceania" }]
   continenteSeleccionado: string = "0"
-  @ViewChild(GeneralesComponent) hijoGenerales: any;
+  @ViewChild(GeneralesComponent) hijoGenerales: any; //= hijoGenerales: Component; 
   error: string = ""
   paisSeleccionado: Pais | undefined //se declara como undefined pq aun no sabemos el pais
   paises: Array<Pais> = []
@@ -54,8 +54,8 @@ export class PapaComponent {
   sendPais(elemento:string){
     this.router.navigate([`/${elemento}` ],{ //añade /elemento a la URL (/generales /geograficos etc)
       state:{
-        key:"pais",
-        data:this.paisSeleccionado,
+        key:"pais", //key no es palabra reservada
+        data:this.paisSeleccionado, //Objeto a pasar! data no es palabra reservada
         valor:"prueba de parametro"
       }
     })
