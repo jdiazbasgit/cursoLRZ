@@ -1,1 +1,11 @@
-<p>traducciones works!</p>
+<div *ngIf="pais">
+<ul>
+    <li *ngFor="let key of traducciones.keys()">
+        <button type="button" class="btn btn-primary" 
+        data-bs-toggle="tooltip" title="{{traducciones.get(key)}}">
+        {{key.split("-")[1]}}</button></li>
+</ul>
+</div>
+
+
+<h1 class="text-danger">{{error}}</h1>

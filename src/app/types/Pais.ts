@@ -8,7 +8,7 @@ export type Pais={
     
     cca3: string
     name:Name
-    translations:Translations
+    translations:any
     capital:string
     population:number
     area:number
