@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./empleado.component.css']
 })
 export class EmpleadoComponent {
-
+  mensajeDelDirector: string =""
+  mensajeAlDirector: string =""
 }
