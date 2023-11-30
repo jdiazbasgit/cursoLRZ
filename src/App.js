@@ -1,5 +1,6 @@
 import { Component } from "react";
-import Ejemplo from "./componentes/Ejemplo";
+import SelectPaises from "./componentes/SelectPaises";
+
 export default class App extends Component{
 
 
@@ -7,7 +8,7 @@ export default class App extends Component{
   
     return (
       <div>
-      <Ejemplo></Ejemplo>
+      <SelectPaises></SelectPaises>
       </div>
     )
   }
