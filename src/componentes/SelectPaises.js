@@ -1,29 +1,53 @@
 import { Component } from "react";
+import DatosService from "../services/DatosService";
 
-export default class SelectPaises extends Component {
+export default class Nombres extends Component {
 
-    render() {
-        return (
-            <div>
-                <h1>Ejercicio de JGL</h1>
+  nombres = ["pepe", "luis", "federico", "andres"]
+  titulo = "empiezo for"
+  service = new DatosService()
+  paises = []
+  
 
-                <select name="continentes" id="continentes">
-                    <option value="0" disabled selected>Seleccionar continente</option>
-                    <option value="africa">África</option>
-                    <option value="america">América</option>
-                    <option value="asia">Asia</option>
-                    <option value="europa">Europa</option>
-                    <option value="oceania">Oceanía</option>
-                </select>
+  constructor(){
+    super()
+    this.state = {valor: true};
+    this.cargaEstado()
+  }
 
-                <select name="paises" id="paises">
-                    <option value="" disabled selected>Seleccionar pais</option>
-                </select>
+  cargaEstado=()=>{
+    this.setState({valor:this.state.valor+1})
+  }
+  
+  componentWillMount() {
+    this.service.getDatos("https://restcountries.com/v3.1/region/europe")
+      .then(paises => {
+        this.paises = paises.data;
+        //cambiamos el estado 
+        setTimeout(()=>{this.setState({valor: !this.state.valor})},5000)
+      })
+  }
 
+  render() {
 
-            </div>
+    return (
+      <div>
 
-        )
-    }
+        <ul>
+          <li>{this.titulo}</li>
+          {this.nombres.map(nombre => {
+            //comentario
+            return <li>{nombre.toUpperCase()}</li>
+          })}
+        </ul>
 
+        <ul>
+          {
+            this.paises.map(pais => <li>{pais.name.common}</li>)
+          }
+
+        </ul>
+      </div>
+    )
+  }
 }
