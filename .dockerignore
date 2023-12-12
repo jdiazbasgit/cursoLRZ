@@ -1,0 +1,6 @@
+.node_modules
+.env3.8
+.mypy_cache
+__pycache__
+*.__pyc
+.vscode

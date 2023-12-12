@@ -1,0 +1,45 @@
+.boxFuncion {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.boxPosicion {
+    margin-left: 20px;
+}
+
+.boxFuncion:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.selectOptions{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.selectOptionsMobile{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.rowSelectOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.columnSelectOptions{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-content: center;
+}

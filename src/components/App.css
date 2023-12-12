@@ -1,0 +1,22 @@
+/* Styles go here */
+
+
+.nav-btn{
+    width: 80%;
+    border: none;
+    text-decoration: none;
+    font-size: 20px;
+    color: #7F86DE;
+}
+
+.nav-btn:hover{
+    background-color: #EEEEEE;
+    color: #7F86DE;
+}
+
+.btn.active{
+    background-color: #EEEEEE;
+    color: #7F86DE;
+}
+
+
