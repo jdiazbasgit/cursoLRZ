@@ -10,17 +10,10 @@ export default class App extends Component {
 
     return (
       <div>
-        <BrowserRouter>
-        <Routes>
-   
-
-            <Route  path="/login" element={Login} />
-
-        
-        </Routes>
-        </BrowserRouter>
+       
+      
         <Nombres></Nombres>
-        <Link to="/login" element={Login}/>
+      
       </div>
     )
   }
