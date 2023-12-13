@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Ejercicio</title>
+    <style>
+        .grid{
+            display: grid;
+            grid-template-columns: 50px 100px 200px;
+            grid-template-rows: 200px 400px 600px;
+        }
+        .hueco1{background-color: aqua;}
+        .hueco2{background-color: bisque;}
+        .hueco3{background-color: palevioletred;}
+        .hueco3{background-color: red;}
+        .hueco5{background-color: blue;}
+        .hueco6{background-color: yellowgreen;}
+        .hueco7{background-color: green;}
+        .hueco8{background-color: yellowgreen;}
+        .hueco9{background-color: yellowgreen;}
+        </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="hueco1">hueco1</div>
+        <div class="hueco2">hueco2</div>
+        <div class="hueco3">hueco3</div>
+        <div class="hueco4">hueco4</div>
+        <div class="hueco5">hueco5</div>
+        <div class="hueco6">hueco6</div>
+        <div class="hueco7">hueco7</div>
+        <div class="hueco8">hueco8</div>
+        <div class="hueco9">hueco9</div>
+        
+        
+    </div>
+    
+</body>
+</html>
