@@ -50,7 +50,10 @@ export default class Paises extends Component {
         this.servicio.getDatos(`${restcountries}/region/${select.value}`)
             .then(response => {
                 this.setState({ paises: [] })
-                this.setState({ paises: response.data })
+                this.setState({ paises: response.data.sort((a,b)=>{
+                    return a.translations.spa.common.localeCompare(b.translations.spa.common) })
+              
+                })
                
             })
 
