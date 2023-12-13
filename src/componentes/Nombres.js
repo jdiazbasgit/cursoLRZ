@@ -24,7 +24,7 @@ export default class Nombres extends Component {
       .then(paises => {
         this.paises = paises.data;
         //cambiamos el estado 
-        setTimeout(()=>{this.setState({valor: !this.state.valor})},5000)
+       //{this.setState({valor: !this.state.valor})}
       })
   }
 
