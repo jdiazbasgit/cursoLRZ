@@ -1,14 +1,26 @@
 import { Component } from "react";
-import Ejemplo from "./componentes/Ejemplo";
-import Nombres from "./componentes/Nombres";
-export default class App extends Component {
 
-  render(){
-  
+import Nombres from "./componentes/Nombres";
+import Login from "./componentes/Login";
+import { BrowserRouter, Link, Route,  BrowserRouter as Router, Routes } from "react-router-dom";
+import { Navbar } from "react-bootstrap";
+export default class App extends Component {
+  texto = "pepepepe"
+  render() {
+
     return (
       <div>
-      <Ejemplo></Ejemplo>
-      <Nombres></Nombres>
+        <BrowserRouter>
+        <Routes>
+   
+
+            <Route  path="/login" element={Login} />
+
+        
+        </Routes>
+        </BrowserRouter>
+        <Nombres></Nombres>
+        <Link to="/login" element={Login}/>
       </div>
     )
   }
