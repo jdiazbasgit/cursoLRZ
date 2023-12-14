@@ -5,6 +5,10 @@ export default class Generales extends Component {
     // eslint-disable-next-line no-useless-constructor
     constructor(props) {
         super(props)
+        this.state={
+            capital:this.props.pais?.capital
+        }
+
 
     }
 

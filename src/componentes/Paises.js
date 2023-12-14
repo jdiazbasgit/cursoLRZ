@@ -19,7 +19,8 @@ export default class Paises extends Component {
             textoBoton: "PULSAME A MI",
             textoH1: "",
             paises: [],
-            paisElegido : undefined
+            paisElegido : undefined,
+            paisNoEncontrado:""
         }
         this.recuperaContinente = this.recuperaContinente.bind(this)
         this.cargarPais=this.cargarPais.bind(this)
@@ -61,11 +62,16 @@ export default class Paises extends Component {
     }
     cargarPais = (e) => {
         e.preventDefault();
-        
+        this.setState({paisNoEncontrado:""})
         let nombrePais=e.target.value
         this.servicio.getDatos(`${restcountries}/name/${nombrePais}`)
         .then(response=>{
+           
             this.setState({paisElegido:response.data[0]})
+        }).catch(error=>{
+            this.setState({paisNoEncontrado:"No se ha seleccionado ningún pais"})
+            this.setState({paisElegido:undefined})
+            return;
         })
 
     }
@@ -85,7 +91,13 @@ export default class Paises extends Component {
                     <option value="0">Selecciona pais....</option>
                     {this.state.paises.map(pais => <option value={pais.name.common}>{pais.translations.spa.common}</option>)}
                 </select>
+                <br></br>
                 <Generales pais={this.state.paisElegido}></Generales>
+                <br></br>
+                <h1 className="text-danger">{this.state.paisNoEncontrado}</h1>
+                
+                
+                
             </div>
         )
     }
