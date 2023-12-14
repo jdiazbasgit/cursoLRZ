@@ -4,6 +4,7 @@ import Nombres from "./componentes/Nombres";
 import Login from "./componentes/Login";
 import { BrowserRouter, Link, Route,  BrowserRouter as Router, Routes } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
+import Paises from "./componentes/Paises";
 export default class App extends Component {
   texto = "pepepepe"
   render() {
@@ -12,7 +13,7 @@ export default class App extends Component {
       <div>
        
       
-        <Nombres></Nombres>
+        <Paises></Paises>
       
       </div>
     )
