@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route, BrowserRouter as Router, Routes } from "rea
 import { Navbar } from "react-bootstrap";
 import Paises from "./componentes/Paises";
 import Generales from "./componentes/Generales";
+
 import { Switch } from "antd";
 export default class App extends Component {
   texto = "pepepepe"
