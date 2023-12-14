@@ -1,17 +1,19 @@
 
+<div class="caja">
+    <p *ngFor="let profesion of profesiones" >Profesión: {{profesion}}</p>
+    <p *ngFor="let enlaceLinkedin of enlacesLinkedin">Perfil en Linkedin: {{enlaceLinkedin}}</p>
+</div>
+
 <form><div class="form-group">
-    <h2 class="center">Introduce tus datos</h2>
+    <h2 class="text-center">Publica tu perfil para que las empresas te encuentren</h2>
+    
     <div class="input-group-prepend">
     <input class="form-control" Ngmodel type="text" #profesion name="profesion" placeholder="Puesto de trabajo deseado">
     <input class="form-control" Ngmodel type="text" #linkedin name="linkedin" placeholder="Enlace a tu perfil de LinkedIn">   
     <button (click)="guardaDatos(profesion.value,linkedin.value)"> Enviar</button>
 </div>
 </div></form>
-<div class="data">
-    <ul class="list-instyled">
-        <li *ngFor="let profesion of profesiones">{{profesion}}</li>
-        <li *ngFor="let enlaceLinkedin of enlacesLinkedin">{{enlaceLinkedin}}</li>
-    </ul>
-</div>
+
+
 
 

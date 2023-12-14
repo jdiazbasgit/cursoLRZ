@@ -1,9 +1,10 @@
-/*Google fonts*/@import url('https://fonts.googleapis.com/css?family=Raleway');
-
+/*Google fonts@import url('https://fonts.googleapis.com/css?family=Poppins:wght@700');
+*/
 body{
     margin:0;
     padding:0;
-    font-family: "Raleway";
+    font-family: 'Poppins', sans-serif;
+ 
 }
 .bloquesMenu{
     text-align: center;

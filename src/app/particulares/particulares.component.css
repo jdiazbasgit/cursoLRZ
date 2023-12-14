@@ -41,3 +41,13 @@ form.form-control:focus{
     box-shadow: 0;
 }
 
+.caja {
+    background: white;
+    border-radius: 5px; 
+    border: 1px solid #00B5A8;
+    border-left: 4px solid #00B5A8;
+    margin: 1em auto;
+    overflow: hidden;
+    padding: 1em;    
+ }
+

@@ -1,12 +1,16 @@
 h1{
     color:white;
-    background-color:#09737A ;
-    padding:1em;
+    background-color:#222222;
+    padding:0.5em;
     text-align: center;
 }
-img{
+#logo{
     float:left;
-    margin:2em -2em 1em 1em;
+    margin:1em -2em 1em 1em;
     width: 150px;
-  
 }
+
+#carouselExampleSlidesOnly img {
+    height: auto;
+}
+

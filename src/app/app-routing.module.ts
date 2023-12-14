@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+
 import { ParticularesComponent } from './particulares/particulares.component';
 import { EmpresasComponent } from './empresas/empresas.component';
-import { FooterComponent } from './footer/footer.component';
+
 import { PrincipalComponent } from './principal/principal.component';
 
 const routes: Routes = [
-  { path: 'header', component: HeaderComponent },
-  { path: 'principal', component: PrincipalComponent },
+ 
+  { path: '', component: PrincipalComponent }, //para que aparezca en la "home"
   { path: 'particulares', component: ParticularesComponent },
   { path: 'empresas', component: EmpresasComponent  },
-  { path: 'footer', component: FooterComponent  }
+  
 
 ];
 
