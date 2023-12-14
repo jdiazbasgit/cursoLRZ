@@ -1,1 +1,16 @@
-<p>empresas works!</p>
+<form><div class="form-group">
+    <h2 class="center">Puesto de trabajo ofertado</h2>
+    <div class="input-group-prepend">
+    <input class="form-control" Ngmodel type="text" #puesto name="puesto" placeholder="Nombre del puesto">
+    <input class="form-control" Ngmodel type="text" #empresa name="empresa" placeholder="Empresa empleadora">
+    <input class="form-control" Ngmodel type="text" #enlace name="enlace" placeholder="Enlace a la descripción del puesto">   
+    <button (click)="guardaDatos(puesto.value,empresa.value,enlace.value)"> Enviar</button>
+</div>
+</div></form>
+<div class="data">
+    <ul class="list-instyled">
+        <li *ngFor="let puesto of puestos">{{puesto}}</li>
+        <li *ngFor="let empresa of empresas">{{empresa}}</li>
+        <li *ngFor="let enlace of enlaces">{{enlace}}</li>
+    </ul>
+</div>

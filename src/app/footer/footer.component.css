@@ -1,0 +1,11 @@
+footer{
+    padding:3em;
+    background-color: #222222;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    text-align: center;
+}
+img{
+    margin:1em 1.5em;
+}

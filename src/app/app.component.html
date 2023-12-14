@@ -1,8 +1,15 @@
-<div class="container">
+
   <app-header/>
-  <app-empresas/>
-  <app-particulares/>
-  <app-footer/>
+<div class="container">
+  <app-principal></app-principal>
+
+  <div class="bloquesMenu">
+    <app-particulares></app-particulares>
+    <app-empresas></app-empresas>
+  </div>
+
 </div>
+  <app-footer/>
+
 
 <router-outlet></router-outlet>

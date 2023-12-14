@@ -1,1 +1,17 @@
-<p>particulares works!</p>
+
+<form><div class="form-group">
+    <h2 class="center">Introduce tus datos</h2>
+    <div class="input-group-prepend">
+    <input class="form-control" Ngmodel type="text" #profesion name="profesion" placeholder="Puesto de trabajo deseado">
+    <input class="form-control" Ngmodel type="text" #linkedin name="linkedin" placeholder="Enlace a tu perfil de LinkedIn">   
+    <button (click)="guardaDatos(profesion.value,linkedin.value)"> Enviar</button>
+</div>
+</div></form>
+<div class="data">
+    <ul class="list-instyled">
+        <li *ngFor="let profesion of profesiones">{{profesion}}</li>
+        <li *ngFor="let enlaceLinkedin of enlacesLinkedin">{{enlaceLinkedin}}</li>
+    </ul>
+</div>
+
+
