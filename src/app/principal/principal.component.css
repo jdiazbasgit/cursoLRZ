@@ -1,7 +1,9 @@
 #principal{
-    font-weight: bold;
-    margin:1em auto;
+    margin:1em auto 2em auto;
     padding:2em;
+}
+#principal p{
+    margin:1em auto 0 auto;
 }
 
 #botonesprincipal{
