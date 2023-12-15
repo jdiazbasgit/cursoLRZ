@@ -15,10 +15,10 @@ export default class Generales extends Component {
     render() {
         return (
             <div>
-                <h1>Nombre comun:{this.props.pais?.name.common}</h1>
-                <h1>Nombre oficial:{this.props.pais?.name.official}</h1>
-                <h1>Nombre capital:{this.props.pais?.capital}</h1>
-                <h1>Nombre poblacion:{this.props.pais?.population}</h1>
+                <h1>Area:{this.props.pais?.area}</h1>
+                <h1>Fronteras:{this.props.pais?.borders}</h1>
+                <h1>Google maps:{this.props.pais?.capital}</h1>
+                <h1>Open street:{this.props.pais?.population}</h1>
             </div>
             
 
