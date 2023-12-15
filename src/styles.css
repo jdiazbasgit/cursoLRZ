@@ -7,6 +7,11 @@
 h1,h2 {
     font-family: 'Poppins';
     color:black;
+    
+}
+h2 {
+  color:#009186;
+  margin-top: 1em;
 }
 
 p {

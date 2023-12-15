@@ -1,4 +1,21 @@
-<form><div class="form-group">
+<div class="caja">
+    <p *ngFor="let item of empresas">Puesto: {{item.puesto}} - Empresa: {{item.nombre}} - Enlace: {{item.enlace}}</p>
+  </div>
+
+<form>
+    <div class="form-group">
+      <h2 class="center">Publica el puesto de trabajo ofertado</h2>
+      <div class="input-group-prepend">
+        <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto">
+        <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora">
+        <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto">
+        <button (click)="guardaDatos(empresaData)"> Enviar</button>
+      </div>
+    </div>
+  </form>
+  
+
+<!-- <form><div class="form-group">
     <h2 class="center">Publica el puesto de trabajo ofertado</h2>
     <div class="input-group-prepend">
     <input class="form-control" Ngmodel type="text" #puesto name="puesto" placeholder="Nombre del puesto">
@@ -13,4 +30,4 @@
         <li *ngFor="let empresa of empresas">{{empresa}}</li>
         <li *ngFor="let enlace of enlaces">{{enlace}}</li>
     </ul>
-</div>
+</div> -->

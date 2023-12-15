@@ -1,0 +1,18 @@
+{
+  "particulares": [
+    {
+      "id": 1,
+      "profesion": "Programador Full Stack",
+      "linkedin":"linkedin.michael"
+    }
+  ],
+  "empresas":[
+    {
+      "id":"1",
+      "puesto":"programador junior react",
+      "nombre":"Babel",
+      "enlace":"htto://babel.com"
+  }
+
+  ]
+}
