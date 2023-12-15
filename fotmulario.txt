@@ -1,0 +1,17 @@
+Dieta Pernocta Nacional (integer, multiplicado por 1000)  (opcional)
+Dieta Pernocta Inter (integer, multiplicado por 1000)   (opcional)
+Dieta desayuno Nacional (integer, multiplicado por 1000)  (opcional)
+Dieta Comida nacional (integer, multiplicado por 1000)   (opcional)
+Dieta cena Nacional (integer, multiplicado por 1000)  (opcional)
+Dieta desayuno Inter (integer, multiplicado por 1000)  (opcional)
+Dieta Comida Inter (integer, multiplicado por 1000)  (opcional)
+Dieta cena Inter (integer, multiplicado por 1000)   (opcional)
+Ubicación del centro de trabajo (string, puede aceptar un municipio, una provincia, o una dirección postal concreta)  (obligatorio)
+codigo postal
+municipio
+dirección
+
+Horas de contrato (integer, en minutos)  (obligatorio)
+Mail (string)  (obligatorio)
+Teléfono (string)  (opcional)
+Aceptacion de política de privacidad (obligatorio)
