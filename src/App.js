@@ -11,10 +11,9 @@ export default class App extends Component {
 
     return (
       <div>
-       
-      
-        <Paises></Paises>
-      
+
+       <Paises></Paises>
+
       </div>
     )
   }

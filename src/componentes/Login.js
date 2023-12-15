@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Ejemplo from "./Ejemplo";
-import { Checkbox } from "antd";
+
 
 export default class Login extends Component {
 
