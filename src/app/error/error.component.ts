@@ -9,9 +9,7 @@ export class ErrorComponent {
 texto:string="federico"
 
 
-constructor(){
-  this.$("#id")?.innerHTML="gfdgdf"
-}
+
 
 $=(query:string)=>{
   return document.querySelector(query)
