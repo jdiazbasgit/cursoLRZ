@@ -2,6 +2,7 @@ import { Component } from "react";
 import Opcion from "../clases/Opcion";
 import DatosService from "../services/DatosService";
 import Generales from "./Generales";
+import Geograficos from "./Geograficos";
 
 const restcountries = "https://restcountries.com/v3.1/"
 export default class Paises extends Component {
@@ -79,8 +80,7 @@ export default class Paises extends Component {
     render() {
         return (
             <div>
-                <button id="soy un boton" onClick={this.botonPulsado}>{this.state.textoBoton}</button>
-                <button>{this.textoBotonSinEstado}</button><br />
+               
                 <h1>{this.state.textoH1}</h1>
                 Continente:<select onChange={this.recuperaContinente}>
                     {this.continentes.map(continente => {
@@ -93,6 +93,8 @@ export default class Paises extends Component {
                 </select>
                 <br></br>
                 <Generales pais={this.state.paisElegido}></Generales>
+                <br></br>
+                <Geograficos pais={this.state.paisElegido}></Geograficos>
                 <br></br>
                 <h1 className="text-danger">{this.state.paisNoEncontrado}</h1>
                 
