@@ -859,6 +859,7 @@ class JustToTest extends Component {
             <option value="Zamora">Zamora</option>
             <option value="Zaragoza">Zaragoza</option>
           </select>
+          <ExternalForm />
         </div>
 
       let display = <div></div>
