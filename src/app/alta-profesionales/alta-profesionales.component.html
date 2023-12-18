@@ -10,12 +10,14 @@
     <input class="form-control" [(ngModel)]="particulares.linkedin" name="linkedin" placeholder="Enlace a tu perfil de LinkedIn">
     <button class="botonEnviar" (click)="guardaDatos(particulares)">ENVIAR</button>   
   </form>
- <h4 class="text-center">Perfiles profesiones publicados</h4>
+ <h4 class="text-center">Todos los perfiles profesionales publicados:</h4>
 
   <div class="bloquePerfiles">
     <div class="caja" *ngFor="let perfil of perfiles">
-      <p><strong>Profesión:</strong> {{perfil.profesion}}</p>
-      <p><strong>Perfil en Linkedin: </strong><a href="{{perfil.linkedin}}">Ver perfil</a></p>
-    </div>
+      <img class="imagenIzq" src="./assets/usuario.png">
+    <ul>
+      <li><strong>Profesión:</strong> {{perfil.profesion}}</li>
+      <li><strong>Perfil en Linkedin: </strong><a href="{{perfil.linkedin}}">Ver perfil</a></li>
+    </ul>
   </div>
 </div>

@@ -62,6 +62,7 @@ form input.form-control{
 }
 @media(max-width:768px){
   form input.form-control{ width: 100%;}
+  div .caja {width: 100%;}
 }
 
 form.form-control:focus{
@@ -94,9 +95,23 @@ form.form-control:focus{
   border: 2px solid #00B5A8;
   margin: 1em 0.5em;
   overflow: hidden;
-  padding: 1em;    
+  padding: 0.5em;    
 } 
 
 .quitaMargen{
   margin-top:-0.5em;
+}
+
+.imagenIzq{
+  float:left;
+  margin:1.5em 1em;
+}
+
+ul{
+  list-style-type: none;
+  font-size: 1.1em;
+  margin-left: 1em;
+}
+ul li{
+  margin:1em auto;
 }

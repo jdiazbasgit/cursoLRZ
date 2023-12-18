@@ -15,10 +15,13 @@
 
 <div class="bloquePerfiles">
   <div class="caja" *ngFor="let item of empresas">
-    <p><strong>Puesto:</strong> {{item.puesto}}</p>
-    <p><strong>Empresa:</strong> {{item.nombre}}</p>
-    <p><strong>Oferta en Linkedin: </strong><a href="{{item.enlace}}">Ver vacante</a></p>
-  </div>
+    <img class="imagenIzq" src="./assets/empresa.png">
+    <ul>
+      <li><strong>Puesto:</strong> {{item.puesto}}</li>
+      <li><strong>Empresa:</strong> {{item.nombre}}</li>
+      <li><strong>Más información: </strong><a href="{{item.enlace}}" target="_blank">Ver oferta</a></li>
+  </ul>
+</div>
 </div>
 
 
