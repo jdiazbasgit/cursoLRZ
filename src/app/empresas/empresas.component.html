@@ -1,37 +1,24 @@
 <div class="quitaMargen">
-  <h1 class="subheader">Vacantes disponibles</h1>
+  <h2 class="subheader">Vacantes disponibles</h2>
 </div>
 
-<div class="caja">
-    <p *ngFor="let item of empresas">Puesto: {{item.puesto}} - Empresa: {{item.nombre}} - Enlace: {{item.enlace}}</p>
+
+<form> 
+  <h3 class="center">Publica el puesto de trabajo ofertado</h3>
+  <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto">
+  <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora">
+  <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto">
+  <button class="botonEnviar" (click)="guardaDatos(empresaData)">ENVIAR</button>
+</form>
+
+<h4 class="text-center">Vacantes demandadas en Las Rozas</h4>
+
+<div class="bloquePerfiles">
+  <div class="caja" *ngFor="let item of empresas">
+    <p><strong>Puesto:</strong> {{item.puesto}}</p>
+    <p><strong>Empresa:</strong> {{item.nombre}}</p>
+    <p><strong>Oferta en Linkedin: </strong><a href="{{item.enlace}}">Ver vacante</a></p>
   </div>
-
-<form>
-    <div class="form-group">
-      <h2 class="center">Publica el puesto de trabajo ofertado</h2>
-      <div class="input-group-prepend">
-        <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto">
-        <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora">
-        <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto">
-        <button (click)="guardaDatos(empresaData)"> Enviar</button>
-      </div>
-    </div>
-  </form>
-  
-
-<!-- <form><div class="form-group">
-    <h2 class="center">Publica el puesto de trabajo ofertado</h2>
-    <div class="input-group-prepend">
-    <input class="form-control" Ngmodel type="text" #puesto name="puesto" placeholder="Nombre del puesto">
-    <input class="form-control" Ngmodel type="text" #empresa name="empresa" placeholder="Empresa empleadora">
-    <input class="form-control" Ngmodel type="text" #enlace name="enlace" placeholder="Enlace a la descripción del puesto">   
-    <button (click)="guardaDatos(puesto.value,empresa.value,enlace.value)"> Enviar</button>
 </div>
-</div></form>
-<div class="data">
-    <ul class="list-instyled">
-        <li *ngFor="let puesto of puestos">{{puesto}}</li>
-        <li *ngFor="let empresa of empresas">{{empresa}}</li>
-        <li *ngFor="let enlace of enlaces">{{enlace}}</li>
-    </ul>
-</div> -->
+
+

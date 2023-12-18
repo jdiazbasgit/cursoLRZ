@@ -4,14 +4,21 @@
     src: url('./assets/fonts/Poppins.ttf');
   } 
 
-h1,h2 {
-    font-family: 'Poppins';
-    color:black;
-    
+h1,h2,h3,h4 {
+    font-family: 'Poppins';  
 }
+
 h2 {
+  color:white;
+}
+h3 {
   color:#009186;
-  margin-top: 1em;
+  margin: 1em auto;
+}
+h4{
+  color:#009186;
+  padding-top:1em;
+  border-top:2px solid #00B5A8;
 }
 .subheader{
   color:white;
@@ -27,11 +34,12 @@ p {
 }
 
 form{
-  max-width: 30em;
-  margin: 4em 2em;
+  width: 80%;
+  margin: 4em auto;
   position: relative;
   background: #f4f4f4;
   padding: 2em 3em;
+  text-align: center;
   
 }
 
@@ -41,38 +49,50 @@ form input{
   padding: 1em;
   margin: 1em auto;
   color: #666; 
+  width: 50%;
 }
 
 form input[type=text]::placeholder{
   color:#666; 
-  
 }
 
-form.input-group-text{
-  border-radius: 50%;
-  width: 5em;
-  height: 5em;
-  padding: 1em 23px;
-  color: #fff;
-  position: absolute;
-  right: 13px;
-  top: 68px;
-  cursor: pointer;
-}
-
-form.form-control{
+form input.form-control{
   height: 3em;
+  width: 70%;
 }
+@media(max-width:768px){
+  form input.form-control{ width: 100%;}
+}
+
 form.form-control:focus{
   box-shadow: 0;
 }
+.botonEnviar{
+  color:white;
+  background-color: #009186;
+  border:1px solid #009186;
+  padding:0.5em 1em;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.botonEnviar:hover{
+  background-color: #222222;
+  border:1px solid white;
+}
+
+.bloquePerfiles{
+  display:flex;
+  width: 100%;
+}
 
 .caja {
-  background: white;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 33.3%;
+  background: #fff;
   border-radius: 5px; 
-  border: 1px solid #00B5A8;
-  border-left: 4px solid #00B5A8;
-  margin: 1em auto;
+  border: 2px solid #00B5A8;
+  margin: 1em 0.5em;
   overflow: hidden;
   padding: 1em;    
 } 

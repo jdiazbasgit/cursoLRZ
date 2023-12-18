@@ -10,7 +10,6 @@ import { AltaProfesionalesComponent } from './alta-profesionales/alta-profesiona
 const routes: Routes = [
  
   { path: '', component: PrincipalComponent }, //para que aparezca en la "home"
-
   { path: 'alta-profesionales', component: AltaProfesionalesComponent },
   { path: 'empresas', component: EmpresasComponent  },
   
