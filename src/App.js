@@ -1,17 +1,22 @@
 import { Component } from "react";
-import SelectPaises from "./componentes/SelectPaises";
 
-export default class App extends Component{
+import Paises from "./componentes/Paises";
 
 
-  render(){
-  
+export default class App extends Component {
+  texto = "pepepepe"
+  render() {
+
     return (
+
       <div>
-      <SelectPaises></SelectPaises>
+
+       
+
+        <Paises></Paises>
+
       </div>
     )
   }
 }
-
 
