@@ -9,7 +9,7 @@
   "empresas":[
     {
       "id":"1",
-      "puesto":"programador junior react",
+      "puesto":"programador junior angular",
       "nombre":"Babel",
       "enlace":"htto://babel.com"
   }

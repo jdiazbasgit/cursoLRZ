@@ -6,20 +6,21 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
-import { ParticularesComponent } from './particulares/particulares.component';
+
 import { EmpresasComponent } from './empresas/empresas.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { AltaProfesionalesComponent } from './alta-profesionales/alta-profesionales.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParticularesComponent,
     EmpresasComponent,
     HeaderComponent,
     FooterComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    AltaProfesionalesComponent
   ],
   imports: [
     BrowserModule,

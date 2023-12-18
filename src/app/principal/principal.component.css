@@ -10,6 +10,11 @@
     display:flex;
     margin:1em auto;
 }
+#botonesprincipal P{
+    color:white;
+    font-weight: bold;
+
+}
 
 .bloque1{
     flex-direction: row;
