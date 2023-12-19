@@ -918,10 +918,10 @@ class JustToTest extends Component {
                 {loader}
               </div>
               <br />            
-              <div style={{ display: 'flex', alignItems: 'center' }}>
-                <span>Al hacer clic en Subir archivo aceptas la <a href="https://www.traxain.com/legal" target="_blank">Política de privacidad de Traxain</a></span>
+              {/* <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input type='checkbox' required></input> <span>Al hacer clic en Subir archivo aceptas la <a href="https://www.traxain.com/legal" target="_blank">Política de privacidad de Traxain</a></span>
               <br/>
-            </div>
+            </div> */}
             <br/>
             <div>
               {this.fileData()}
