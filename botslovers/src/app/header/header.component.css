@@ -1,0 +1,10 @@
+.navbar {
+    height: 120px;
+    margin-top: 0px;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
