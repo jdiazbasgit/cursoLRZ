@@ -3,6 +3,9 @@
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins.ttf');
   } 
+a{
+  text-decoration: none;
+}
 
 h1,h2,h3,h4 {
     font-family: 'Poppins';  
@@ -87,10 +90,12 @@ form.form-control:focus{
 }
 
 .caja {
-  flex-direction: row;
   flex-wrap: wrap;
   width: 33.3%;
-  background: #fff;
+  background-color: #fff;
+  background-image: url(./assets/usuario.png);
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
   border-radius: 5px; 
   border: 2px solid #00B5A8;
   margin: 1em 0.5em;
@@ -110,7 +115,7 @@ form.form-control:focus{
 ul{
   list-style-type: none;
   font-size: 1.1em;
-  margin-left: 1em;
+  margin-left: 2.7em;
 }
 ul li{
   margin:1em auto;

@@ -5,9 +5,9 @@
 
 <form> 
   <h3 class="center">Publica el puesto de trabajo ofertado</h3>
-  <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto">
-  <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora">
-  <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto">
+  <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto" required>
+  <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora" required>
+  <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto" required>
   <button class="botonEnviar" (click)="guardaDatos(empresaData)">ENVIAR</button>
 </form>
 

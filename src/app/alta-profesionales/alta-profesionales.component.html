@@ -6,18 +6,17 @@
 <div class="container">
   <form>   
     <h3 class="text-center">Publica tu perfil para que las empresas te encuentren</h3>
-    <input class="form-control" [(ngModel)]="particulares.profesion" name="profesion" placeholder="Puesto de trabajo deseado">
-    <input class="form-control" [(ngModel)]="particulares.linkedin" name="linkedin" placeholder="Enlace a tu perfil de LinkedIn">
+    <input class="form-control" [(ngModel)]="particulares.profesion" name="profesion" placeholder="Puesto de trabajo deseado" required>
+    <input class="form-control" [(ngModel)]="particulares.linkedin" name="linkedin" placeholder="Enlace a tu perfil de LinkedIn" required>
     <button class="botonEnviar" (click)="guardaDatos(particulares)">ENVIAR</button>   
   </form>
  <h4 class="text-center">Todos los perfiles profesionales publicados:</h4>
 
   <div class="bloquePerfiles">
     <div class="caja" *ngFor="let perfil of perfiles">
-      <img class="imagenIzq" src="./assets/usuario.png">
     <ul>
       <li><strong>Profesión:</strong> {{perfil.profesion}}</li>
-      <li><strong>Perfil en Linkedin: </strong><a href="{{perfil.linkedin}}">Ver perfil</a></li>
+      <li><strong>Perfil Linkedin: </strong><a href="{{perfil.linkedin}}">Ver</a></li>
     </ul>
   </div>
 </div>

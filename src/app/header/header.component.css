@@ -1,18 +1,48 @@
+nav{
+    background-color: #222222;
+    margin:-1em auto;
+   
+}
+
+nav ul{
+    display: flex;
+   
+
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav li{
+    flex-grow:1;
+    text-align:center;
+  }
+
+nav li a{
+    display: block;
+    color:white;
+    padding:0.5em;
+}
+nav li a:hover{
+    background-color: #00B5A8;
+}
+
+.cabecera{
+    background-color:#222222;
+    background-image: url("/assets/logo-Templea.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:1em 0;
+   
+}
+
 h1{
     color:white;
-    background-color:#222222;
-    padding:0.5em;
     text-align: center;
+    margin:0.75em auto;
 }
-#logoizq{
-    float:left;
-    margin:1em -2em 1em 1em;   
-}
-#logoder{
-    float:right;
-    margin:1em 1em;
-    
-}
+
+
 
 #carouselExampleSlidesOnly img {
     height: auto;
