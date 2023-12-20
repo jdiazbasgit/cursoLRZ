@@ -17,8 +17,6 @@
 }
 
 .bloque1{
-    flex-direction: row;
-    flex-wrap: wrap;   
     width:50%;
     display: block;
     background-color:#009186;
@@ -26,9 +24,7 @@
     border-radius: 5px;
     
 }
-.bloque2{
-    flex-direction: row;
-    flex-wrap: wrap;   
+.bloque2{ 
     width:50%;
     display: block;
     background-color:#009186;
@@ -39,3 +35,6 @@
     padding: 3em;
 }
 
+@media(max-width:700px){
+    div.bloque1,div.bloque2{ width: 100%;}
+}

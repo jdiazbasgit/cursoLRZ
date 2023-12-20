@@ -1,13 +1,10 @@
 nav{
     background-color: #222222;
     margin:-1em auto;
-   
 }
-
 nav ul{
     display: flex;
-   
-
+    justify-content: flex-end;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
@@ -41,8 +38,6 @@ h1{
     text-align: center;
     margin:0.75em auto;
 }
-
-
 
 #carouselExampleSlidesOnly img {
     height: auto;

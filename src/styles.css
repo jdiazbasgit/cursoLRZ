@@ -11,12 +11,9 @@ h1,h2,h3,h4 {
     font-family: 'Poppins';  
 }
 
-h2 {
-  color:white;
-}
-h3 {
+h2,h3 {
   color:#009186;
-  margin: 1em auto;
+  margin: 0.8em auto;
 }
 h4{
   color:#009186;
@@ -43,7 +40,6 @@ form{
   background: #f4f4f4;
   padding: 2em 3em;
   text-align: center;
-  
 }
 
 form input{
@@ -63,10 +59,7 @@ form input.form-control{
   height: 3em;
   width: 70%;
 }
-@media(max-width:768px){
-  form input.form-control{ width: 100%;}
-  div .caja {width: 100%;}
-}
+
 
 form.form-control:focus{
   box-shadow: 0;
@@ -84,14 +77,13 @@ form.form-control:focus{
   border:1px solid white;
 }
 
-.bloquePerfiles{
-  display:flex;
-  width: 100%;
-}
 
-.caja {
+.bloquePerfiles{
+  display: flex;
   flex-wrap: wrap;
-  width: 33.3%;
+}
+div.caja,.caja2 {
+  width: 48%;
   background-color: #fff;
   background-image: url(./assets/usuario.png);
   background-repeat: no-repeat;
@@ -102,20 +94,23 @@ form.form-control:focus{
   overflow: hidden;
   padding: 0.5em;    
 } 
-
-.quitaMargen{
-  margin-top:-0.5em;
+.caja2 {
+background-image: url(./assets/empresa.png);
 }
 
-.imagenIzq{
-  float:left;
-  margin:1.5em 1em;
+@media(max-width:1000px){
+  form input.form-control{ width: 100%;}
+  div .caja, div .caja2  { width: 100%;}
+}
+
+.quitaMargen{
+  margin-top:-2em;
 }
 
 ul{
   list-style-type: none;
   font-size: 1.1em;
-  margin-left: 2.7em;
+  margin-left: 4.6em;
 }
 ul li{
   margin:1em auto;

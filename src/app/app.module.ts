@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { AltaProfesionalesComponent } from './alta-profesionales/alta-profesionales.component';
+import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AltaProfesionalesComponent } from './alta-profesionales/alta-profesiona
     HeaderComponent,
     FooterComponent,
     PrincipalComponent,
-    AltaProfesionalesComponent
+    AltaProfesionalesComponent,
+    SobreNosotrosComponent
   ],
   imports: [
     BrowserModule,
