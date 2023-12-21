@@ -1,0 +1,8 @@
+.mail {
+  background-color: red;
+  border-color: red;
+}
+
+.mail:hover {
+  border-color: blue;
+}
