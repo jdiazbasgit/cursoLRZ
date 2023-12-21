@@ -108,10 +108,13 @@ background-image: url(./assets/empresa.png);
 }
 
 ul{
-  list-style-type: none;
+  list-style: none;
   font-size: 1.1em;
   margin-left: 4.6em;
 }
 ul li{
   margin:1em auto;
+}
+.bold{
+  font-weight: bold;
 }
