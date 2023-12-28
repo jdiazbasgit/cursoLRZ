@@ -6,7 +6,7 @@ export default class Generales extends Component {
     constructor(props) {
         super(props)
         this.state={
-            capital:this.props.pais?.capital
+            capital:this.props.pais?.name.common
         }
 
 
