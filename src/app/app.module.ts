@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { QuienessomosComponent } from './quienessomos/quienessomos.component';
+import { ModelodenegocioComponent } from './modelodenegocio/modelodenegocio.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { QuienessomosComponent } from './quienessomos/quienessomos.component';
     HeaderComponent,
     HomeComponent,
     QuienessomosComponent,
+    ModelodenegocioComponent,
   
   ],
   imports: [
