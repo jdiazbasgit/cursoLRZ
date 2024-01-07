@@ -3,6 +3,7 @@ import axios from 'axios';
 import CustomSpinner from "./CustomSpinner";
 import loaderbar from "../loaderbar.gif";
 import ExternalForm from './externalForm/ExternalForm';
+import SelectExternalForm from './externalForm/SelectExternalForm';
 
 let file = '';
 
@@ -808,7 +809,7 @@ class JustToTest extends Component {
       let provinceSelector = 
         <div>
           <label style={{fontSize: "20px"}}>Selecciona tu provincia para aplicar el convenio correspondiente</label>          
-          <select class="form-select" onChange={this.handleChangeProvince}> 
+          {/* <select class="form-select" onChange={this.handleChangeProvince}> 
             <option value="Álava">Álava</option>
             <option value="Albacete">Albacete</option>
             <option value="Alicante">Alicante</option>
@@ -859,7 +860,8 @@ class JustToTest extends Component {
             <option value="Vizcaya">Vizcaya</option>
             <option value="Zamora">Zamora</option>
             <option value="Zaragoza">Zaragoza</option>
-          </select>
+          </select> */}
+          <SelectExternalForm />
           <ExternalForm />
         </div>
 
