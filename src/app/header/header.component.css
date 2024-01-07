@@ -41,6 +41,7 @@ h1 {
     color: white;
     text-align: center;
     margin: 0.75em auto;
+    text-shadow: 1px 1px black;
 }
 
 #carouselExampleSlidesOnly img {
