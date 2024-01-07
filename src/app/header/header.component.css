@@ -1,8 +1,9 @@
-nav{
+nav {
     background-color: #222222;
     margin:-1em auto;
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
@@ -10,33 +11,36 @@ nav ul{
     padding: 0;
     margin: 0;
 }
-nav li{
-    flex-grow:1;
-    text-align:center;
-  }
 
-nav li a{
+nav li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+nav li a {
     display: block;
-    color:white;
-    padding:0.5em;
-}
-nav li a:hover{
-    background-color: #00B5A8;
+    color :white;
+    padding: 0.5em;
 }
 
-.cabecera{
-    background-color:#222222;
+nav li a:hover {
+    background-color: #00B5A8;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+.cabecera {
+    background-color: #222222;
     background-image: url("/assets/logo-Templea.png");
     background-repeat: no-repeat;
     background-position: center;
-    padding:1em 0;
-   
+    padding: 1em 0;
 }
 
-h1{
-    color:white;
+h1 {
+    color: white;
     text-align: center;
-    margin:0.75em auto;
+    margin: 0.75em auto;
 }
 
 #carouselExampleSlidesOnly img {

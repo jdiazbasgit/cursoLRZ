@@ -1,9 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
- @font-face {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins.ttf');
-  } 
-a{
+} 
+
+a {
   text-decoration: none;
 }
 
@@ -15,25 +20,28 @@ h2,h3 {
   color:#009186;
   margin: 0.8em auto;
 }
-h4{
+
+h4 {
   color:#009186;
   padding-top:1em;
   border-top:2px solid #00B5A8;
 }
-.subheader{
-  color:white;
+
+.subheader {
+  color: white;
   text-align: center;
   background-image: url("./assets/subheader.jpg");
   padding: 2em;
   background-position: center; /* Center the image */
   background-repeat: repeat;
+  margin-top:0;
 }
 
 p {
     font-size: 1.2em;
 }
 
-form{
+form {
   width: 80%;
   margin: 4em auto;
   position: relative;
@@ -42,7 +50,7 @@ form{
   text-align: center;
 }
 
-form input{
+form input {
   background: #fff;
   border-left: 4px solid #00B5A8;
   padding: 1em;
@@ -51,38 +59,46 @@ form input{
   width: 50%;
 }
 
-form input[type=text]::placeholder{
+form input[type=text]::placeholder {
   color:#666; 
 }
 
-form input.form-control{
+form input.form-control {
   height: 3em;
   width: 70%;
 }
 
-
-form.form-control:focus{
+form.form-control:focus {
   box-shadow: 0;
 }
-.botonEnviar{
-  color:white;
+
+.botonEnviar {
+  color: white;
   background-color: #009186;
-  border:1px solid #009186;
-  padding:0.5em 1em;
+  border: 1px solid #009186;
+  padding: 0.5em 1em;
   border-radius: 5px;
   font-weight: bold;
+  transition-property: background-color;
+  /* transition-property, transition-duration, transition-timing-function, transition-delay. */
 }
-.botonEnviar:hover{
+
+.botonEnviar:hover {
   background-color: #222222;
-  border:1px solid white;
+  border: 1px solid white;
+}
+
+.separa {
+  margin: 2em auto 1em auto;
 }
 
 
-.bloquePerfiles{
+.bloquePerfiles {
   display: flex;
   flex-wrap: wrap;
 }
-div.caja,.caja2 {
+
+div.caja, .caja2 {
   width: 48%;
   background-color: #fff;
   background-image: url(./assets/usuario.png);
@@ -94,27 +110,41 @@ div.caja,.caja2 {
   overflow: hidden;
   padding: 0.5em;    
 } 
+
 .caja2 {
 background-image: url(./assets/empresa.png);
 }
 
-@media(max-width:1000px){
-  form input.form-control{ width: 100%;}
-  div .caja, div .caja2  { width: 100%;}
+@media(max-width:1000px) {
+  form input.form-control {
+    width: 100%;
+  }
+  div .caja, div .caja2 {
+    width: 100%;
+  }
 }
 
-.quitaMargen{
-  margin-top:-2em;
-}
-
-ul{
+nav ul {
   list-style: none;
   font-size: 1.1em;
   margin-left: 4.6em;
 }
-ul li{
-  margin:1em auto;
+
+nav ul li {
+  margin: 1em auto;
 }
-.bold{
+
+.bold {
   font-weight: bold;
+}
+
+.green {
+  color: green;
+}
+
+ul li {
+  margin: 1em auto;
+  font-size: 1.2em;
+  text-align: left;
+  margin-left: 3em;
 }

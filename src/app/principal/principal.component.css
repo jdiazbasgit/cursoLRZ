@@ -1,40 +1,56 @@
-#principal{
-    margin:1em auto 2em auto;
-    padding:2em;
+#principal {
+    margin: 0em auto 2em auto;
+    padding: 2em;
 }
-#principal p{
-    margin:1em auto 0 auto;
+#principal p {
+    margin: 1em auto 0 auto;
 }
 
-#botonesprincipal{
-    display:flex;
-    margin:1em auto;
+#botonesprincipal {
+    display: flex;
+    margin: 0 auto;
 }
-#botonesprincipal P{
-    color:white;
+#botonesprincipal P {
+    color: white;
     font-weight: bold;
 
 }
+.masinfo {
+    display: none;
+}
 
-.bloque1{
-    width:50%;
+.bloque1 {
+    width: 50%;
     display: block;
-    background-color:#009186;
+    background-color: #009186;
     margin-right: 2em;
     border-radius: 5px;
     
 }
-.bloque2{ 
-    width:50%;
+
+.bloque2 { 
+    width: 50%;
     display: block;
     background-color:#009186;
-    border-radius: 5px;
-    
-}
-.bloque a{
-    padding: 3em;
+    border-radius: 5px;  
 }
 
-@media(max-width:700px){
-    div.bloque1,div.bloque2{ width: 100%;}
+.bloque1:hover, .bloque2:hover {
+    background-color: #222222;
+    transition: background-color 1s;    
+}
+
+.bloque1:hover p, .bloque2:hover p {
+    font-size: 1.5em;
+    transition: font-size 1s; 
+  }
+
+.bloque a {
+    padding:v3em;
+}
+
+@media(max-width:700px) {
+    div.bloque1, div.bloque2 {
+        width: 100%;
+    }
 }

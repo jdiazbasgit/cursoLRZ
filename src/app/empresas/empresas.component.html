@@ -3,11 +3,11 @@
 </div>
 
 
-<form> 
+<form action="" method="POST"> 
   <h3 class="center">Publica el puesto de trabajo ofertado</h3>
-  <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto" required>
-  <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora" required>
-  <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto" required>
+  <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto" required minlength="3" maxlength="100">
+  <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora" required minlength="3" maxlength="100">
+  <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace a la descripción del puesto" required minlength="3" maxlength="100">
   <button class="botonEnviar" (click)="guardaDatos(empresaData)">ENVIAR</button>
 </form>
 
@@ -19,6 +19,7 @@
       <li><strong>Puesto:</strong> {{item.puesto}}</li>
       <li><strong>Empresa:</strong> {{item.nombre}}</li>
       <li><strong>Más información: </strong><a href="{{item.enlace}}" target="_blank">ver</a></li>
+      <li><strong>Estado: </strong><span class=green>Se admiten solicitudes</span></li>
   </ul>
 </div>
 </div>
