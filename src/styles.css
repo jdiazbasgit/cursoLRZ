@@ -80,7 +80,6 @@ form.form-control:focus {
   border-radius: 5px;
   font-weight: bold;
   transition-property: background-color;
-  /* transition-property, transition-duration, transition-timing-function, transition-delay. */
 }
 
 .botonEnviar:hover {
