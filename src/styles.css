@@ -118,12 +118,3 @@ ul li{
 .bold{
   font-weight: bold;
 }
-.lista ul li{
-  margin:0;
-  text-align: left;
-}
-.lista ul {
-  margin:0;
-  padding-bottom: 2em;
-  text-align: left;
-}
