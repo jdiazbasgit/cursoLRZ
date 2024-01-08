@@ -861,8 +861,7 @@ class JustToTest extends Component {
             <option value="Zamora">Zamora</option>
             <option value="Zaragoza">Zaragoza</option>
           </select> */}
-          <SelectExternalForm />
-          <ExternalForm />
+          
         </div>
 
       let display = <div></div>
@@ -906,14 +905,14 @@ class JustToTest extends Component {
             <div style={{ textAlign: 'center' }}>
               {provinceSelector}
               <br />
-              <input id='fileUpload' type='file' name="file" onChange={this.handleChangeFile} ref={(input) => { file = input; }} multiple hidden />
+              {/* <input id='fileUpload' type='file' name="file" onChange={this.handleChangeFile} ref={(input) => { file = input; }} multiple hidden />
               <label className="btn btn-primary btn-block btn-lg" style={{ backgroundColor: '#0d6efd', borderColor: '#0d6efd', fontSize: 14 }} htmlFor="fileUpload">
                 Seleccionar archivo
-              </label>
+              </label> */}
               <br/><br />
-              <button className="btn btn-primary btn-block btn-lg" style={{ backgroundColor: '#0d6efd', borderColor: '#0d6efd', fontSize: 14 }} onClick={this.onFileUpload}>
+              {/* <button className="btn btn-primary btn-block btn-lg" style={{ backgroundColor: '#0d6efd', borderColor: '#0d6efd', fontSize: 14 }} onClick={this.onFileUpload}>
                 Subir archivo
-              </button>
+              </button> */}
               </div>
               <br/>
               <div>

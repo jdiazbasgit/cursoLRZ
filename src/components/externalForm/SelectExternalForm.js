@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const Select = () => {
+const SelectExternalForm = () => {
   const [paises, setPaises] = useState([]);
   const [paisSeleccionado, setPaisSeleccionado] = useState('');
 
@@ -45,4 +45,4 @@ const Select = () => {
   );
 };
 
-export default Select
+export default SelectExternalForm

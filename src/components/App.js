@@ -3,6 +3,9 @@ import {BrowserRouter, Routes, Route, Link, Navigate} from 'react-router-dom'
 import Page404 from './Page404'
 import Home from './Home'
 import "./App.css"
+import ExternalForm from './externalForm/ExternalForm';
+import SelectExternalForm from './externalForm/SelectExternalForm';
+
 
 function subscribeToPushNotifications() {
   navigator.serviceWorker.ready.then(registration => {
@@ -70,6 +73,8 @@ function App() {
     
     
     </BrowserRouter>
+    <SelectExternalForm />
+    <ExternalForm />
   </div>
   );
 }
