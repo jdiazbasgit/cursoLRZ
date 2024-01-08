@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "react-scripts dev",
+    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "lint": "react-scripts lint"
   },
   "dependencies": {
     "@ant-design/plots": "1.2.2",
@@ -47,6 +47,7 @@
     "react-hook-form": "7.33.1",
     "react-redux": "8.0.2",
     "react-router-dom": "^6.11.2",
+    "react-scripts": "^5.0.1",
     "react-share": "4.4.1",
     "react-tooltip": "^5.10.4"
   },
