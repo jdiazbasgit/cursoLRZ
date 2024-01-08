@@ -15,6 +15,9 @@ export default class Generales extends Component {
     render() {
         return (
             <div>
+                <h1>Nombre comun:{this.props.pais?.name.common}</h1>
+                <h1>Nombre comun:{this.props.pais?.capital}</h1>
+                <h1>Nombre comun:{this.props.pais?.capital}</h1>
                 <h1>Nombre comun:{this.props.pais?.capital}</h1>
             </div>
 
