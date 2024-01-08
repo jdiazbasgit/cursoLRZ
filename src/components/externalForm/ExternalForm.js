@@ -17,7 +17,7 @@ const ExternalForm = () => {
     int_cena_diet: 0,
     int_sleep_diet: 0
   }
-  
+
   const [form, setForm] = useState(initialState) // setform es una funcion que modifica los campos del formulario
   const handleSubmit = (event) => { //es la funcion que se utiliza para enviar el formulario que recibe un evento por parametro
     event.preventDefault(); //se utiliza para cuando el usuario envie el formulario (submit) no se recargue y se pierdan los datos escritos
@@ -27,10 +27,10 @@ const ExternalForm = () => {
     const { value, name } = event.target; //Usando la sintaxis de desestructuración para sacar los valores Value y Name de event.target
     setForm({ ...form, [name]: value })
   }
-  this.prueba2 = this.prueba2.bind(this)
-  const prueba2 = (event) => {
-    console.log("estoy dentro")
-  }
+  // this.prueba2 = this.prueba2.bind(this)
+  // const prueba2 = (event) => {
+  //   console.log("estoy dentro")
+  // }
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -88,15 +88,14 @@ const ExternalForm = () => {
         <div className="privacyPolicies" style={{ marginTop: "13px", alignItems: 'center' }}>
           <input name='privacyPolicies' value={initialState.privacyPolicies} type='checkbox' required style={{ marginRight: "5px" }}></input> <span> Al hacer clic en Subir archivo aceptas la <a href="https://www.traxain.com/legal" target="_blank">Política de privacidad de Traxain</a></span>
         </div>
+        <div>
         {/* <input type='file' name="file"/>
           <label className="selectFile" style={{ backgroundColor: 'lightblue', borderColor: 'lightblue', fontSize: 14, marginTop: "70px" }}>
-            Seleccionar archivo
+            Buscar Archivo
           </label> */}
-        {/* <button type='submit' className="uploadFile" style={{backgroundColor: 'lightblue', borderColor: 'lightblue', fontSize: 14, marginTop: "100px" }}>
+        {/* <button onClick={this.prueba2} type='submit' className="uploadFile" style={{backgroundColor: 'lightblue', borderColor: 'lightblue', fontSize: 14, marginTop: "100px" }}>
           Subir archivo
         </button> */}
-        <div>
-          <button onClick={this.prueba2}>Subir Archivo</button>
         </div>
       </form>
     </div>
