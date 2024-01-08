@@ -7,6 +7,7 @@ import { ModelodenegocioComponent } from './modelodenegocio/modelodenegocio.comp
 
 const routes: Routes = [
   {path: "", component:   HomeComponent},
+  {path: "home", component:   HomeComponent},
   {path: "quienessomos", component:   QuienessomosComponent},
   {path:"modelodenegocio", component: ModelodenegocioComponent}
 ];

@@ -1,0 +1,29 @@
+.co p{
+ 
+    
+/*   
+    color: violet; */
+    /* background-color: gray; */
+    /* height: 200px; */
+    font-size: medium;
+    
+    /* text-align: center; */
+    text-align: left;
+    justify-content: center;
+}
+
+
+.co1 p{
+ 
+    
+      
+        color: violet;
+         background-color: gray;
+        height: 200px; 
+        font-size: medium;
+       
+        text-align: right; 
+        text-align: justify; 
+         /* justify-content: center;  */
+    }
+    
