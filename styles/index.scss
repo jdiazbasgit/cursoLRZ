@@ -1,0 +1,73 @@
+@import "../src/components/common/RingProgress/RingProgress.scss";
+@import "../src/components/common/TreeSelect/TreeSelect.scss";
+@import "../src/components/common/SearchOptions/SearchOptions.scss";
+@import "../src/views/Dashboard/OverView/overview.scss";
+
+
+@import "~react-calendar/dist/Calendar.css";
+
+.ant-picker-dropdown {
+  z-index: 1401 !important;
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+.ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+  background-color: #E51D20;
+}
+
+.ant-picker-time-panel-column>li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner {
+  background-color: #E51D20;
+  color: white;
+
+  &:hover {
+    background-color: #E51D20;
+  }
+}
+
+.ant-picker-ranges {
+  .ant-picker-ok {
+    button {
+      background-color: #E51D20;
+      border-color: #E51D20;
+
+      &:disabled {
+        color: white;
+        background-color: #CECECE;
+        border-color: #CECECE;
+
+        &:hover {
+          background-color: #CECECE;
+        }
+      }
+    }
+  }
+}
+
+.ant-picker-focused {
+  box-shadow: none;
+}
+
+.ant-picker-month-btn {
+  &:hover {
+    color: #E51D20 !important;
+  }
+}
+
+.ant-picker-year-btn {
+  &:hover {
+    color: #E51D20 !important;
+  }
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+  border: 1px solid #E51D20;
+}
+
+.chakra-form__required-indicator {
+  color: inherit !important;
+}
+
+th::first-letter {
+  text-transform: uppercase;
+}

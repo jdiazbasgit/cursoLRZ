@@ -1,0 +1,16 @@
+version: "3"
+services:
+  api_dev:
+    container_name: ninjatalent_front_dev
+    image: registry.gitlab.com/cloudappi/ninjatalent/ninjatalent-next-front:dev
+    restart: always
+    tty: true
+    ports:
+      - 3091:3000
+    networks:
+      - ninjatalent
+    # logging:
+    #  driver: "syslog"
+networks:
+    ninjatalent:
+

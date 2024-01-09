@@ -1,0 +1,40 @@
+.searchOptions{
+  width: 100%;
+  margin-top: 0 !important;
+  font-size: 14px;
+  color: #636363;
+
+  &:hover{
+    .ant-select-selector{
+      border-color: #7A7A7A !important;
+    }
+  }  
+  
+  .ant-select-selector{
+    border-radius: 0.3rem !important;
+    
+  }
+}
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  border-color: #7A7A7A !important;
+    box-shadow: 0 0 0 1px rgb(24 144 255 / 90%) !important;
+}
+
+.ant-select-dropdown{
+  z-index: 1401;
+}
+
+.disabled {
+  &:hover {
+    .ant-select-selector {
+      border-color: #7A7A7A !important;
+    }
+  }
+
+  .ant-select-selector {
+    border-color: #7A7A7A !important;
+    background-color: #CECECE !important;
+    opacity: .4 !important;
+    cursor: not-allowed;
+  }
+}
