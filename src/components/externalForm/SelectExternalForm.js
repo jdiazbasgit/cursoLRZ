@@ -11,16 +11,16 @@ const SelectExternalForm = () => {
         const respuesta = await fetch('https://www.universal-tutorial.com/api/countries/', {
           method: 'GET',
           headers: {
-            Authorization: "Bearer tu_token",
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJfZW1haWwiOiJqYXZpZXI3bW9yZW5vQGhvdG1haWwuY29tIiwiYXBpX3Rva2VuIjoiUFdLZkpCMWp1OWprbzhsSHJuT2FDNkpOd19jVWJSN2VoOUhxVjNRUGsySUFIUzNyY1FTY3VLUVhBVThUeldYR1VfcyJ9LCJleHAiOjE3MDQ4MzczMzd9.SRpLF25HJA-OeyMwuUClvA-E6NVQ-FCPxVbqIciQRp0",
             Accept: "application/json"
           },
           redirect: 'follow',
         });
-  
+
         if (!respuesta.ok) {
           throw new Error(`Error al obtener la lista de países. Código: ${respuesta.status}`);
         }
-  
+
         const resultado = await respuesta.json();
         setPaises(resultado);
       } catch (error) {
@@ -28,7 +28,7 @@ const SelectExternalForm = () => {
         setError("Hubo un problema al obtener la lista de países. Por favor, inténtalo de nuevo más tarde.");
       }
     }
-  
+
     obtenerPaises();
   }, []);
 
