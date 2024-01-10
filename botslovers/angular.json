@@ -25,7 +25,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/bootstrap.min.css"
             ],
             "scripts": []
           },

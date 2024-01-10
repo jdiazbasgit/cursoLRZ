@@ -1,0 +1,12 @@
+.header {
+    background: url("/assets/background-header.png") no-repeat;
+      background-color: rgba(0, 0, 0, 0);
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: auto;
+    background-size: cover;
+    background-position: bottom;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+  }
