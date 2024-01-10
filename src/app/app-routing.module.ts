@@ -13,7 +13,6 @@ const routes: Routes = [
   { path: 'alta-profesionales', component: AltaProfesionalesComponent },
   { path: 'empresas', component: EmpresasComponent  },
   
-
 ];
 
 @NgModule({
