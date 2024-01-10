@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 interface Perfil {
   profesion: string;
@@ -12,17 +13,22 @@ interface Perfil {
 })
 export class AltaProfesionalesComponent {
   perfiles: Perfil[] = [];
-  particulares={
-    profesion:"",
-    linkedin:"",
+  particulares = {
+    profesion: '',
+    linkedin: '',
+  };
+  camposVaciosTocados = false;
+
+  guardaDatos(miFormulario: NgForm) {
+    if (this.particulares.profesion && this.particulares.linkedin) {
+      
+      const nuevoPerfil: Perfil = { ...this.particulares };
+      this.perfiles.push(nuevoPerfil);
+      this.particulares = { profesion: '', linkedin: '' };
+      miFormulario.resetForm();
+      this.camposVaciosTocados = false;  // Reinicia el estado de los campos tocados
+    } else {
+      this.camposVaciosTocados = true;
+    }
   }
- 
-
-  guardaDatos(particulares:Perfil) {
-    const nuevoPerfil: Perfil=this.particulares;
-    this.perfiles.push(nuevoPerfil);
-    this.particulares = { profesion: '', linkedin: '' };
-
-  }
-
 }

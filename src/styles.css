@@ -79,6 +79,7 @@ form.form-control:focus {
   padding: 0.5em 1em;
   border-radius: 5px;
   font-weight: bold;
+  margin-top:1em;
   transition-property: background-color;
 }
 
@@ -146,4 +147,9 @@ ul li {
   font-size: 1.2em;
   text-align: left;
   margin-left: 4em;
+}
+
+.rojo {
+  font-size:0.9em;
+  color:red;
 }
