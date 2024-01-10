@@ -114,7 +114,7 @@ div.caja, .caja2 {
 background-image: url(./assets/empresa.png);
 }
 
-@media(max-width:1000px) {
+@media (max-width:1000px) {
   form input.form-control {
     width: 100%;
   }
@@ -145,5 +145,5 @@ ul li {
   margin: 1em auto;
   font-size: 1.2em;
   text-align: left;
-  margin-left: 3em;
+  margin-left: 4em;
 }

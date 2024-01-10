@@ -10,11 +10,13 @@
     display: flex;
     margin: 0 auto;
 }
+
 #botonesprincipal P {
     color: white;
     font-weight: bold;
 
 }
+
 .masinfo {
     display: none;
 }
@@ -41,16 +43,16 @@
 }
 
 .bloque1:hover p, .bloque2:hover p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     transition: font-size 1s; 
   }
 
 .bloque a {
-    padding:v3em;
+    padding:3em;
 }
 
-@media(max-width:700px) {
-    div.bloque1, div.bloque2 {
+@media (max-width:700px) {
+    .bloque1, .bloque2 {
         width: 100%;
     }
 }

@@ -1,0 +1,5 @@
+@media (max-width:900px) {
+    ul li {
+        margin-left: 2em;
+    }
+}
