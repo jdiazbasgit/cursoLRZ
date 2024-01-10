@@ -1,7 +1,20 @@
 h1{
     text-align: left;
+
+    
     /* justify-content: center; */
 }
-    
+
+.move{
+border-radius: 8px;
+box-shadow: 0 2px 2px rgb(0, 0, 0.2);
+overflow: hidden;
+transition: all 0.25s;
+}
+
+.move:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(0, 0 , 0.2);
+}
     
         
