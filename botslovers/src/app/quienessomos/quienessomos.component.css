@@ -1,14 +1,48 @@
+/* CSS 1) Cajitas de colores */
+.primercontenedor{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
 
-.espacio{
+
+
+
+ /* espaciocarousel{
     margin-top: 100px;
     margin-bottom: 20px;
-    /* height: 200px; */
-    background-color: white;
+    height: 200px;
    
-}
-
-.hola{
+    }  */
+/* 
+ .hola{
 
     background-color: white;
-}
+} */
+
+
+
+
+/* .carousel-image {
+    height: auto;
+    max-height: 100%;
+} */
+
+/* .carousel-caption-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+} */
+
+/* .carousel-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff; /* Color del texto
+} */
+
+/* .carousel-description {
+    font-size: 1.2rem;
+    color: #fff; /* Color del texto
+} */
