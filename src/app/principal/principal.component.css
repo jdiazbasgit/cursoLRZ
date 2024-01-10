@@ -8,6 +8,7 @@
 
 #botonesprincipal {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
 }
 
@@ -17,24 +18,14 @@
 
 }
 
-.masinfo {
-    display: none;
-}
-
-.bloque1 {
-    width: 50%;
+.bloque1, .bloque2 {
+    width: 48%;
     display: block;
     background-color: #009186;
-    margin-right: 2em;
     border-radius: 5px;
+    margin:0 auto 1em auto;
+    overflow: hidden;
     
-}
-
-.bloque2 { 
-    width: 50%;
-    display: block;
-    background-color:#009186;
-    border-radius: 5px;  
 }
 
 .bloque1:hover, .bloque2:hover {
@@ -51,7 +42,7 @@
     padding:3em;
 }
 
-@media (max-width:700px) {
+@media (max-width:800px) {
     .bloque1, .bloque2 {
         width: 100%;
     }

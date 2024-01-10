@@ -17,3 +17,15 @@ footer p {
 a {
     color: white;
 }
+
+@media (max-width:500px) {
+    footer {
+        flex-direction: column;
+    }
+    footer p{
+        line-height: 2em;
+    }
+    img {
+        margin: 0 auto;
+    }
+}
