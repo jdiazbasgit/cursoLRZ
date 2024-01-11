@@ -114,16 +114,6 @@ div.caja, div.caja2 {
 background-image: url(./assets/empresa.png);
 }
 
-@media (max-width:1000px) {
-  form input.form-control {
-    width: 100%;
-  }
-  div.caja, div.caja2 {
-    width: 100%; 
-    flex-direction: column;
-  }
-}
-
 nav ul {
   list-style: none;
   font-size: 1.1em;
@@ -150,6 +140,19 @@ ul li {
 }
 
 .rojo {
-  font-size:0.9em;
-  color:red;
+  font-size: 0.9em;
+  color: red;
+  display: block;
+  
+  margin: 0 auto -1.8em auto;
+}
+
+@media (max-width:1000px) {
+  form input.form-control {
+    width: 100%;
+  }
+  div.caja, div.caja2 {
+    width: 100%; 
+    flex-direction: column;
+  }
 }

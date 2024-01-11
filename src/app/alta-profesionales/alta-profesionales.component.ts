@@ -26,7 +26,7 @@ export class AltaProfesionalesComponent {
       this.perfiles.push(nuevoPerfil);
       this.particulares = { profesion: '', linkedin: '' };
       miFormulario.resetForm();
-      this.camposVaciosTocados = false;  // Reinicia el estado de los campos tocados
+      this.camposVaciosTocados = false;
     } else {
       this.camposVaciosTocados = true;
     }
