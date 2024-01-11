@@ -7,13 +7,13 @@
   <form (ngSubmit)="guardaDatos(myForm)" #myForm="ngForm" novalidate>   
     <h3 class="text-center">Publica tu perfil para que las empresas te encuentren</h3>
     
-    <div *ngIf="myForm && myForm.controls['profesion'] && myForm.controls['profesion'].invalid && (myForm.controls['profesion'].touched || myForm.submitted)" class="error-message">
-      <span class="rojo">*Introduce tu profesión</span>
+    <div *ngIf="myForm && myForm.controls['profesion'] && myForm.controls['profesion'].invalid && (myForm.controls['profesion'].touched || myForm.submitted)">
+      <span class="mensajeError">*Introduce tu profesión</span>
     </div>
     <input class="form-control" [(ngModel)]="particulares.profesion" name="profesion" placeholder="Profesión" required minlength="3" maxlength="100">
     
-    <div *ngIf="myForm && myForm.controls['linkedin'] && myForm.controls['linkedin'].invalid && (myForm.controls['linkedin'].touched || myForm.submitted)" class="error-message">
-      <span class=rojo>*Introduce el enlace a tu LinkedIn</span>
+    <div *ngIf="myForm && myForm.controls['linkedin'] && myForm.controls['linkedin'].invalid && (myForm.controls['linkedin'].touched || myForm.submitted)" >
+      <span class=mensajeError>*Introduce el enlace a tu LinkedIn</span>
     </div>
     <input class="form-control" [(ngModel)]="particulares.linkedin" name="linkedin" placeholder="Enlace a tu LinkedIn" required minlength="3" maxlength="100">
 

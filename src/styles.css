@@ -139,11 +139,11 @@ ul li {
   margin-left: 4em;
 }
 
-.rojo {
+.mensajeError {
   font-size: 0.9em;
   color: red;
   display: block;
-  
+
   margin: 0 auto -1.8em auto;
 }
 
@@ -156,3 +156,4 @@ ul li {
     flex-direction: column;
   }
 }
+

@@ -1,4 +1,6 @@
+import { NgFor } from '@angular/common';
 import { Component} from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 
 interface Empresa {
@@ -16,30 +18,19 @@ export class EmpresasComponent {
   empresas: Empresa[] = [];
   empresaData={puesto:"", nombre:"", enlace: "",}
 
-  guardaDatos(empresaData:Empresa) {
-    let nuevaEmpresa: Empresa = this.empresaData;
-    this.empresas.push(nuevaEmpresa);
-    this.empresaData = { puesto: '', nombre: '', enlace: '' };
+  camposVaciosTocados = false;
+
+  
+  guardaDatos(miFormulario: NgForm) {
+    if (this.empresaData.puesto && this.empresaData.nombre && this.empresaData.enlace) {
+      /* */
+      const nuevaEmpresa: Empresa = { ...this.empresaData };
+      this.empresas.push(nuevaEmpresa);
+      this.empresaData = { puesto: "", nombre: '', enlace: '' };
+      miFormulario.resetForm();
+      this.camposVaciosTocados = false;  // Reinicia el estado de los campos tocados
+    } else {
+      this.camposVaciosTocados = true;
+    }
   }
 }
-
-
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-empresas',
-//   templateUrl: './empresas.component.html',
-//   styleUrls: ['./empresas.component.css']
-// })
-// export class EmpresasComponent {
-//   puestos= new Array();
-//   empresas= new Array();
-//   enlaces= new Array();
-
-//   guardaDatos(puesto:string,empresa:string,enlace:string){
-//     this.puestos.push(puesto)
-//     this.empresas.push(empresa)
-//     this.enlaces.push(enlace)
-//   }
-
-// }

@@ -2,12 +2,25 @@
   <h2 class="subheader">Vacantes disponibles</h2>
 </div>
 
-<form action="" method="POST"> 
+<form (ngSubmit)="guardaDatos(myForm)" #myForm="ngForm" novalidate> 
   <h3 class="center">Publica el puesto de trabajo ofertado</h3>
+
+  <div *ngIf="myForm && myForm.controls['puesto'] && myForm.controls['puesto'].invalid && (myForm.controls['puesto'].touched || myForm.submitted)" class="error-message">
+    <span class="mensajeError">*Introduce el puesto</span>
+  </div>
   <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto" required minlength="3" maxlength="100">
+
+  <div *ngIf="myForm && myForm.controls['empresa'] && myForm.controls['empresa'].invalid && (myForm.controls['empresa'].touched || myForm.submitted)" class="error-message">
+    <span class="mensajeError">*Introduce la empresa</span>
+  </div>
   <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora" required minlength="3" maxlength="100">
+ 
+  <div *ngIf="myForm && myForm.controls['enlace'] && myForm.controls['enlace'].invalid && (myForm.controls['enlace'].touched || myForm.submitted)" class="error-message">
+    <span class="mensajeError">*Introduce el enlace al puesto</span>
+  </div>
   <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace al puesto" required minlength="3" maxlength="100">
-  <button class="botonEnviar" (click)="guardaDatos(empresaData)">ENVIAR</button>
+
+  <button class="botonEnviar" type="submit">ENVIAR</button>
 </form>
 
 <h4 class="text-center">Vacantes demandadas en Las Rozas</h4>
@@ -22,5 +35,7 @@
   </ul>
 </div>
 </div>
+
+
 
 

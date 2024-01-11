@@ -2,10 +2,12 @@
     margin: 1em auto;
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    
+
 }
 .fotogrupo img {
     overflow: hidden;
+    align-items: center;
     margin: 1em;
 }
 
