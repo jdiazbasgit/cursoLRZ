@@ -26,7 +26,13 @@
             ],
             "styles": [
               "src/styles.css",
-              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/bootstrap.min.css"
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/bootstrap.min.css",
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/style.css",
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/accordian.css",
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/swiper.min.css",
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/remodal.css",
+              "https://www.botslovers.com/wp-content/themes/botslover/assets/css/remodal-default-theme.css",
+              "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
             ],
             "scripts": []
           },

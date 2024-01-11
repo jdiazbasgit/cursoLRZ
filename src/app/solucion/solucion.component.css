@@ -1,0 +1,67 @@
+.backazul {
+    background-color: #080a3d;
+    padding-top: 130px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.blanco {
+    color: white;
+}
+
+.rojo {
+    color: #e4202d;
+}
+
+hr {
+    border-top: 1px solid white;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: white;
+    max-width: 800px;
+}
+
+.col h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.header-title-text {
+    max-width: 100%;
+
+  }
+
+.espacioextra {
+    padding-top: 50px;
+}
+
+.backblanco {
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+} 
+
+.backblanco2 {
+    padding: 1rem;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.4);
+} 
+
+li {
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+ul { 
+    list-style-type: "✔️"; 
+}
+
+.logolist {
+list-style-image: url("/assets/logo-list.png");
+}
+
