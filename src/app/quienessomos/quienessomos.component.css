@@ -1,29 +1,86 @@
-.co p{
- 
-    
-/*   
-    color: violet; */
-    /* background-color: gray; */
-    /* height: 200px; */
-    font-size: medium;
-    
-    /* text-align: center; */
-    text-align: left;
-    justify-content: center;
-}
-
-
-.co1 p{
- 
-    
-      
-        color: violet;
-         background-color: gray;
-        height: 200px; 
-        font-size: medium;
-       
-        text-align: right; 
-        text-align: justify; 
-         /* justify-content: center;  */
+/* .mt-5 {
+    margin-top: 0 !important;
+  } */
+  
+  .ft-1 {
+    background-color: #484c82;
+  }
+  
+  .ft-2 {
+    background-color: #676ba5;
+  }
+  
+  .ft-3 {
+    background-color: #8d92cc;
+  }
+  
+  .ft-4 {
+    background-color: #e0737e;
+  }
+  
+  .ft-5 {
+    background-color: #e29ca3;
+  }
+  
+  .ft-6 {
+    background-color: #e2bfc2;
+  }
+  
+  .blanco {
+    color: white;
+  }
+  
+  .rojo {
+    color: #e4202d;
+  }
+  
+  .ft-1 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
     }
-    
+  
+  .ft-2 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
+    }
+  
+  .ft-3 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
+    }
+  
+  .ft-4 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
+    }
+  
+  .ft-4 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
+    }
+  
+  .ft-5 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
+    }
+  
+  .ft-6 h3::before {
+      content: none;
+      position: absolute;
+      display: block;
+      margin-top: -70px;
+    }
+
+

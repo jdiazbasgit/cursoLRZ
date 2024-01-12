@@ -1,3 +1,30 @@
+/* .mt-5 {
+    margin-top: 0 !important;
+  
+} */
+  .header {
+    padding: 200px 0 0 0;
+      padding-bottom: 0;
+    background: url("/assets/background-header.png") no-repeat;
+      background-color: rgba(0, 0, 0, 0);
+      background-position-x: 0%;
+      background-position-y: 0%;
+      background-size: auto;
+    background-size: cover;
+    background-position: bottom;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video-section {
+    background-color: #fff0;
+  }
+
+  .item_blog img {
+    height: 100%;
+  }
+
 h1{
     text-align: left;
 
