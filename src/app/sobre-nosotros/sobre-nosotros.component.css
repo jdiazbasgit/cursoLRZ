@@ -5,10 +5,15 @@
     
 
 }
-.fotogrupo img {
+.fotogrupo figure {
     overflow: hidden;
     align-items: center;
     margin: 1em;
+}
+
+.fotogrupo figcaption {
+    font-style: italic;
+    color:#3D3E4A;
 }
 
 @media (max-width:900px) {

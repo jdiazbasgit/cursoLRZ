@@ -6,19 +6,28 @@
   <h3 class="center">Publica el puesto de trabajo ofertado</h3>
 
   <div *ngIf="myForm && myForm.controls['puesto'] && myForm.controls['puesto'].invalid && (myForm.controls['puesto'].touched || myForm.submitted)" class="error-message">
-    <span class="mensajeError">*Introduce el puesto</span>
+    <p class="mensajeError">*Introduce el puesto</p>
   </div>
-  <input class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto" required minlength="3" maxlength="100">
+  <div class="form-floating mt-3 mb-3">
+    <input type="text" id="vacante" class="form-control" [(ngModel)]="empresaData.puesto" name="puesto" placeholder="Nombre del puesto" required minlength="3" maxlength="100">
+    <label for="vacante">Nombre del puesto</label>
+  </div>
 
   <div *ngIf="myForm && myForm.controls['empresa'] && myForm.controls['empresa'].invalid && (myForm.controls['empresa'].touched || myForm.submitted)" class="error-message">
-    <span class="mensajeError">*Introduce la empresa</span>
+    <p class="mensajeError">*Introduce la empresa</p>
   </div>
-  <input class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa empleadora" required minlength="3" maxlength="100">
- 
+   <div class="form-floating mt-3 mb-3">
+    <input type="text" id="empresa" class="form-control" [(ngModel)]="empresaData.nombre" name="empresa" placeholder="Empresa" required minlength="3" maxlength="100">
+    <label for="empresa">Empresa</label>
+  </div>
+
   <div *ngIf="myForm && myForm.controls['enlace'] && myForm.controls['enlace'].invalid && (myForm.controls['enlace'].touched || myForm.submitted)" class="error-message">
-    <span class="mensajeError">*Introduce el enlace al puesto</span>
+    <p class="mensajeError">*Introduce el enlace al puesto</p>
   </div>
-  <input class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace al puesto" required minlength="3" maxlength="100">
+  <div class="form-floating mt-3 mb-3">
+    <input type="text" id="enlace" class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace al puesto" required minlength="3" maxlength="100">
+    <label for="enlace">Enlace al puesto</label>
+  </div>
 
   <button class="botonEnviar" type="submit">ENVIAR</button>
 </form>

@@ -56,7 +56,6 @@ form input {
   padding: 1em;
   margin: 1em auto;
   color: #666; 
-  width: 50%;
 }
 
 form input[type=text]::placeholder {
@@ -65,7 +64,6 @@ form input[type=text]::placeholder {
 
 form input.form-control {
   height: 3em;
-  width: 70%;
 }
 
 form.form-control:focus {
@@ -142,7 +140,7 @@ ul li {
 .mensajeError {
   font-size: 0.9em;
   color: red;
-  display: block;
+  text-align: left;
   margin: 0 auto -1em auto;
 }
 
