@@ -27,18 +27,18 @@ h4 {
   border-top:2px solid #00B5A8;
 }
 
+p {
+  font-size: 1.2em;
+}
+
 .subheader {
   color: white;
   text-align: center;
   background-image: url("./assets/subheader.jpg");
   padding: 2em;
-  background-position: center; /* Center the image */
+  background-position: center;
   background-repeat: repeat;
   margin-top:0;
-}
-
-p {
-    font-size: 1.2em;
 }
 
 form {

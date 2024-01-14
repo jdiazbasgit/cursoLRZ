@@ -2,7 +2,6 @@ import { NgFor } from '@angular/common';
 import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-
 interface Empresa {
   puesto: string;
   nombre: string;
@@ -14,6 +13,7 @@ interface Empresa {
   templateUrl: './empresas.component.html',
   styleUrls: ['./empresas.component.css']
 })
+
 export class EmpresasComponent {
   empresas: Empresa[] = [];
   empresaData={puesto:"", nombre:"", enlace: "",}
