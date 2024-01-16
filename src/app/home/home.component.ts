@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
           card.style.transform = `${commonTransform} translate(0, -120vh) rotate(-48deg)`;
         } else {
           // Aplicar transformación menos pronunciada en móviles
-          card.style.transform = `${commonTransform} translate(0, -30vh) rotate(-10deg)`;
+          card.style.transform = `${commonTransform} translate(0, -10vh) rotate(-10deg)`;
         }
       } else {
         card.style.transform = `${commonTransform} rotate(${angle}deg)`;
