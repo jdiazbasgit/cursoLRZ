@@ -25,7 +25,7 @@
     <p class="mensajeError">*Introduce el enlace al puesto</p>
   </div>
   <div class="form-floating mt-3 mb-3">
-    <input type="text" id="enlace" class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace al puesto" required minlength="3" maxlength="100">
+    <input type="url" id="enlace" class="form-control" [(ngModel)]="empresaData.enlace" name="enlace" placeholder="Enlace al puesto" required minlength="3" maxlength="100">
     <label for="enlace">Enlace al puesto</label>
   </div>
 

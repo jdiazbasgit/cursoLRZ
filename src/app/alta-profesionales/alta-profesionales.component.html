@@ -19,7 +19,7 @@
       <p class="mensajeError">*Introduce el enlace a tu LinkedIn</p>
     </div>
     <div class="form-floating mt-3 mb-3">
-      <input type="text" id="linkedIn" class="form-control" [(ngModel)]="particulares.linkedin" name="linkedin" placeholder="Enlace a tu LinkedIn" required minlength="3" maxlength="100">
+      <input type="url" id="linkedIn" class="form-control" [(ngModel)]="particulares.linkedin" name="linkedin" placeholder="Enlace a tu LinkedIn" required minlength="3" maxlength="100">
       <label for="linkedIn">Enlace a tu LinkedIn</label>
     </div>
 
@@ -32,7 +32,7 @@
     <div class="caja" *ngFor="let perfil of perfiles">
       <ul>
         <li><span class="bold">Profesión: </span>{{perfil.profesion}}</li>
-        <li><span class="bold">Perfil Linkedin: </span><a href="{{perfil.linkedin}}">ver</a></li>
+        <li><span class="bold">Perfil Linkedin: </span><a href="{{perfil.linkedin}}" target="_blank">ver</a></li>
       </ul>
     </div>
   </div>
