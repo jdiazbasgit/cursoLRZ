@@ -20,15 +20,14 @@ export class EmpresasComponent {
 
   camposVaciosTocados = false;
 
-  
   guardaDatos(miFormulario: NgForm) {
     if (this.empresaData.puesto && this.empresaData.nombre && this.empresaData.enlace) {
-      /* */
+
       const nuevaEmpresa: Empresa = { ...this.empresaData };
       this.empresas.push(nuevaEmpresa);
       this.empresaData = { puesto: "", nombre: '', enlace: '' };
       miFormulario.resetForm();
-      this.camposVaciosTocados = false;  // Reinicia el estado de los campos tocados
+      this.camposVaciosTocados = false; 
     } else {
       this.camposVaciosTocados = true;
     }

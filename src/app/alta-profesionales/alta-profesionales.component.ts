@@ -5,12 +5,12 @@ interface Perfil {
   profesion: string;
   linkedin: string;
 }
-
 @Component({
   selector: 'app-alta-profesionales',
   templateUrl: './alta-profesionales.component.html',
   styleUrls: ['./alta-profesionales.component.css']
 })
+
 export class AltaProfesionalesComponent {
   perfiles: Perfil[] = [];
   particulares = {
