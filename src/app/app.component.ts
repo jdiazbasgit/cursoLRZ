@@ -10,13 +10,14 @@ import { OpinionesComponent } from "./opiniones/opiniones.component";
 import { QuienessomosComponent } from "./quienessomos/quienessomos.component";
 import { ModelodenegocioComponent } from "./modelodenegocio/modelodenegocio.component";
 import { SolucionComponent } from "./solucion/solucion.component";
+import { HomemanuelComponent } from "./homemanuel/homemanuel.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, HomeComponent, FeaturesComponent, OpinionesComponent, QuienessomosComponent, ModelodenegocioComponent, SolucionComponent]
+    imports: [CommonModule, RouterOutlet, HeaderComponent, FooterComponent, HomeComponent, FeaturesComponent, OpinionesComponent, QuienessomosComponent, ModelodenegocioComponent, SolucionComponent, HomemanuelComponent]
 })
 export class AppComponent {
   title = 'botslovers';
