@@ -49,4 +49,5 @@ export default extendTheme({
     title: "Montserrat, sans-serif",
     logoNinja: "Gang of three, sans-serif"
   }
+  
 })

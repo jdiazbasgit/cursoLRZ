@@ -8,61 +8,45 @@ import {
   Button,
   Flex,
   Img,
+  CheckboxGroup,
 } from "@chakra-ui/react";
-import data from "./json_prefijos.json";
+import React from "react";
 
-export default function Pagina2(this: any) {
-  const StatusBar = ({ totalPages, currentPage }) => {
-    return (
-      <Flex justify="center" mb={4}>
-        {[...Array(totalPages)].map((_, index) => (
-          <Text
-            key={index}
-            fontSize="lg"
-            mx={1}
-            color={currentPage === index ? "redBrand.900" : "gray.500"}
-          >
-            ●
-          </Text>
-        ))}
-      </Flex>
-    );
-  };
-  const [page, setPage] = useState(0);
-  const [formData, setFormData] = useState({
-    nombre: "",
-    apellidos: "",
-    email: "",
-    pais: "",
-    telefono: "",
-    linkedin: "",
-    buscoEmpleo: false,
-    expectativaSalarial: "",
-    modalidadTrabajo: [],
-    movilidad: "",
-    ubicacion: [],
-    aceptoPoliticas: false,
-  });
-  type OptionType = {
-    nombre: string;
-    name: string;
-    nom: string;
-    iso2: string;
-    iso3: string;
-    phone_code: number;
-  };
-  const [options, setOptions] = useState<OptionType[]>(data);
-
-  interface Country {
-    value: string;
-    label: string;
-  }
+export default function Pagina2({ nextPage, prevPage }) {
+  const [page, setPage] = useState(2);
   const cambiar = () => {
     setCheck(!check);
   };
   const [check, setCheck] = useState(false);
-  const nextPage = () => setPage(page + 1);
-  const prevPage = () => setPage(page - 1);
+
+  const [expectativaSalarial, setExpectativaSalarial] = useState<number>(10000);
+  const [isOn, setIsOn] = useState(false);
+
+  const [movilidad, setMovilidad] = useState<boolean>(false);
+  const [modalidad, setModalidad] = useState<string[]>([]);
+
+  const toggleMovilidad = () => {
+    setMovilidad(!movilidad);
+  };
+
+  const opcionesModalidad = ["Teletrabajo", "Presencial", "Híbrido"];
+
+  const handleChange = (event) => {
+    const selectedOptions = Array.from(event.target.selectedOptions, (option) => option.value);
+    setModalidad(selectedOptions);
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const nuevoValor = parseInt(e.target.value, 10);
+    setExpectativaSalarial(nuevoValor);
+  };
+
+  const communities = [
+    { value: 'madrid', label: 'Madrid' },
+    { value: 'galicia', label: 'Galicia' },
+    { value: 'andalucia', label: 'Andalucia' },
+    { value: 'asturias', label: 'Asturias' },
+  ];
 
   return (
     <Flex>
@@ -72,29 +56,89 @@ export default function Pagina2(this: any) {
         height={500}
       ></Img>
 
-      <SimpleGrid minChildWidth={"310px"} gap={5}>
+      <SimpleGrid minChildWidth={"310px"} gap={5} margin={4}>
         <Text fontSize="xl" fontWeight="bold">
           Empleo
         </Text>
         <Checkbox onChange={cambiar}>Busco empleo</Checkbox>
         {check && (
           <div>
+            <div>
+              <label htmlFor="expectativaSalarial">
+                Expectativa salarial: {expectativaSalarial} €
+              </label>
+            </div>{" "}
             <Input
               placeholder="Expectativa salarial"
               type="range"
               min="10000"
               max="50000"
+              step="1000"
               required
+              value={expectativaSalarial}
+              onChange={handleInputChange}
+              bg={"grew"}
             />
-            <Select placeholder="Modalidad de trabajo" multiple required>
-              {/* Aquí puedes agregar las opciones para las modalidades de trabajo */}
+            <label>Modalidad de Trabajo:</label>
+            <Select
+              multiple
+              value={modalidad}
+              onChange={handleChange}
+              style={{
+                padding: '5px',
+                borderRadius: '4px',
+                height: 'auto',
+                minHeight: '30px'
+              }}
+            >
+              {opcionesModalidad.map((opcion) => (
+                <option  style={{
+                  backgroundColor: 'black',
+                  color: 'white', // Cambia el color del texto si es necesario// Ajusta una altura mínima para el cuadro de selección
+                }}  key={opcion} value={opcion}>
+                  {opcion}
+                </option>
+              ))}
             </Select>
-            <Select placeholder="Movilidad" required>
-              <option>Si</option>
-              <option>No</option>
-            </Select>
-            <Select placeholder="Ubicación" multiple required>
-              {/* Aquí puedes agregar las opciones para las ciudades */}
+            <div>
+              <label>Posibilidad de Movilidad:</label>
+              <div>
+                <input
+                  type="radio"
+                  value="Si"
+                  checked={movilidad}
+                  onChange={toggleMovilidad}
+                />{" "}
+                <span>Si</span>{" "}
+                <input
+                  type="radio"
+                  value="No"
+                  checked={!movilidad}
+                  onChange={toggleMovilidad}
+                />{" "}
+                No
+              </div>
+            </div>
+            <label>Ubicación:</label>
+            <Select
+              multiple
+              onChange={(event) => handleChange(event)}
+              required
+              style={{
+                padding: '5px', // Ajusta el espaciado interno
+                borderRadius: '4px', // Ajusta la esquina del cuadro de selección
+                height: 'auto', // Ajusta la altura según la cantidad de opciones
+                minHeight: '30px' // Ajusta una altura mínima para el cuadro de selección
+              }}
+            >
+              {communities.map((community) => (
+                <option  style={{
+                  backgroundColor: 'black',
+                  color: 'white', // Cambia el color del texto si es necesario// Ajusta una altura mínima para el cuadro de selección
+                }}  key={community.value} value={community.value}>
+                  {community.label}
+                </option>
+              ))}
             </Select>
             <Checkbox required>
               Acepto las políticas de privacidad y uso de la aplicación

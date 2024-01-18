@@ -107,5 +107,6 @@ export const Radio: ComponentStyleConfig = {
     label: {
       color: "ineherit"
     },
+    
   }
 }

@@ -1,0 +1,23 @@
+.toggle-button {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .toggle-button:hover {
+    background-color: #eee;
+  }
+  
+  .toggle-button.encendido {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .toggle-button.apagado {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
